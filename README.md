@@ -113,7 +113,8 @@ D:\code/
 │   │   ├── demo3_robustness.py     #   Demo 3 独立运行器
 │   │   ├── trajectory_smoother.py  #   样条+梯形 Profile 轨迹合成
 │   │   ├── ui_theme.py             #   CSS + 主题
-│   │   └── ui_common.py            #   共享 UI 工具
+│   │   ├── ui_common.py            #   共享 UI 工具
+│   │   └── mcp_server.py           #   MCP 服务器 (AI Agent 集成)
 │   ├── tests/                      ← 38 单元测试
 │   │   ├── test_z_axis.py
 │   │   ├── test_entity_stats.py
@@ -160,7 +161,28 @@ python data/download_osm_networks.py --preset mixed --n_networks 20
 # 6. 启动 Gradio 调试面板（需 API Key）
 $env:DEEPSEEK_API_KEY = "sk-..."
 cd SMDSL && python -m smdsl_demo.app
+
+# 7. 启动 MCP Server（AI Agent 工具调用）
+cd SMDSL && python -m smdsl_demo.mcp_server
 ```
+
+### MCP Server 配置 (Claude Desktop)
+
+在 `claude_desktop_config.json` 中添加：
+
+```json
+{
+  "mcpServers": {
+    "smdsl": {
+      "command": "python",
+      "args": ["-m", "smdsl_demo.mcp_server"],
+      "cwd": "D:/Code/SMDSL_demo/SMDSL"
+    }
+  }
+}
+```
+
+提供 6 个工具：`cad_dispatch`, `compute_topology`, `plan_path`, `validate_trajectory`, `smooth_trajectory`, `analyze_scene`
 
 ---
 

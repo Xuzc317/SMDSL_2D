@@ -83,7 +83,7 @@ _DEFAULT_SAMPLE_PATH = next(
 )
 
 
-from smdsl_demo.ui_common import format_seed_label as _format_seed_label
+from smdsl_demo.ui_common import format_seed_label as _format_seed_label, flow_nav_md as _flow_nav_md, current_timestamp as _ts
 from smdsl_demo.ui_theme import SMDSL_THEME_CSS as _CLAUDE_DOCS_CSS, build_theme as _build_theme
 
 

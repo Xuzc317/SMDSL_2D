@@ -48,7 +48,7 @@ from smdsl_demo.spatial_api_stub import _eval_distance_via_field
 from smdsl_demo.trajectory_smoother import smooth_path_to_trajectory
 
 # ── Server ────────────────────────────────────────────────────────
-server = Server("smdsl", version="0.2.0")
+server = Server("smdsl-2d", version="0.2.0")
 
 
 def _load_and_prepare(file_path: str, resolution: float = 0.05):

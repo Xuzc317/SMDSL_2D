@@ -1,4 +1,4 @@
-# Changelog
+# SMDSL_2D Changelog
 
 ## [0.2.0] — 2026-06-15
 

@@ -1,9 +1,9 @@
-# SMDSL (RoboIR) — 具身智能空间-动作特定领域语言
+# SMDSL_2D — 空间约束验证与闭环重规划系统
 
 > **解决的核心痛点**：现有 VLA（视觉-语言-动作）模型（如 RT-2、OpenVLA）采用端到端黑盒模式，
 > 无法理解物理几何关联性，在时序依赖的复杂任务中极易陷入局部最优，且发生碰撞时完全不可追溯。
 >
-> **解法**：SMDSL 在 LLM 大脑与物理执行器之间插入一个强类型"中间表示层 (IR)"——
+> **解法**：SMDSL_2D 在 LLM 大脑与物理执行器之间插入一个强类型"中间表示层 (IR)"——
 > 底层 API 负责所有空间计算，LLM 只做逻辑翻译，编译器在编译阶段消灭空间幻觉。
 
 ---
@@ -173,7 +173,7 @@ cd SMDSL && python -m smdsl_demo.mcp_server
 ```json
 {
   "mcpServers": {
-    "smdsl": {
+    "smdsl-2d": {
       "command": "python",
       "args": ["-m", "smdsl_demo.mcp_server"],
       "cwd": "D:/Code/SMDSL_demo/SMDSL"

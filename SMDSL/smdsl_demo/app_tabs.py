@@ -1,5 +1,5 @@
 ﻿"""
-app_tabs.py — SMDSL Tab Extensions
+app_tabs.py — SMDSL_2D Tab Extensions
 
 Monkey-patches the original app.py to add Architecture and Demo Recording tabs.
 Run this instead of app.py directly to get the extended interface.
@@ -35,7 +35,7 @@ def create_standalone_arch_gradio() -> None:
     import gradio as gr
     from smdsl_demo.architecture_viz import get_architecture_html
 
-    with gr.Blocks(title="SMDSL Architecture") as demo:
+    with gr.Blocks(title="SMDSL_2D Architecture") as demo:
         gr.HTML(get_architecture_html())
     demo.launch(server_port=7861, share=False, inbrowser=True)
 
@@ -45,8 +45,8 @@ def create_standalone_demo_recorder_gradio() -> None:
     import gradio as gr
     from smdsl_demo.demo_recorder import record_demo_video
 
-    with gr.Blocks(title="SMDSL Demo Recorder") as demo:
-        gr.Markdown("# SMDSL Demo Recorder")
+    with gr.Blocks(title="SMDSL_2D Demo Recorder") as demo:
+        gr.Markdown("# SMDSL_2D Demo Recorder")
         gr.Markdown(
             "Record a video walkthrough of the SMDSL pipeline. "
             "Requires Playwright installed."

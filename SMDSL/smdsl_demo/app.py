@@ -1800,7 +1800,7 @@ def _api_key_status_md() -> str:
 
 
 def build_ui() -> gr.Blocks:
-    with gr.Blocks(title="SMDSL — Spatial-Motion DSL") as demo:
+    with gr.Blocks(title="SMDSL_2D — Spatial-Motion DSL") as demo:
         # gr.State 必须在 with gr.Blocks 内
         topology_state = gr.State(value=None)
         candidates_state = gr.State(value=[])

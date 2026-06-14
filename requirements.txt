@@ -1,4 +1,4 @@
-# SMDSL (RoboIR) - Embodied Intelligence Spatial-Motion DSL
+# SMDSL_2D — Spatial-Motion Domain-Specific Language for 2D Navigation
 # All Python dependencies
 # =============================================================================
 

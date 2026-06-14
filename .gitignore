@@ -52,4 +52,4 @@ demo_*.py
 back/scratch_scripts/
 
 # Claude Code session artifacts
-C:\Users*.txt
+*.claude/projects/*/tool-results/

@@ -16,25 +16,27 @@
 
 ---
 
-## 方向一：2D 极致打磨 （进行中）
+## 方向一：2D 极致打磨 — ✅ 已完成
 
 > 让 SMDSL 在 2D 路径约束验证上，从技术 demo 变成有量化证据支持的、物理上可执行的、对自己行为诚实的工程系统。
 
 | 验收标准 | 状态 |
 |----------|------|
-| 系统自洽：所有接口明确只接受 2D（z=0）；LLM 修正不篡改核心语义；实体丢弃用户可见 | 🔴 待开始 |
-| 轨迹可信：每条轨迹有加减速剖面，路径经梯度微调 | 🔴 待开始 |
-| 有据可依：EDT 方案 vs costmap 膨胀层方案在 200 布局上的 clearance 量化对比 | 🔴 待开始 |
+| 系统自洽：所有接口明确只接受 2D（z=0）；LLM 修正不篡改核心语义；实体丢弃用户可见 | 🟢 已完成 |
+| 轨迹可信：每条轨迹有加减速剖面，路径经梯度微调 | 🟢 已完成 |
+| 有据可依：EDT 方案 vs costmap 膨胀层方案在 200 布局上的 clearance 量化对比 | 🟢 已完成（合成数据 +12.1%）|
 
 | Phase | 内容 | 状态 |
 |-------|------|------|
-| Phase 0 | Git 仓库初始化 | 🟡 进行中 |
-| Phase 1 | P0 修复（Z 轴断言 / RoboIR diff / DWG 丢弃率）| 🔴 |
-| Phase 2 | P1 优化（轨迹合成 / 梯度微调 / EDT vs Costmap）| 🔴 |
-| Phase 3 | app.py 模块拆分 | 🔴 |
-| Phase 4 | 测试补充 | 🔴 |
-| Phase 5 | 基准运行 | 🔴 |
-| Phase 6 | 文档与收尾 | 🔴 |
+| Phase 0 | Git 仓库初始化 | ✅ |
+| Phase 1 | P0 修复（Z 轴断言 / RoboIR diff / DWG 丢弃率）| ✅ |
+| Phase 2 | P1 优化（轨迹合成 / 梯度微调 / EDT vs Costmap）| ✅ |
+| Phase 3 | app.py 模块拆分 | ✅ |
+| Phase 4 | 测试补充 | ✅ (38 tests) |
+| Phase 5 | 基准运行 | ✅ |
+| Phase 6 | 文档与收尾 | ✅ |
+
+> 详见 [SMDSL_Direction1_Workflow.md](SMDSL_Direction1_Workflow.md) · [CHANGELOG.md](CHANGELOG.md)
 
 ### FloorplanQA 基准
 

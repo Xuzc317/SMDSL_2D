@@ -885,7 +885,62 @@ def path_pixels_to_trajectory(
 
 
 # ══════════════════════════════════════════════════════
-# 5. 种子点 / 上料位接口
+# 5. 距离场梯度路径微调 (Phase 2.2)
+# ══════════════════════════════════════════════════════
+
+def compute_field_gradient(
+    distance_field: np.ndarray,
+) -> Tuple[np.ndarray, np.ndarray]:
+    """计算 EDT 梯度场 ∇d = (∂d/∂x, ∂d/∂y)。使用 np.gradient 中心差分。"""
+    dy, dx = np.gradient(distance_field.astype(np.float64))
+    return dx, dy
+
+
+def refine_path_via_gradient(
+    path_rc: List[Tuple[int, int]],
+    distance_field: np.ndarray,
+    gradient_field: Tuple[np.ndarray, np.ndarray],
+    robot_radius_px: float,
+    iterations: int = 5,
+    step_size: float = 0.5,
+) -> List[Tuple[int, int]]:
+    """
+    梯度微调：沿 ∇d（远离障碍物方向）微调路径内部点。
+    保持起点终点不变；保证新位置不穿墙（d >= robot_radius_px）。
+    """
+    if len(path_rc) < 3:
+        return path_rc[:]
+
+    gx, gy = gradient_field
+    H, W = distance_field.shape
+    refined = path_rc[:]
+    req_clearance = max(1.0, robot_radius_px)
+
+    for _ in range(iterations):
+        new_path = [refined[0]]
+        for i in range(1, len(refined) - 1):
+            r, c = refined[i]
+            # 离散索引 clamp
+            ri = max(0, min(H - 1, int(round(r))))
+            ci = max(0, min(W - 1, int(round(c))))
+            dr = gy[ri, ci] * step_size
+            dc = gx[ri, ci] * step_size
+            nr = r + dr
+            nc = c + dc
+            ri_new = max(0, min(H - 1, int(round(nr))))
+            ci_new = max(0, min(W - 1, int(round(nc))))
+            if distance_field[ri_new, ci_new] >= req_clearance:
+                new_path.append((nr, nc))
+            else:
+                new_path.append((r, c))
+        new_path.append(refined[-1])
+        refined = new_path
+
+    return [(int(round(r)), int(round(c))) for r, c in refined]
+
+
+# ══════════════════════════════════════════════════════
+# 6. 种子点 / 上料位接口
 # ══════════════════════════════════════════════════════
 
 def extract_door_seeds(

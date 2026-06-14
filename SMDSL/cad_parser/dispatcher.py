@@ -470,22 +470,30 @@ def _dwg_point_to_xy(pt: Any, unit_scale: float = 1.0) -> Tuple[float, float]:
 def _extract_dwg_geometry(
     entities: List[Dict[str, Any]],
     unit_scale: float = 1.0,
-) -> Tuple[List[Tuple[Tuple[float, float], Tuple[float, float]]], List[Dict[str, Any]]]:
+) -> Tuple[List[Tuple[Tuple[float, float], Tuple[float, float]]], List[Dict[str, Any]], Dict[str, Any]]:
     walls: List[Tuple[Tuple[float, float], Tuple[float, float]]] = []
     polygons: List[Dict[str, Any]] = []
+    entity_stats = {
+        "total_entities": len(entities),
+        "processed": 0,
+        "skipped_by_type": {},
+    }
 
     for ent in entities:
         # LibreDWG 用 entity 字段（字符串）标识类型
-        etype = str(ent.get("entity", ent.get("type", ""))).upper()
+        raw_type = str(ent.get("entity", ent.get("type", "")))
+        etype = raw_type.upper()
         # 去掉可能的 AcDb 前缀（如 AcDbLine → LINE）
         if etype.startswith("ACDB"):
             etype = etype[4:]
+        processed = False
 
         if etype in ("LINE", "19"):
             s = _dwg_point_to_xy(ent.get("start"), unit_scale)
             e = _dwg_point_to_xy(ent.get("end"), unit_scale)
             if s != e:
                 walls.append((s, e))
+            processed = True
 
         elif etype in ("LWPOLYLINE", "POLYLINE", "POLYLINE2D", "POLYLINE3D", "21", "22", "23"):
             vertices = ent.get("vertices", ent.get("points", []))
@@ -502,6 +510,7 @@ def _extract_dwg_geometry(
                 layer = ent.get("layer", "")
                 label = f"polyline_{layer}" if layer else "polyline"
                 polygons.append({"label": label, "points": pts, "layer": layer})
+            processed = True
 
         elif etype in ("CIRCLE", "18"):
             cx, cy = _dwg_point_to_xy(ent.get("center"), unit_scale)
@@ -518,6 +527,7 @@ def _extract_dwg_geometry(
                 layer = ent.get("layer", "")
                 label = f"circle_{layer}" if layer else "circle"
                 polygons.append({"label": label, "points": circle_pts, "layer": layer})
+            processed = True
 
         elif etype in ("ARC", "45"):
             cx, cy = _dwg_point_to_xy(ent.get("center"), unit_scale)
@@ -532,8 +542,37 @@ def _extract_dwg_geometry(
                     arc_pts.append((cx + r * math.cos(a), cy + r * math.sin(a)))
                 for i in range(len(arc_pts) - 1):
                     walls.append((arc_pts[i], arc_pts[i + 1]))
+            processed = True
 
-    return walls, polygons
+        if processed:
+            entity_stats["processed"] += 1
+        else:
+            type_name = raw_type if raw_type else "(empty)"
+            entity_stats["skipped_by_type"][type_name] = (
+                entity_stats["skipped_by_type"].get(type_name, 0) + 1
+            )
+
+    return walls, polygons, entity_stats
+
+
+def _format_entity_drop_note(entity_stats: Dict[str, Any]) -> str:
+    total = entity_stats.get("total_entities", 0)
+    processed = entity_stats.get("processed", 0)
+    if total == 0:
+        return ""
+    drop_rate = 1.0 - processed / total
+    if drop_rate <= 0.1:
+        return ""
+    top_skipped = sorted(
+        entity_stats.get("skipped_by_type", {}).items(),
+        key=lambda x: -x[1],
+    )[:5]
+    top_str = ", ".join(f"{t}={c}" for t, c in top_skipped)
+    return (
+        f"\n\n [DWG 实体丢弃率: {drop_rate:.1%}"
+        f" ({total} total, {processed} processed,"
+        f" top skipped: {top_str})"
+    )
 
 
 def _extract_dwg_semantics(entities: List[Dict[str, Any]]) -> Dict[str, Any]:
@@ -627,7 +666,7 @@ def _parse_dwg(
     except (TypeError, ValueError):
         pass
 
-    walls, polygons = _extract_dwg_geometry(entities, unit_scale)
+    walls, polygons, entity_stats = _extract_dwg_geometry(entities, unit_scale)
     if not walls:
         raise CadDispatchError("DWG 中未提取到任何墙体几何。")
 
@@ -690,7 +729,7 @@ def _parse_dwg(
             f"{len(semantics['texts'])} 文本，"
             f"{len(semantics['blocks'])} 块参照。"
             "AI 语义流已就绪，可调用 semantic_extractor 提取业务节点。"
-        ),
+        ) + _format_entity_drop_note(entity_stats),
     }
 
 

@@ -511,6 +511,11 @@ def _eval_distance_via_field(
         ρ = d_real_m - D_safe
     """
     # [Fix 1] Z-axis hard assertion: detect 3D trajectory passed to 2D solver
+    if not trajectory:
+        report["robustness"] = float("inf")
+        report["violated"] = False
+        report["source"] = "distance_field"
+        return report
     z_vals = [float(pt.get("z", 0.0)) for pt in trajectory]
     z_range = max(z_vals) - min(z_vals)
     if z_range > 0.01:

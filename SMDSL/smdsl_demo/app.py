@@ -83,11 +83,7 @@ _DEFAULT_SAMPLE_PATH = next(
 )
 
 
-def _format_seed_label(idx: int, kind: str, x: float, y: float,
-                       extra: str = "") -> str:
-    """统一格式化候选种子点的下拉标签。"""
-    base = f"#{idx} [{kind}]  ({x:.2f}, {y:.2f}) m"
-    return f"{base}  · {extra}" if extra else base
+from smdsl_demo.ui_common import format_seed_label as _format_seed_label
 
 
 def _gather_seed_candidates(
@@ -514,7 +510,19 @@ def demo1_run(layout_path_text: str, png_invert: bool = False,
         + (f"（主区占 {topo_stats['largest_component_frac']:.0%}）"
            if nc > 0 else "")
     )
+    status_prefix = ""
+    note = parsed.get("note", "")
+    if "实体丢弃率" in str(note):
+        status_prefix = (
+            "<div style='background:#fff3cd;border:1px solid #ffc107;"
+            "padding:8px 12px;margin-bottom:8px;border-radius:4px;"
+            "font-size:14px;color:#664d03'>"
+            "⚠️ 实体丢弃率偏高："
+            + str(note).replace("\n", "<br>")
+            + "</div>\n\n"
+        )
     status = (
+        f"{status_prefix}"
         f"✅ 解析完成 · 模式 = **{parsed['mode'].upper()}** {semantic_icon} · "
         f"格 {grid.shape[0]}×{grid.shape[1]} · "
         f"节点数 = **{n_nodes}** · 可走比例 = **{path_frac:.1%}** · "
@@ -799,8 +807,9 @@ def _plan_path_core(
 
     try:
         from cad_parser.astar_topology import (  # noqa: PLC0415
-            astar_shortest_path, path_pixels_to_trajectory,
+            astar_shortest_path, compute_field_gradient, refine_path_via_gradient,
         )
+        from smdsl_demo.trajectory_smoother import smooth_path_to_trajectory
     except ImportError as e:
         return ("", None, f"❌ 模块导入失败：{e}", "")
 
@@ -851,9 +860,20 @@ def _plan_path_core(
             "",
         )
 
-    traj = path_pixels_to_trajectory(
-        path, transform, total_time_s=float(total_time_s),
-        sample_step=max(1, len(path) // 12),
+    # Phase 2.2: 距离场梯度路径微调
+    ref_gx, ref_gy = compute_field_gradient(df)
+    path = refine_path_via_gradient(
+        path_rc=path,
+        distance_field=df,
+        gradient_field=(ref_gx, ref_gy),
+        robot_radius_px=safe_radius_px,
+    )
+
+    traj = smooth_path_to_trajectory(
+        path_rc=path,
+        resolution=float(res),
+        origin_xy=(float(ox), float(oy)),
+        total_time_s=float(total_time_s),
     )
 
     # 用实际出发的像素位置（而非用户原始点击坐标）记录世界坐标

@@ -474,9 +474,8 @@ def _replan_trajectory_with_clearance(
     Returns:
         新轨迹（[{t,x,y,z,roll,pitch,yaw}, ...]）；规划失败 → None。
     """
-    from cad_parser.astar_topology import (
-        astar_shortest_path, path_pixels_to_trajectory,
-    )
+    from cad_parser.astar_topology import astar_shortest_path
+    from smdsl_demo.trajectory_smoother import smooth_path_to_trajectory
 
     grid = pipeline_result.get("grid")
     distance_field = pipeline_result.get("distance_field")
@@ -505,11 +504,11 @@ def _replan_trajectory_with_clearance(
     if not path_rc:
         return None
 
-    new_traj = path_pixels_to_trajectory(
+    new_traj = smooth_path_to_trajectory(
         path_rc=path_rc,
-        transform=transform,
+        resolution=res,
+        origin_xy=(ox, oy),
         total_time_s=total_time_s,
-        z=0.0, yaw_rad=0.0, sample_step=2,
     )
     return new_traj if new_traj else None
 
@@ -582,6 +581,28 @@ def run_correction_loop(
         except Exception as e:
             print(f"    LLM 调用失败: {e}")
             metrics.errors.append(f"LLM correction round {attempt}: {e}")
+            continue
+
+        # [Phase 1.2] RoboIR diff hard check: LLM 禁止修改 intent / target_frame
+        corrected_intent = corrected_roboir.get("intent")
+        corrected_target = corrected_roboir.get("target_frame")
+        original_intent = roboir.get("intent")
+        original_target = roboir.get("target_frame")
+        if corrected_intent != original_intent or corrected_target != original_target:
+            print(
+                f"    [DIFF-REJECT] LLM 非法修改 intent/target_frame: "
+                f"intent {original_intent}→{corrected_intent}, "
+                f"target {original_target}→{corrected_target}"
+            )
+            correction_prompt += (
+                f"\n[HARD CONSTRAINT] 禁止修改 intent 和 target_frame。"
+                f"保持 intent='{original_intent}', "
+                f"target_frame='{original_target}' 不变，"
+                f"仅调整 stl_constraints 的参数。"
+            )
+            metrics.errors.append(
+                f"round {attempt}: LLM modified intent or target_frame"
+            )
             continue
 
         # 据修正后的 d_safe 重规划轨迹（真闭环关键步骤）：LLM 把 Distance

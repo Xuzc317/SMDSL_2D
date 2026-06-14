@@ -76,19 +76,18 @@ def path_clearance_stats(
     distance_field: np.ndarray,
     resolution: float,
 ) -> Dict[str, float]:
-    """计算一条路径上的 clearance 统计。"""
+    """计算一条路径上的 clearance 统计（向量化版本）。"""
     if not path_rc:
         return {"clearance_min": 0.0, "clearance_mean": 0.0, "clearance_below_1px": 1.0}
     H, W = distance_field.shape
-    vals = []
-    for r, c in path_rc:
-        ri = max(0, min(H - 1, int(round(r))))
-        ci = max(0, min(W - 1, int(round(c))))
-        vals.append(distance_field[ri, ci])
-    vals_m = [v * resolution for v in vals]
-    below = sum(1 for v in vals if v < 1.0) / max(1, len(vals))
+    arr = np.array(path_rc)
+    rows = np.clip(arr[:, 0].astype(int), 0, H - 1)
+    cols = np.clip(arr[:, 1].astype(int), 0, W - 1)
+    vals = distance_field[rows, cols]
+    vals_m = vals * resolution
+    below = float(np.sum(vals < 1.0)) / max(1, len(vals))
     return {
-        "clearance_min": float(min(vals_m)),
+        "clearance_min": float(np.min(vals_m)),
         "clearance_mean": float(np.mean(vals_m)),
         "clearance_below_1px": below,
     }
@@ -155,6 +154,9 @@ def run_single_comparison(
     room_type = _group_by_room_type(layout_path)
     results = []
 
+    # Hoist costmap computation once per layout (not per-pair)
+    _, bin_grid = costmap_baseline(grid, robot_radius_px)
+
     for start_rc, goal_rc in pairs:
         # ── EDT 方法 ──
         t0 = time.perf_counter()
@@ -167,9 +169,8 @@ def run_single_comparison(
         t_edt = (time.perf_counter() - t0) * 1000.0
         cl_edt = path_clearance_stats(path_edt, df, resolution) if path_edt else {"clearance_min": 0, "clearance_mean": 0, "clearance_below_1px": 1.0}
 
-        # ── Costmap 方法 ──
+        # ── Costmap 方法 (costmap pre-computed once above) ──
         t0 = time.perf_counter()
-        _costmap, bin_grid = costmap_baseline(grid, robot_radius_px)
         path_cm = _astar_binary(bin_grid, start_rc, goal_rc)
         t_cm = (time.perf_counter() - t0) * 1000.0
         cl_cm = path_clearance_stats(path_cm, df, resolution) if path_cm else {"clearance_min": 0, "clearance_mean": 0, "clearance_below_1px": 1.0}
@@ -262,6 +263,10 @@ def run_synthetic_benchmark():
         rpx = 0.25 / 0.05  # robot_radius_m / resolution
         pairs = _pick_random_start_goal(grid, df, rpx, n_pairs=3)
         room_types = ["bedroom", "kitchen", "living_room"]
+
+        # Hoist costmap once per layout
+        _, bg = costmap_baseline(grid, rpx)
+
         for start_rc, goal_rc in pairs:
             t0 = time.perf_counter()
             p_edt = astar_shortest_path(grid, df, start_rc, goal_rc, robot_radius_px=rpx, safety_weight=1.0)
@@ -269,7 +274,6 @@ def run_synthetic_benchmark():
             c_edt = path_clearance_stats(p_edt, df, 0.05) if p_edt else {"clearance_min": 0, "clearance_mean": 0, "clearance_below_1px": 1.0}
 
             t0 = time.perf_counter()
-            _, bg = costmap_baseline(grid, rpx)
             p_cm = _astar_binary(bg, start_rc, goal_rc)
             t_cm = (time.perf_counter() - t0) * 1000
             c_cm = path_clearance_stats(p_cm, df, 0.05) if p_cm else {"clearance_min": 0, "clearance_mean": 0, "clearance_below_1px": 1.0}
@@ -294,16 +298,40 @@ def main():
     parser.add_argument("--n_pairs", type=int, default=5,
                         help="每布局的起终点对数")
     parser.add_argument("--output", type=str, default="benchmark/results/edt_vs_costmap_results.json")
+    parser.add_argument("--seed", type=int, default=42,
+                        help="随机种子（保证可复现）")
+    parser.add_argument("--workers", type=int, default=1,
+                        help="并行进程数（默认 1=串行，0=自动检测 CPU 核数）")
     args = parser.parse_args()
+
+    np.random.seed(args.seed)
 
     all_results: List[Dict[str, Any]] = []
 
     if args.data_dir and Path(args.data_dir).exists():
         layout_files = sorted(Path(args.data_dir).rglob("*.json"))[:args.n_layouts]
-        print(f"Found {len(layout_files)} layout files")
-        for lf in layout_files:
-            r = run_single_comparison(str(lf), n_pairs=args.n_pairs)
-            all_results.extend(r)
+        print(f"Found {len(layout_files)} layout files (seed={args.seed})")
+
+        n_workers = args.workers if args.workers > 0 else os.cpu_count() or 4
+        if n_workers > 1:
+            from concurrent.futures import ProcessPoolExecutor, as_completed
+            import itertools
+            chunk_size = max(1, len(layout_files) // n_workers)
+            with ProcessPoolExecutor(max_workers=n_workers) as executor:
+                futures = {
+                    executor.submit(run_single_comparison, str(lf), 0.25, 0.05, args.n_pairs): lf
+                    for lf in layout_files
+                }
+                for future in as_completed(futures):
+                    try:
+                        all_results.extend(future.result())
+                    except Exception as e:
+                        print(f"  Worker failed for {futures[future].name}: {e}")
+            print(f"  (Processed {len(layout_files)} layouts with {n_workers} workers)")
+        else:
+            for lf in layout_files:
+                r = run_single_comparison(str(lf), n_pairs=args.n_pairs)
+                all_results.extend(r)
     else:
         all_results = run_synthetic_benchmark()
 

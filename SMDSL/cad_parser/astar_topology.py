@@ -789,6 +789,8 @@ def astar_shortest_path(
         return None
     if distance_field[gy, gx] < robot_radius_px:
         return None
+    if (sy, sx) == (gy, gx):
+        return [(sy, sx)]
 
     g_score = np.full((H, W), np.inf, dtype=np.float32)
     g_score[sy, sx] = 0.0

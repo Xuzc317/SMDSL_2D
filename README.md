@@ -44,7 +44,10 @@
 |--------|--------|---------------------|
 | FloorplanQA | 1,981 (目标) | — |
 | 合成基准 (200 layouts × 5 pairs) | 200 | **clearance_min +31.0%** |
-| OSM 真实路网 | 0-30 (可下载) | — |
+| 合成基准 (200 layouts × 5 pairs) | 200 | **clearance_min +31.0%** |
+| OSM 真实路网 | 0-30 (需代理/VPN) | — |
+
+> **注意**: OSM 下载需要访问 `nominatim.openstreetmap.org`，在中国大陆网络环境下需要配置代理或 VPN。
 
 > 详见 [OPERATIONS_MANUAL.md](OPERATIONS_MANUAL.md) · [SMDSL_Direction1_Workflow.md](SMDSL_Direction1_Workflow.md)
 

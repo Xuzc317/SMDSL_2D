@@ -98,7 +98,13 @@ data/datasets/synthetic_benchmark/
 
 ### 3.2 下载真实路网数据
 
+> **网络要求**: OSMnx 需要访问 `nominatim.openstreetmap.org` (443端口)。
+> 在中国大陆网络环境下需要配置 HTTPS 代理或 VPN 才能正常下载。
+
 ```bash
+# 如使用代理，先设置环境变量
+$env:HTTPS_PROXY = "http://127.0.0.1:7890"
+
 # 下载指定城市路网
 python data/download_osm_networks.py \
     --city "Beijing, China" \

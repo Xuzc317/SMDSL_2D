@@ -84,7 +84,7 @@ _DEFAULT_SAMPLE_PATH = next(
 
 
 from smdsl_demo.ui_common import format_seed_label as _format_seed_label, flow_nav_md as _flow_nav_md, current_timestamp as _ts
-from smdsl_demo.ui_theme import SMDSL_THEME_CSS as _CLAUDE_DOCS_CSS, build_theme as _build_theme
+from smdsl_demo.ui_theme import SMDSL_THEME_CSS as _CLAUDE_DOCS_CSS, build_theme as _build_theme, THEME_TOGGLE_JS
 
 
 def _gather_seed_candidates(
@@ -1800,7 +1800,7 @@ def _api_key_status_md() -> str:
 
 
 def build_ui() -> gr.Blocks:
-    with gr.Blocks(title="SMDSL — 模块化调试面板") as demo:
+    with gr.Blocks(title="SMDSL — Spatial-Motion DSL") as demo:
         # gr.State 必须在 with gr.Blocks 内
         topology_state = gr.State(value=None)
         candidates_state = gr.State(value=[])
@@ -1811,10 +1811,25 @@ def build_ui() -> gr.Blocks:
         shared_traj_state = gr.State(value="")
         shared_demo3_out_state = gr.State(value="")
 
-        gr.Markdown("# SMDSL (RoboIR) — 模块化调试面板")
+        # ── Header ──
+        gr.HTML("""
+        <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:16px">
+        <div>
+        <h1 style="margin:0;font-size:28px;font-weight:700;letter-spacing:-0.02em">SMDSL</h1>
+        <p style="margin:4px 0 0 0;color:var(--text-secondary);font-size:13px">
+        Spatial-Motion DSL · 2D Path Planning & Verification
+        </p>
+        </div>
+        <div style="display:flex;gap:10px;align-items:center">
+        <span style="font-size:11px;color:var(--text-tertiary);background:var(--bg-tertiary);padding:4px 10px;border-radius:20px">
+        ⌨ D = Dark Mode
+        </span>
+        </div>
+        </div>
+        """)
+
         gr.Markdown(
-            "**端到端流程**：自然语言 + CAD →（① 环境感知 + ② 语义编译）→ "
-            "③ 物理求解 → 结构化反馈给 LLM。每个 Tab 之间通过状态自动贯通。"
+            "自然语言 + CAD → ① 环境感知 → ② 语义编译 → ③ 物理求解 → LLM 反馈闭环"
         )
 
         # ══════════════════════════════════════════════════════════════
@@ -2526,7 +2541,11 @@ def build_ui() -> gr.Blocks:
 
 def main() -> None:
     demo = build_ui()
-    demo.launch(theme=_build_theme(), css=_CLAUDE_DOCS_CSS)
+    demo.launch(
+        theme=_build_theme(),
+        css=_CLAUDE_DOCS_CSS,
+        head=THEME_TOGGLE_JS,
+    )
 
 
 if __name__ == "__main__":

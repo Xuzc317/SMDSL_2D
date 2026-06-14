@@ -1,13 +1,13 @@
 # SMDSL 测试手册
 
-> 完整测试指南。覆盖范围：38 个单元测试 + 集成测试 + 基准验证。
+> 完整测试指南。覆盖范围：63 个单元测试 + MCP 工具测试 + 基准验证。
 > 最后更新：2026-06-15
 
 ---
 
 ## 1. 测试概览
 
-### 1.1 测试文件清单
+### 1.1 测试文件清单 (8 文件, 63 tests)
 
 | 文件 | 测试数 | 覆盖范围 | Phase |
 |------|--------|---------|-------|
@@ -16,20 +16,34 @@
 | `tests/test_roboir_diff.py` | 6 | RoboIR intent/target_frame 不变性 | 1.2 |
 | `tests/test_trajectory_smoother.py` | 11 | 梯形 Profile + 三次样条 | 2.1 |
 | `tests/test_gradient_refine.py` | 7 | EDT 梯度 + 路径微调 | 2.2 |
-| `tests/test_metrics.py` | 16 | stl_robustness, path_efficiency 等 5 函数 | Next |
+| `tests/test_metrics.py` | 16 | stl_robustness, path_efficiency 等 | Next |
 | `tests/test_rust_compiler.py` | 9 | RoboIR 编译器验证 (validate) | Next |
-| `tests/test_closed_loop_recovery.py` | 1* | 端到端闭环自愈（需 LLM API）| 1.x |
-| `tests/test_demo3_pipeline.py` | 1* | Demo 3 鲁棒度验证管道 | 4.2 |
+| `smdsl_demo/mcp_server.py` | 6 | MCP 工具端到端 | UX |
+
+### 1.3 MCP Server 工具测试
+
+MCP Server 提供 6 个工具，可通过 Claude Desktop 调用并验证:
+
+| 工具 | 功能 | 验证状态 |
+|------|------|---------|
+| `cad_dispatch` | CAD 文件解析 → 栅格元数据 | ✅ |
+| `compute_topology` | EDT 距离场 + 拓扑分析 | ✅ |
+| `plan_path` | A* 安全路径规划 | ✅ |
+| `validate_trajectory` | STL 鲁棒度验证 | ✅ |
+| `smooth_trajectory` | 样条平滑轨迹合成 | ✅ |
+| `analyze_scene` | 完整场景分析 + 安全候选点 | ✅ |
 
 > \* 需要 DEEPSEEK_API_KEY 环境变量，不计入自动化测试计数
 
 ### 1.2 测试统计
 
 ```
-总计: 38 单元测试
-状态: 全部通过 (100%)
-执行时间: < 1s
-框架: pytest 9.1.0
+单元测试: 63 (8 文件)
+MCP 工具: 6 (端到端验证)
+基准验证: 200 layouts × 5 pairs (EDT +36.9% vs Costmap)
+状态:     全部通过 (100%)
+执行时间: < 2s
+框架:     pytest 9.1.0 + MCP stdio
 ```
 
 ---

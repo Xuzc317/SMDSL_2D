@@ -146,7 +146,7 @@ def run_single_comparison(
 
     # 拓扑分类获取可用起终点候选
     topology, _ = safety_aware_astar_flood(
-        grid, df, seeds=[], robot_radius_px=robot_radius_px, safety_weight=0.5,
+        grid, df, seed_points=[], robot_radius_px=robot_radius_px, safety_weight=0.5,
     )
     pairs = _pick_random_start_goal(grid, df, robot_radius_px, n_pairs)
     if not pairs:

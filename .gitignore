@@ -40,13 +40,14 @@ Thumbs.db
 .DS_Store
 Desktop.ini
 
-# Temp
+# Temp (one-shot scratch scripts in root)
 _*.py
 _*.png
 check_*.py
-download_*.py
-search_*.py
 demo_*.py
+search_*.py
+
+# NOTE: data/download_*.py and data/generate_*.py are permanent tools — NOT temp
 
 # Archive — scratch scripts inside back/ are not re-tracked
 back/scratch_scripts/

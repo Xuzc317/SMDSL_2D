@@ -38,15 +38,15 @@
 
 > 详见 [SMDSL_Direction1_Workflow.md](SMDSL_Direction1_Workflow.md) · [CHANGELOG.md](CHANGELOG.md)
 
-### FloorplanQA 基准
+### 基准数据
 
-| 指标 | 值 |
-|------|-----|
-| 布局数 | 1981 |
-| 平均规划时间 | 29.87ms |
-| 错误数 | 0 |
+| 数据集 | 布局数 | EDT vs Costmap 提升 |
+|--------|--------|---------------------|
+| FloorplanQA | 1,981 (目标) | — |
+| 合成基准 (200 layouts × 5 pairs) | 200 | **clearance_min +31.0%** |
+| OSM 真实路网 | 0-30 (可下载) | — |
 
-> 详见 [SMDSL_Direction1_Workflow.md](SMDSL_Direction1_Workflow.md)
+> 详见 [OPERATIONS_MANUAL.md](OPERATIONS_MANUAL.md) · [SMDSL_Direction1_Workflow.md](SMDSL_Direction1_Workflow.md)
 
 ---
 
@@ -108,15 +108,25 @@ D:\code/
 │   │   ├── metrics.py              #   Zone 4: FailureTaxonomy + 反馈
 │   │   ├── visualize_demo3.py      #   Plotly 3D 仪表盘
 │   │   ├── demo3_robustness.py     #   Demo 3 独立运行器
-│   │   └── rust_compiler_stub.py   #   RoboIR 编译器存根
-│   ├── tests/
-│   │   └── test_closed_loop_recovery.py  ← 闭环自愈端到端测试
-│   └── data -> ../data             ← 符号链接
-├── back/                           ← 📦 SMDSL 归档 (禁止删除，保留可追溯性)
-│   ├── legacy_root_modules/        #   旧根目录副本 (cad_parser, smdsl_demo)
-│   └── scratch_scripts/            #   一次性调试脚本
-├── factory-robot-projects/         ← 独立工程：工厂机器人路径规划参考库
-├── ros_flutter_gui_app/            ← 独立工程：ROS + Flutter GUI
+│   │   ├── trajectory_smoother.py  #   样条+梯形 Profile 轨迹合成
+│   │   ├── ui_theme.py             #   CSS + 主题
+│   │   └── ui_common.py            #   共享 UI 工具
+│   ├── tests/                      ← 38 单元测试
+│   │   ├── test_z_axis.py
+│   │   ├── test_entity_stats.py
+│   │   ├── test_roboir_diff.py
+│   │   ├── test_trajectory_smoother.py
+│   │   ├── test_gradient_refine.py
+│   │   └── test_closed_loop_recovery.py
+│   └── data -> ../data
+├── benchmark/                      ← 基准测试
+│   ├── bench_edt_vs_costmap.py
+│   └── results/
+├── data/
+│   ├── generate_synthetic_layouts.py  # 合成布局生成器
+│   ├── download_osm_networks.py       # OSM 真实路网下载
+│   └── datasets/
+├── back/                           ← SMDSL 归档
 ├── data/                           ← CAD 样本数据集 (gitignored 大文件)
 ├── out/                            ← 生成产物 (gitignored)
 ├── PROJECT_ARCHIVE.md              ← 工程演进血泪史
@@ -129,22 +139,24 @@ D:\code/
 ## 快速启动
 
 ```powershell
-# 1. 设置 API Key
+# 1. 安装依赖
+pip install -r requirements.txt
+
+# 2. 运行测试（38 tests）
+python -m pytest SMDSL/tests/ -v
+
+# 3. 生成合成基准数据
+python data/generate_synthetic_layouts.py --n_layouts 200
+
+# 4. 运行 EDT vs Costmap 基准
+python benchmark/bench_edt_vs_costmap.py --data_dir data/datasets/synthetic_benchmark --n_layouts 200 --n_pairs 5
+
+# 5. 下载 OSM 真实路网（可选，需联网）
+python data/download_osm_networks.py --preset mixed --n_networks 20
+
+# 6. 启动 Gradio 调试面板（需 API Key）
 $env:DEEPSEEK_API_KEY = "sk-..."
-$env:NO_PROXY = "localhost,127.0.0.1"
-
-# 2. 启动 Gradio UI
-cd D:\code\SMDSL
-python -m smdsl_demo.app
-
-# 3. 端到端闭环测试
-python -m pytest SMDSL/tests/test_closed_loop_recovery.py -v
-
-# 4. Demo 3 独立鲁棒度验证
-python -m smdsl_demo.demo3_robustness `
-    --layout data/cad_samples/floorplanqa/layouts/kitchen/room_24.json `
-    --d_safe 0.30 --robot_radius 0.25 --resolution 0.05 `
-    --out_dir out/demo3
+cd SMDSL && python -m smdsl_demo.app
 ```
 
 ---

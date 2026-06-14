@@ -1,0 +1,201 @@
+{
+  "config": {
+    "resolution": 0.02,
+    "robot_radius_m": 0.3,
+    "min_region_area_m2": 1.0
+  },
+  "summary": {
+    "total": 6,
+    "ok": 6,
+    "failed": 0,
+    "total_duration_s": 7.81
+  },
+  "results": [
+    {
+      "file": "example_2000.dwg",
+      "status": "ok",
+      "duration_s": 2.28,
+      "error": "",
+      "steps": {
+        "ingestion": {
+          "status": "ok",
+          "dwg_version": "AC1015",
+          "duration_s": 0.31
+        },
+        "dispatch": {
+          "status": "ok",
+          "mode": "dwg",
+          "grid_shape": [
+            843,
+            815
+          ],
+          "has_semantics": true,
+          "duration_s": 1.8,
+          "semantic_summary": {
+            "lines": 68,
+            "polylines": 11,
+            "circles": 1,
+            "arcs": 5,
+            "texts": 26,
+            "blocks": 10
+          }
+        },
+        "topology": {
+          "status": "ok",
+          "n_path_px": 338355,
+          "n_components": 1,
+          "duration_s": 0.09
+        },
+        "area_graph": {
+          "status": "ok",
+          "n_regions": 1,
+          "n_edges": 0,
+          "loading_zones": 0,
+          "duration_s": 0.03
+        },
+        "save": {
+          "bundle_npz": "D:\\code\\data\\dwg_samples\\output\\full_pipeline\\example_2000\\example_2000.npz",
+          "duration_s": 0.04
+        }
+      }
+    },
+    {
+      "file": "example_2004.dwg",
+      "status": "ok",
+      "duration_s": 2.65,
+      "error": "",
+      "steps": {
+        "ingestion": {
+          "status": "ok",
+          "dwg_version": "AC1018",
+          "duration_s": 0.33
+        },
+        "dispatch": {
+          "status": "ok",
+          "mode": "dwg",
+          "grid_shape": [
+            843,
+            815
+          ],
+          "has_semantics": true,
+          "duration_s": 2.14,
+          "semantic_summary": {
+            "lines": 68,
+            "polylines": 11,
+            "circles": 1,
+            "arcs": 5,
+            "texts": 26,
+            "blocks": 10
+          }
+        },
+        "topology": {
+          "status": "ok",
+          "n_path_px": 338355,
+          "n_components": 1,
+          "duration_s": 0.1
+        },
+        "area_graph": {
+          "status": "ok",
+          "n_regions": 1,
+          "n_edges": 0,
+          "loading_zones": 0,
+          "duration_s": 0.04
+        },
+        "save": {
+          "bundle_npz": "D:\\code\\data\\dwg_samples\\output\\full_pipeline\\example_2004\\example_2004.npz",
+          "duration_s": 0.05
+        }
+      }
+    },
+    {
+      "file": "example_2007.dwg",
+      "status": "ok",
+      "duration_s": 2.68,
+      "error": "",
+      "steps": {
+        "ingestion": {
+          "status": "ok",
+          "dwg_version": "AC1021",
+          "duration_s": 0.28
+        },
+        "dispatch": {
+          "status": "ok",
+          "mode": "dwg",
+          "grid_shape": [
+            843,
+            815
+          ],
+          "has_semantics": true,
+          "duration_s": 2.24,
+          "semantic_summary": {
+            "lines": 68,
+            "polylines": 11,
+            "circles": 1,
+            "arcs": 5,
+            "texts": 26,
+            "blocks": 10
+          }
+        },
+        "topology": {
+          "status": "ok",
+          "n_path_px": 338355,
+          "n_components": 1,
+          "duration_s": 0.08
+        },
+        "area_graph": {
+          "status": "ok",
+          "n_regions": 1,
+          "n_edges": 0,
+          "loading_zones": 0,
+          "duration_s": 0.03
+        },
+        "save": {
+          "bundle_npz": "D:\\code\\data\\dwg_samples\\output\\full_pipeline\\example_2007\\example_2007.npz",
+          "duration_s": 0.04
+        }
+      }
+    },
+    {
+      "file": "bedroom/room_0.json",
+      "status": "ok",
+      "duration_s": 0.07,
+      "error": "",
+      "steps": {
+        "area_graph": {
+          "n_regions": 1,
+          "n_edges": 0,
+          "loading_zones": 0,
+          "duration_s": 0.0
+        }
+      }
+    },
+    {
+      "file": "bedroom/room_1.json",
+      "status": "ok",
+      "duration_s": 0.04,
+      "error": "",
+      "steps": {
+        "area_graph": {
+          "n_regions": 1,
+          "n_edges": 0,
+          "loading_zones": 0,
+          "duration_s": 0.0
+        }
+      }
+    },
+    {
+      "file": "bedroom/room_10.json",
+      "status": "ok",
+      "duration_s": 0.09,
+      "error": "",
+      "steps": {
+        "area_graph": {
+          "n_regions": 1,
+          "n_edges": 0,
+          "loading_zones": 0,
+          "duration_s": 0.0
+        }
+      }
+    }
+  ]
+}

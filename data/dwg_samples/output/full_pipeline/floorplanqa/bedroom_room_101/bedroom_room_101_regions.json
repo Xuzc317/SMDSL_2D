@@ -1,0 +1,14 @@
+{
+  "n_regions": 1,
+  "regions": {
+    "region_0": {
+      "centroid_world": [
+        1.1517796365734063,
+        0.8285030285549468
+      ],
+      "area_m2": 1.39,
+      "n_neighbors": 0
+    }
+  },
+  "resolution_m_per_px": 0.02
+}

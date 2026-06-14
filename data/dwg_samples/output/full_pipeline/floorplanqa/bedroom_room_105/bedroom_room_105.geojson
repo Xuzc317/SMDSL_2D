@@ -1,0 +1,25 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          1.0152090660414226,
+          0.9421336459554512
+        ]
+      },
+      "properties": {
+        "node_id": "region_0",
+        "area_m2": 1.02,
+        "n_neighbors": 0,
+        "is_loading_zone": false
+      }
+    }
+  ],
+  "metadata": {
+    "n_nodes": 1,
+    "n_edges": 0
+  }
+}

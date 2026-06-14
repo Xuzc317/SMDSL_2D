@@ -1,0 +1,25 @@
+# SMDSL (RoboIR) - Embodied Intelligence Spatial-Motion DSL
+# All Python dependencies
+# =============================================================================
+
+# Core (Zone 1-4)
+gradio>=5.0.0
+numpy>=1.24.0
+scipy>=1.10.0
+scikit-image>=0.20.0
+matplotlib>=3.7.0
+plotly>=5.15.0
+opencv-python-headless>=4.8.0
+openai>=1.30.0
+pytest>=7.4.0
+Pillow>=9.0.0
+
+# CAD/DWG processing (cad2osm, dispatcher)
+PyYAML>=6.0
+ezdxf>=0.16.0
+svgwrite>=1.4.0
+svgpathtools>=1.4.0
+cairosvg>=2.5.0
+
+# cad2osm GUI
+PyQt5>=5.15.0

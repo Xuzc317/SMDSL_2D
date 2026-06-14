@@ -1,0 +1,80 @@
+{
+  "metadata": {
+    "timestamp": "2025-06-06T22:22:40.694715",
+    "input_file": "/home/jay/AGSeg_ws/AGSeg/area_graph_segment/input/residential_building_1.png",
+    "filename": "residential_building_1.png",
+    "base_name": "residential_building_1",
+    "building_type": "apartment",
+    "alpha_value": 2400,
+    "processing_mode": "multi_alpha_test"
+  },
+  "image_info": {
+    "width": 4000,
+    "height": 2106,
+    "dimensions": "4000x2106"
+  },
+  "algorithm_parameters": {
+    "resolution": 0.04,
+    "door_width": 3.8191835884530847,
+    "corridor_width": 4.419183588453085,
+    "noise_percent": 1.5,
+    "simplify_tolerance": 1.0,
+    "spike_angle": 15.0,
+    "spike_distance": 0.25,
+    "min_room_area": 8.0,
+    "clean_input": 0,
+    "remove_furniture": 1,
+    "png_width": 4000,
+    "png_height": 2106
+  },
+  "command_line": {
+    "full_command": "./build/bin/area_graph_segmentation /home/jay/AGSeg_ws/AGSeg/area_graph_segment/output/residential_building_1/alpha_2400/residential_building_1.png --resolution 0.04 --door-width 3.8191835884530847 --corridor-width 4.419183588453085 --noise-percent 1.5 --simplify-tolerance 1.0 --spike-angle 15.0 --spike-distance 0.25 --min-room-area 8.0 --clean-input 0 --remove-furniture 1 --png-width 4000 --png-height 2106",
+    "arguments": [
+      "/home/jay/AGSeg_ws/AGSeg/area_graph_segment/output/residential_building_1/alpha_2400/residential_building_1.png",
+      "--resolution",
+      "0.04",
+      "--door-width",
+      "3.8191835884530847",
+      "--corridor-width",
+      "4.419183588453085",
+      "--noise-percent",
+      "1.5",
+      "--simplify-tolerance",
+      "1.0",
+      "--spike-angle",
+      "15.0",
+      "--spike-distance",
+      "0.25",
+      "--min-room-area",
+      "8.0",
+      "--clean-input",
+      "0",
+      "--remove-furniture",
+      "1",
+      "--png-width",
+      "4000",
+      "--png-height",
+      "2106"
+    ]
+  },
+  "building_type_config": {
+    "resolution": 0.04,
+    "door_width": 0.9,
+    "corridor_width": 1.2,
+    "noise_percent": 1.5,
+    "simplify_tolerance": 1.0,
+    "spike_angle": 15.0,
+    "spike_distance": 0.25,
+    "min_room_area": 8.0
+  },
+  "output_directory": "/home/jay/AGSeg_ws/AGSeg/area_graph_segment/output/residential_building_1/alpha_2400",
+  "derived_info": {
+    "alpha_calculation": {
+      "formula": "alpha = ceil((min(door_width, corridor_width) + offset)^2 * 0.25 / resolution^2)",
+      "calculated_from_alpha": true,
+      "target_alpha": 2400,
+      "min_width": 3.8191835884530847,
+      "a_value": 3.919183588453085
+    }
+  }
+}

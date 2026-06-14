@@ -1,0 +1,113 @@
+{
+  "total": 8,
+  "passed": 8,
+  "failed": 0,
+  "tested_layouts": [
+    "bedroom/room_0.json",
+    "bedroom/room_1.json",
+    "hssd/room_0.json",
+    "hssd/room_1.json",
+    "kitchen/room_0.json",
+    "kitchen/room_1.json",
+    "living_room/room_0.json",
+    "living_room/room_1.json"
+  ],
+  "per_layout": [
+    {
+      "label": "bedroom/room_0.json",
+      "n_regions": 1,
+      "n_edges": 1,
+      "topo_stats": {
+        "n_components": 1,
+        "largest_component_frac": 1.0,
+        "n_path_px": 3516,
+        "n_inflated_px": 7071,
+        "n_obstacle_px": 29313
+      }
+    },
+    {
+      "label": "bedroom/room_1.json",
+      "n_regions": 1,
+      "n_edges": 1,
+      "topo_stats": {
+        "n_components": 1,
+        "largest_component_frac": 1.0,
+        "n_path_px": 588,
+        "n_inflated_px": 9169,
+        "n_obstacle_px": 35243
+      }
+    },
+    {
+      "label": "hssd/room_0.json",
+      "n_regions": 4,
+      "n_edges": 1,
+      "topo_stats": {
+        "n_components": 4,
+        "largest_component_frac": 0.5460858585858586,
+        "n_path_px": 7920,
+        "n_inflated_px": 29459,
+        "n_obstacle_px": 102775
+      }
+    },
+    {
+      "label": "hssd/room_1.json",
+      "n_regions": 0,
+      "n_edges": 0,
+      "topo_stats": {
+        "n_components": 0,
+        "largest_component_frac": 0.0,
+        "n_path_px": 0,
+        "n_inflated_px": 1124,
+        "n_obstacle_px": 55933
+      }
+    },
+    {
+      "label": "kitchen/room_0.json",
+      "n_regions": 1,
+      "n_edges": 1,
+      "topo_stats": {
+        "n_components": 1,
+        "largest_component_frac": 1.0,
+        "n_path_px": 5036,
+        "n_inflated_px": 4773,
+        "n_obstacle_px": 23441
+      }
+    },
+    {
+      "label": "kitchen/room_1.json",
+      "n_regions": 1,
+      "n_edges": 1,
+      "topo_stats": {
+        "n_components": 1,
+        "largest_component_frac": 1.0,
+        "n_path_px": 4888,
+        "n_inflated_px": 4834,
+        "n_obstacle_px": 23278
+      }
+    },
+    {
+      "label": "living_room/room_0.json",
+      "n_regions": 3,
+      "n_edges": 1,
+      "topo_stats": {
+        "n_components": 3,
+        "largest_component_frac": 0.9716988695582458,
+        "n_path_px": 12473,
+        "n_inflated_px": 16845,
+        "n_obstacle_px": 52282
+      }
+    },
+    {
+      "label": "living_room/room_1.json",
+      "n_regions": 1,
+      "n_edges": 1,
+      "topo_stats": {
+        "n_components": 1,
+        "largest_component_frac": 1.0,
+        "n_path_px": 14900,
+        "n_inflated_px": 18403,
+        "n_obstacle_px": 53907
+      }
+    }
+  ]
+}

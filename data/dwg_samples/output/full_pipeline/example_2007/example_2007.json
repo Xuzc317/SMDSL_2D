@@ -1,0 +1,18 @@
+{
+  "grid_transform": {
+    "origin": [
+      -4.088145449163752,
+      -4.064577269769421
+    ],
+    "resolution": 0.02,
+    "shape": [
+      843,
+      815
+    ]
+  },
+  "robot_radius_m": 0.3,
+  "robot_radius_px": 15.0,
+  "layout_id": "example_2007",
+  "room_type": "dwg_industrial",
+  "field_npz": "example_2007.npz"
+}

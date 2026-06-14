@@ -1,0 +1,27 @@
+# Python
+__pycache__/
+*.py[cod]
+
+# Data & output (junctions — not in git)
+data/
+out/
+
+# IDE
+.vscode/
+.idea/
+.claude/
+
+# OS
+Thumbs.db
+.DS_Store
+Desktop.ini
+
+# Temp scripts
+_*.py
+check_*.py
+demo_*.py
+download_*.py
+search_*.py
+# large exports
+smdsl_demo/conversation_exports/transcript_*.jsonl
+*.docx

@@ -1,0 +1,55 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+dist/
+build/
+.eggs/
+
+# Virtual environments
+venv/
+.venv/
+env/
+
+# IDE
+.vscode/
+.idea/
+.claude/
+
+# Output
+out/
+*.log
+
+# Data (large files)
+data/_archive/
+data/benchmarks/
+data/cad_samples/
+data/footwear_manufacturing_warehouse/
+data/autodesk_fdu_tutorials/
+data/datasets/_mendeley_dl_tmp/
+data/datasets/*.zip
+*.npy
+*.npz
+
+# Secrets
+.env
+*.key
+
+# OS
+Thumbs.db
+.DS_Store
+Desktop.ini
+
+# Temp
+_*.py
+_*.png
+check_*.py
+download_*.py
+search_*.py
+demo_*.py
+
+# Archive — scratch scripts inside back/ are not re-tracked
+back/scratch_scripts/
+
+# Claude Code session artifacts
+C:\Users*.txt

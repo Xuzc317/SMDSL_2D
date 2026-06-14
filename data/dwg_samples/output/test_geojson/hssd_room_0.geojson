@@ -1,0 +1,94 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -18.657735260115608,
+          1.5653173410404624
+        ]
+      },
+      "properties": {
+        "node_id": "region_0",
+        "area_m2": 1.73,
+        "n_neighbors": 1,
+        "is_loading_zone": false
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -17.03828876797513,
+          0.2968307423241354
+        ]
+      },
+      "properties": {
+        "node_id": "region_1",
+        "area_m2": 1.03,
+        "n_neighbors": 0,
+        "is_loading_zone": false
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -14.533788177339902,
+          0.4487807881773398
+        ]
+      },
+      "properties": {
+        "node_id": "region_2",
+        "area_m2": 0.41,
+        "n_neighbors": 0,
+        "is_loading_zone": false
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -13.451857142857143,
+          1.006357142857143
+        ]
+      },
+      "properties": {
+        "node_id": "region_3",
+        "area_m2": 0.0,
+        "n_neighbors": 0,
+        "is_loading_zone": false
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -18.657735260115608,
+            1.5653173410404624
+          ],
+          [
+            0,
+            0
+          ]
+        ]
+      },
+      "properties": {
+        "source": "region_0",
+        "target": "loading_zone_A",
+        "cost_m": 0.0
+      }
+    }
+  ],
+  "metadata": {
+    "n_nodes": 4,
+    "n_edges": 1
+  }
+}

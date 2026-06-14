@@ -1,0 +1,1 @@
+"data/dwg_samples/output/hotel-ground-floor-plan.json" filter=lfs diff=lfs merge=lfs -text

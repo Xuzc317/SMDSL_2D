@@ -1,0 +1,152 @@
+{
+  "batch_metadata": {
+    "dwgread_available": true,
+    "dwgread_path": "C:\\Users\\admin\\AppData\\Local\\LibreDWG\\bin\\dwgread.exe",
+    "elapsed_s": 40.5,
+    "total_files": 20,
+    "successful": 19,
+    "pending": 0,
+    "failed": 1
+  },
+  "per_file": [
+    {
+      "filename": "example_2000.dwg",
+      "status": "ok",
+      "dwg_version": "AC1015",
+      "is_r2004": false,
+      "json_size_kb": 2384
+    },
+    {
+      "filename": "example_2004.dwg",
+      "status": "ok",
+      "dwg_version": "AC1018",
+      "is_r2004": true,
+      "json_size_kb": 1978
+    },
+    {
+      "filename": "example_2007.dwg",
+      "status": "ok",
+      "dwg_version": "AC1021",
+      "is_r2004": false,
+      "json_size_kb": 2409
+    },
+    {
+      "filename": "example_2010.dwg",
+      "status": "ok",
+      "dwg_version": "AC1024",
+      "is_r2004": false,
+      "json_size_kb": 2279
+    },
+    {
+      "filename": "example_2013.dwg",
+      "status": "ok",
+      "dwg_version": "AC1027",
+      "is_r2004": false,
+      "json_size_kb": 1436
+    },
+    {
+      "filename": "example_2018.dwg",
+      "status": "ok",
+      "dwg_version": "AC1032",
+      "is_r2004": false,
+      "json_size_kb": 1422
+    },
+    {
+      "filename": "example_r13.dwg",
+      "status": "ok",
+      "dwg_version": "AC1012",
+      "is_r2004": false,
+      "json_size_kb": 4976
+    },
+    {
+      "filename": "example_r14.dwg",
+      "status": "ok",
+      "dwg_version": "AC1014",
+      "is_r2004": false,
+      "json_size_kb": 2001
+    },
+    {
+      "filename": "sample_2000.dwg",
+      "status": "ok",
+      "dwg_version": "AC1015",
+      "is_r2004": false,
+      "json_size_kb": 95
+    },
+    {
+      "filename": "sample_2018.dwg",
+      "status": "ok",
+      "dwg_version": "AC1032",
+      "is_r2004": false,
+      "json_size_kb": 250
+    },
+    {
+      "filename": "apartment-building-plan.dwg",
+      "status": "ok",
+      "dwg_version": "AC1021",
+      "is_r2004": false,
+      "json_size_kb": 5799
+    },
+    {
+      "filename": "apartment_1.dwg",
+      "status": "ok",
+      "dwg_version": "AC1021",
+      "is_r2004": false,
+      "json_size_kb": 23549
+    },
+    {
+      "filename": "fish_processing_plant.dwg",
+      "status": "error",
+      "dwg_version": "AC1021",
+      "message": "dwgread 输出非合法 JSON：Expecting value: line 12255351 column 9 (char 320317982)"
+    },
+    {
+      "filename": "gym-scheme-1.dwg",
+      "status": "ok",
+      "dwg_version": "AC1021",
+      "is_r2004": false,
+      "json_size_kb": 33960
+    },
+    {
+      "filename": "historical_museum.dwg",
+      "status": "ok",
+      "dwg_version": "AC1021",
+      "is_r2004": false,
+      "json_size_kb": 5522
+    },
+    {
+      "filename": "hotel-ground-floor-plan.dwg",
+      "status": "ok",
+      "dwg_version": "AC1021",
+      "is_r2004": false,
+      "json_size_kb": 157540
+    },
+    {
+      "filename": "hotel-second-floor.dwg",
+      "status": "ok",
+      "dwg_version": "AC1021",
+      "is_r2004": false,
+      "json_size_kb": 49695
+    },
+    {
+      "filename": "kindergarten-1.dwg",
+      "status": "ok",
+      "dwg_version": "AC1015",
+      "is_r2004": false,
+      "json_size_kb": 12348
+    },
+    {
+      "filename": "office.dwg",
+      "status": "ok",
+      "dwg_version": "AC1021",
+      "is_r2004": false,
+      "json_size_kb": 17533
+    },
+    {
+      "filename": "school_universita-pianta-02.dwg",
+      "status": "ok",
+      "dwg_version": "AC1024",
+      "is_r2004": false,
+      "json_size_kb": 5587
+    }
+  ]
+}

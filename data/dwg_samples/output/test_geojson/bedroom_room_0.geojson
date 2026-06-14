@@ -1,0 +1,46 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.0748805460750854,
+          1.460221843003413
+        ]
+      },
+      "properties": {
+        "node_id": "region_0",
+        "area_m2": 1.41,
+        "n_neighbors": 1,
+        "is_loading_zone": false
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            2.0748805460750854,
+            1.460221843003413
+          ],
+          [
+            0,
+            0
+          ]
+        ]
+      },
+      "properties": {
+        "source": "region_0",
+        "target": "loading_zone_A",
+        "cost_m": 0.0
+      }
+    }
+  ],
+  "metadata": {
+    "n_nodes": 1,
+    "n_edges": 1
+  }
+}

@@ -1,0 +1,80 @@
+{
+  "metadata": {
+    "timestamp": "2025-06-06T21:43:39.812181",
+    "input_file": "/home/jay/AGSeg_ws/AGSeg/area_graph_segment/input/Universita-pianta-02.png",
+    "filename": "Universita-pianta-02.png",
+    "base_name": "Universita-pianta-02",
+    "building_type": "school",
+    "alpha_value": 3600,
+    "processing_mode": "multi_alpha_test"
+  },
+  "image_info": {
+    "width": 3999,
+    "height": 3155,
+    "dimensions": "3999x3155"
+  },
+  "algorithm_parameters": {
+    "resolution": 0.045,
+    "door_width": 5.300000000000001,
+    "corridor_width": 5.9,
+    "noise_percent": 1.0,
+    "simplify_tolerance": 1.5,
+    "spike_angle": 10.0,
+    "spike_distance": 0.15,
+    "min_room_area": 20.0,
+    "clean_input": 0,
+    "remove_furniture": 1,
+    "png_width": 3999,
+    "png_height": 3155
+  },
+  "command_line": {
+    "full_command": "./build/bin/area_graph_segmentation /home/jay/AGSeg_ws/AGSeg/area_graph_segment/output/Universita-pianta-02/alpha_3600/Universita-pianta-02.png --resolution 0.045 --door-width 5.300000000000001 --corridor-width 5.9 --noise-percent 1.0 --simplify-tolerance 1.5 --spike-angle 10.0 --spike-distance 0.15 --min-room-area 20.0 --clean-input 0 --remove-furniture 1 --png-width 3999 --png-height 3155",
+    "arguments": [
+      "/home/jay/AGSeg_ws/AGSeg/area_graph_segment/output/Universita-pianta-02/alpha_3600/Universita-pianta-02.png",
+      "--resolution",
+      "0.045",
+      "--door-width",
+      "5.300000000000001",
+      "--corridor-width",
+      "5.9",
+      "--noise-percent",
+      "1.0",
+      "--simplify-tolerance",
+      "1.5",
+      "--spike-angle",
+      "10.0",
+      "--spike-distance",
+      "0.15",
+      "--min-room-area",
+      "20.0",
+      "--clean-input",
+      "0",
+      "--remove-furniture",
+      "1",
+      "--png-width",
+      "3999",
+      "--png-height",
+      "3155"
+    ]
+  },
+  "building_type_config": {
+    "resolution": 0.045,
+    "door_width": 1.2,
+    "corridor_width": 2.5,
+    "noise_percent": 1.0,
+    "simplify_tolerance": 1.5,
+    "spike_angle": 10.0,
+    "spike_distance": 0.15,
+    "min_room_area": 20.0
+  },
+  "output_directory": "/home/jay/AGSeg_ws/AGSeg/area_graph_segment/output/Universita-pianta-02/alpha_3600",
+  "derived_info": {
+    "alpha_calculation": {
+      "formula": "alpha = ceil((min(door_width, corridor_width) + offset)^2 * 0.25 / resolution^2)",
+      "calculated_from_alpha": true,
+      "target_alpha": 3600,
+      "min_width": 5.300000000000001,
+      "a_value": 5.4
+    }
+  }
+}

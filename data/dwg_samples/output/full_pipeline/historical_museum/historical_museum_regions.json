@@ -1,0 +1,702 @@
+{
+  "n_regions": 87,
+  "regions": {
+    "region_0": {
+      "centroid_world": [
+        23.917904922174774,
+        13.59008295339859
+      ],
+      "area_m2": 818.7,
+      "n_neighbors": 0
+    },
+    "region_1": {
+      "centroid_world": [
+        91.75701478546526,
+        11.811579979750423
+      ],
+      "area_m2": 280.69,
+      "n_neighbors": 0
+    },
+    "region_2": {
+      "centroid_world": [
+        65.92103969424575,
+        4.520783371655155
+      ],
+      "area_m2": 10.1,
+      "n_neighbors": 0
+    },
+    "region_3": {
+      "centroid_world": [
+        103.50347312314398,
+        11.909522122607711
+      ],
+      "area_m2": 0.73,
+      "n_neighbors": 0
+    },
+    "region_4": {
+      "centroid_world": [
+        77.54774583171377,
+        20.810367247483015
+      ],
+      "area_m2": 284.8,
+      "n_neighbors": 0
+    },
+    "region_5": {
+      "centroid_world": [
+        58.8838211650891,
+        12.078632942300537
+      ],
+      "area_m2": 1.32,
+      "n_neighbors": 0
+    },
+    "region_6": {
+      "centroid_world": [
+        39.05066398786875,
+        13.879565747004843
+      ],
+      "area_m2": 6.91,
+      "n_neighbors": 0
+    },
+    "region_7": {
+      "centroid_world": [
+        46.5013128434034,
+        15.770699167923429
+      ],
+      "area_m2": 15.6,
+      "n_neighbors": 0
+    },
+    "region_8": {
+      "centroid_world": [
+        52.655540912056146,
+        13.785061028919447
+      ],
+      "area_m2": 5.61,
+      "n_neighbors": 0
+    },
+    "region_9": {
+      "centroid_world": [
+        109.36796800793589,
+        15.22546511466999
+      ],
+      "area_m2": 2.11,
+      "n_neighbors": 0
+    },
+    "region_10": {
+      "centroid_world": [
+        57.871308130463724,
+        16.67449327724934
+      ],
+      "area_m2": 16.53,
+      "n_neighbors": 0
+    },
+    "region_11": {
+      "centroid_world": [
+        40.33842425307017,
+        23.249782430739277
+      ],
+      "area_m2": 45.49,
+      "n_neighbors": 0
+    },
+    "region_12": {
+      "centroid_world": [
+        52.057382181036246,
+        31.391364382377457
+      ],
+      "area_m2": 82.34,
+      "n_neighbors": 0
+    },
+    "region_13": {
+      "centroid_world": [
+        27.52806589379144,
+        27.24638585428099
+      ],
+      "area_m2": 32.25,
+      "n_neighbors": 0
+    },
+    "region_14": {
+      "centroid_world": [
+        59.461400952043185,
+        24.082101924273655
+      ],
+      "area_m2": 1.06,
+      "n_neighbors": 0
+    },
+    "region_15": {
+      "centroid_world": [
+        71.94798499729943,
+        24.39644920111554
+      ],
+      "area_m2": 0.16,
+      "n_neighbors": 0
+    },
+    "region_16": {
+      "centroid_world": [
+        121.882749566882,
+        27.198514388344453
+      ],
+      "area_m2": 2.33,
+      "n_neighbors": 0
+    },
+    "region_17": {
+      "centroid_world": [
+        33.48232395295535,
+        27.5805239723482
+      ],
+      "area_m2": 1.13,
+      "n_neighbors": 0
+    },
+    "region_18": {
+      "centroid_world": [
+        44.534512007038735,
+        26.752311834314586
+      ],
+      "area_m2": 0.16,
+      "n_neighbors": 0
+    },
+    "region_19": {
+      "centroid_world": [
+        96.77756116034391,
+        27.173896827618336
+      ],
+      "area_m2": 4.64,
+      "n_neighbors": 0
+    },
+    "region_20": {
+      "centroid_world": [
+        102.63623680758258,
+        27.276280839503386
+      ],
+      "area_m2": 3.24,
+      "n_neighbors": 0
+    },
+    "region_21": {
+      "centroid_world": [
+        107.19735823087913,
+        27.27485279430986
+      ],
+      "area_m2": 2.05,
+      "n_neighbors": 0
+    },
+    "region_22": {
+      "centroid_world": [
+        116.7471310683417,
+        27.215339780907534
+      ],
+      "area_m2": 4.05,
+      "n_neighbors": 0
+    },
+    "region_23": {
+      "centroid_world": [
+        40.78248113591306,
+        28.778667042217062
+      ],
+      "area_m2": 1.52,
+      "n_neighbors": 0
+    },
+    "region_24": {
+      "centroid_world": [
+        68.10693080577201,
+        29.06705919665715
+      ],
+      "area_m2": 1.99,
+      "n_neighbors": 0
+    },
+    "region_25": {
+      "centroid_world": [
+        75.7328786628166,
+        29.017200790933025
+      ],
+      "area_m2": 2.01,
+      "n_neighbors": 0
+    },
+    "region_26": {
+      "centroid_world": [
+        102.2730739299067,
+        30.158570363368543
+      ],
+      "area_m2": 0.05,
+      "n_neighbors": 0
+    },
+    "region_27": {
+      "centroid_world": [
+        121.54509306464776,
+        30.17982626682598
+      ],
+      "area_m2": 0.08,
+      "n_neighbors": 0
+    },
+    "region_28": {
+      "centroid_world": [
+        108.50813894408763,
+        30.17982626682598
+      ],
+      "area_m2": 0.02,
+      "n_neighbors": 0
+    },
+    "region_29": {
+      "centroid_world": [
+        110.63372928983112,
+        30.17982626682598
+      ],
+      "area_m2": 0.01,
+      "n_neighbors": 0
+    },
+    "region_30": {
+      "centroid_world": [
+        111.90908349727722,
+        30.17982626682598
+      ],
+      "area_m2": 0.01,
+      "n_neighbors": 0
+    },
+    "region_31": {
+      "centroid_world": [
+        114.07010034878311,
+        30.17982626682598
+      ],
+      "area_m2": 0.02,
+      "n_neighbors": 0
+    },
+    "region_32": {
+      "centroid_world": [
+        98.0573197441821,
+        30.250679278350763
+      ],
+      "area_m2": 0.01,
+      "n_neighbors": 0
+    },
+    "region_33": {
+      "centroid_world": [
+        101.52911730889647,
+        30.250679278350763
+      ],
+      "area_m2": 0.02,
+      "n_neighbors": 0
+    },
+    "region_34": {
+      "centroid_world": [
+        107.55162328850305,
+        30.250679278350763
+      ],
+      "area_m2": 0.02,
+      "n_neighbors": 0
+    },
+    "region_35": {
+      "centroid_world": [
+        116.58538225791293,
+        30.250679278350763
+      ],
+      "area_m2": 0.02,
+      "n_neighbors": 0
+    },
+    "region_36": {
+      "centroid_world": [
+        125.6091998727448,
+        34.44569250848096
+      ],
+      "area_m2": 29.84,
+      "n_neighbors": 0
+    },
+    "region_37": {
+      "centroid_world": [
+        82.23499776788155,
+        34.547416635531114
+      ],
+      "area_m2": 9.18,
+      "n_neighbors": 0
+    },
+    "region_38": {
+      "centroid_world": [
+        86.97554671901936,
+        34.38633594466003
+      ],
+      "area_m2": 5.5,
+      "n_neighbors": 0
+    },
+    "region_39": {
+      "centroid_world": [
+        95.15234627166598,
+        33.43906479696601
+      ],
+      "area_m2": 1.39,
+      "n_neighbors": 0
+    },
+    "region_40": {
+      "centroid_world": [
+        98.12817275570687,
+        34.3247274410258
+      ],
+      "area_m2": 0.48,
+      "n_neighbors": 0
+    },
+    "region_41": {
+      "centroid_world": [
+        105.34381607742309,
+        34.33443102794298
+      ],
+      "area_m2": 31.71,
+      "n_neighbors": 0
+    },
+    "region_42": {
+      "centroid_world": [
+        117.44496955509177,
+        34.367571933400875
+      ],
+      "area_m2": 7.91,
+      "n_neighbors": 0
+    },
+    "region_43": {
+      "centroid_world": [
+        28.515088932607263,
+        33.4744913027284
+      ],
+      "area_m2": 4.26,
+      "n_neighbors": 0
+    },
+    "region_44": {
+      "centroid_world": [
+        37.690501493139074,
+        33.47657110252402
+      ],
+      "area_m2": 10.18,
+      "n_neighbors": 0
+    },
+    "region_45": {
+      "centroid_world": [
+        23.87794578360368,
+        34.289300935263405
+      ],
+      "area_m2": 0.19,
+      "n_neighbors": 0
+    },
+    "region_46": {
+      "centroid_world": [
+        113.7512617969216,
+        34.71441900441211
+      ],
+      "area_m2": 0.01,
+      "n_neighbors": 1
+    },
+    "region_47": {
+      "centroid_world": [
+        113.64498227963442,
+        34.89155153322407
+      ],
+      "area_m2": 0.01,
+      "n_neighbors": 2
+    },
+    "region_48": {
+      "centroid_world": [
+        113.20486379813588,
+        35.67636034105939
+      ],
+      "area_m2": 0.56,
+      "n_neighbors": 1
+    },
+    "region_49": {
+      "centroid_world": [
+        15.904359959500903,
+        35.81264068304625
+      ],
+      "area_m2": 0.64,
+      "n_neighbors": 0
+    },
+    "region_50": {
+      "centroid_world": [
+        91.2200041320405,
+        36.4503177867693
+      ],
+      "area_m2": 0.04,
+      "n_neighbors": 0
+    },
+    "region_51": {
+      "centroid_world": [
+        91.30435295528429,
+        38.59109092069668
+      ],
+      "area_m2": 0.11,
+      "n_neighbors": 0
+    },
+    "region_52": {
+      "centroid_world": [
+        108.7858233992979,
+        40.400887705198436
+      ],
+      "area_m2": 44.59,
+      "n_neighbors": 0
+    },
+    "region_53": {
+      "centroid_world": [
+        132.16749347868486,
+        40.40953150760137
+      ],
+      "area_m2": 13.26,
+      "n_neighbors": 0
+    },
+    "region_54": {
+      "centroid_world": [
+        21.60927967460173,
+        40.187841160338955
+      ],
+      "area_m2": 39.5,
+      "n_neighbors": 0
+    },
+    "region_55": {
+      "centroid_world": [
+        33.61650576239166,
+        40.04367689086444
+      ],
+      "area_m2": 3.84,
+      "n_neighbors": 0
+    },
+    "region_56": {
+      "centroid_world": [
+        39.0551036971085,
+        40.25713001314003
+      ],
+      "area_m2": 8.62,
+      "n_neighbors": 0
+    },
+    "region_57": {
+      "centroid_world": [
+        52.81047761587482,
+        39.95694428761026
+      ],
+      "area_m2": 30.36,
+      "n_neighbors": 0
+    },
+    "region_58": {
+      "centroid_world": [
+        72.24290345292307,
+        39.951276307718345
+      ],
+      "area_m2": 33.32,
+      "n_neighbors": 0
+    },
+    "region_59": {
+      "centroid_world": [
+        120.77943586550002,
+        40.44679744275102
+      ],
+      "area_m2": 15.68,
+      "n_neighbors": 0
+    },
+    "region_60": {
+      "centroid_world": [
+        42.933676777900665,
+        39.92211535148368
+      ],
+      "area_m2": 0.18,
+      "n_neighbors": 0
+    },
+    "region_61": {
+      "centroid_world": [
+        83.73978626783332,
+        40.75051036970928
+      ],
+      "area_m2": 3.4,
+      "n_neighbors": 0
+    },
+    "region_62": {
+      "centroid_world": [
+        61.328990767761034,
+        61.394693451223965
+      ],
+      "area_m2": 4.41,
+      "n_neighbors": 0
+    },
+    "region_63": {
+      "centroid_world": [
+        40.691979469663124,
+        64.7401200567705
+      ],
+      "area_m2": 114.08,
+      "n_neighbors": 0
+    },
+    "region_64": {
+      "centroid_world": [
+        55.02069081013284,
+        62.186578295270735
+      ],
+      "area_m2": 13.96,
+      "n_neighbors": 0
+    },
+    "region_65": {
+      "centroid_world": [
+        65.42950793701937,
+        60.43406218790845
+      ],
+      "area_m2": 0.14,
+      "n_neighbors": 0
+    },
+    "region_66": {
+      "centroid_world": [
+        71.77085246848748,
+        60.43406218790845
+      ],
+      "area_m2": 0.02,
+      "n_neighbors": 0
+    },
+    "region_67": {
+      "centroid_world": [
+        73.29419221627032,
+        60.43406218790845
+      ],
+      "area_m2": 0.03,
+      "n_neighbors": 0
+    },
+    "region_68": {
+      "centroid_world": [
+        79.49383072468886,
+        60.43406218790845
+      ],
+      "area_m2": 0.11,
+      "n_neighbors": 0
+    },
+    "region_69": {
+      "centroid_world": [
+        83.35531985278955,
+        60.43406218790845
+      ],
+      "area_m2": 0.08,
+      "n_neighbors": 0
+    },
+    "region_70": {
+      "centroid_world": [
+        89.73209089002005,
+        60.43406218790845
+      ],
+      "area_m2": 0.13,
+      "n_neighbors": 0
+    },
+    "region_71": {
+      "centroid_world": [
+        98.12505723321429,
+        61.86599652578805
+      ],
+      "area_m2": 14.16,
+      "n_neighbors": 0
+    },
+    "region_72": {
+      "centroid_world": [
+        116.44193394769472,
+        62.97567199203108
+      ],
+      "area_m2": 1.84,
+      "n_neighbors": 0
+    },
+    "region_73": {
+      "centroid_world": [
+        106.34712209258174,
+        62.77575421880253
+      ],
+      "area_m2": 1.0,
+      "n_neighbors": 0
+    },
+    "region_74": {
+      "centroid_world": [
+        110.5436322504848,
+        62.979522231576595
+      ],
+      "area_m2": 0.81,
+      "n_neighbors": 0
+    },
+    "region_75": {
+      "centroid_world": [
+        65.64206697159372,
+        62.98477060280065
+      ],
+      "area_m2": 0.11,
+      "n_neighbors": 0
+    },
+    "region_76": {
+      "centroid_world": [
+        79.7418162650256,
+        62.98477060280065
+      ],
+      "area_m2": 0.04,
+      "n_neighbors": 0
+    },
+    "region_77": {
+      "centroid_world": [
+        84.52439454294847,
+        62.98477060280065
+      ],
+      "area_m2": 0.2,
+      "n_neighbors": 0
+    },
+    "region_78": {
+      "centroid_world": [
+        89.76751739578243,
+        62.98477060280065
+      ],
+      "area_m2": 0.09,
+      "n_neighbors": 0
+    },
+    "region_79": {
+      "centroid_world": [
+        131.0808898102211,
+        63.79441230954791
+      ],
+      "area_m2": 2.37,
+      "n_neighbors": 0
+    },
+    "region_80": {
+      "centroid_world": [
+        120.61862607713869,
+        63.80690753918405
+      ],
+      "area_m2": 2.65,
+      "n_neighbors": 0
+    },
+    "region_81": {
+      "centroid_world": [
+        125.86154941689811,
+        63.87838613590914
+      ],
+      "area_m2": 1.72,
+      "n_neighbors": 0
+    },
+    "region_82": {
+      "centroid_world": [
+        135.51339137617182,
+        63.8573813763164
+      ],
+      "area_m2": 0.76,
+      "n_neighbors": 0
+    },
+    "region_83": {
+      "centroid_world": [
+        68.12321501827287,
+        66.8016231415428
+      ],
+      "area_m2": 4.4,
+      "n_neighbors": 0
+    },
+    "region_84": {
+      "centroid_world": [
+        16.772109327835977,
+        67.18323939199385
+      ],
+      "area_m2": 5.2,
+      "n_neighbors": 0
+    },
+    "region_85": {
+      "centroid_world": [
+        28.999868944056008,
+        68.15386845315123
+      ],
+      "area_m2": 9.98,
+      "n_neighbors": 0
+    },
+    "region_86": {
+      "centroid_world": [
+        59.69127152861358,
+        69.09238594874714
+      ],
+      "area_m2": 3.32,
+      "n_neighbors": 0
+    }
+  },
+  "resolution_m_per_px": 0.07085301152478332
+}

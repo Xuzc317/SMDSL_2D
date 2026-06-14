@@ -1,0 +1,80 @@
+{
+  "metadata": {
+    "timestamp": "2025-06-06T21:30:25.940382",
+    "input_file": "/home/jay/AGSeg_ws/AGSeg/area_graph_segment/input/office.png",
+    "filename": "office.png",
+    "base_name": "office",
+    "building_type": "office",
+    "alpha_value": 2800,
+    "processing_mode": "multi_alpha_test"
+  },
+  "image_info": {
+    "width": 4000,
+    "height": 2042,
+    "dimensions": "4000x2042"
+  },
+  "algorithm_parameters": {
+    "resolution": 0.035,
+    "door_width": 3.604051835490427,
+    "corridor_width": 4.204051835490427,
+    "noise_percent": 1.2,
+    "simplify_tolerance": 1.2,
+    "spike_angle": 12.0,
+    "spike_distance": 0.2,
+    "min_room_area": 12.0,
+    "clean_input": 0,
+    "remove_furniture": 1,
+    "png_width": 4000,
+    "png_height": 2042
+  },
+  "command_line": {
+    "full_command": "./build/bin/area_graph_segmentation /home/jay/AGSeg_ws/AGSeg/area_graph_segment/output/office/alpha_2800/office.png --resolution 0.035 --door-width 3.604051835490427 --corridor-width 4.204051835490427 --noise-percent 1.2 --simplify-tolerance 1.2 --spike-angle 12.0 --spike-distance 0.2 --min-room-area 12.0 --clean-input 0 --remove-furniture 1 --png-width 4000 --png-height 2042",
+    "arguments": [
+      "/home/jay/AGSeg_ws/AGSeg/area_graph_segment/output/office/alpha_2800/office.png",
+      "--resolution",
+      "0.035",
+      "--door-width",
+      "3.604051835490427",
+      "--corridor-width",
+      "4.204051835490427",
+      "--noise-percent",
+      "1.2",
+      "--simplify-tolerance",
+      "1.2",
+      "--spike-angle",
+      "12.0",
+      "--spike-distance",
+      "0.2",
+      "--min-room-area",
+      "12.0",
+      "--clean-input",
+      "0",
+      "--remove-furniture",
+      "1",
+      "--png-width",
+      "4000",
+      "--png-height",
+      "2042"
+    ]
+  },
+  "building_type_config": {
+    "resolution": 0.035,
+    "door_width": 1.0,
+    "corridor_width": 1.5,
+    "noise_percent": 1.2,
+    "simplify_tolerance": 1.2,
+    "spike_angle": 12.0,
+    "spike_distance": 0.2,
+    "min_room_area": 12.0
+  },
+  "output_directory": "/home/jay/AGSeg_ws/AGSeg/area_graph_segment/output/office/alpha_2800",
+  "derived_info": {
+    "alpha_calculation": {
+      "formula": "alpha = ceil((min(door_width, corridor_width) + offset)^2 * 0.25 / resolution^2)",
+      "calculated_from_alpha": true,
+      "target_alpha": 2800,
+      "min_width": 3.604051835490427,
+      "a_value": 3.7040518354904273
+    }
+  }
+}

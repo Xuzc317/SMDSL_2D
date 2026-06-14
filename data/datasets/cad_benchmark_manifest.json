@@ -1,0 +1,17 @@
+{
+  "datasets": {
+    "osmAG_from_cad": {
+      "path": "data\\osmAG-from-cad",
+      "dwg_count": 32,
+      "source": "https://github.com/jiajiezhang7/osmAG-from-cad.git"
+    },
+    "footwear_manufacturing_warehouse": {
+      "path": "data\\footwear_manufacturing_warehouse",
+      "source": "https://data.mendeley.com/datasets/pf2w725pw3/1"
+    },
+    "autodesk_factory_design": {
+      "path": "data\\dwg_samples\\autodesk_official",
+      "fdu_tutorials": "data\\autodesk_fdu_tutorials"
+    }
+  }
+}

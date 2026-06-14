@@ -1,0 +1,3741 @@
+{
+  "created_by": "LibreDWG ",
+  "FILEHEADER": {
+    "version": "AC1015",
+    "maint_rel_version": 15,
+    "zero_one_or_three": 1,
+    "thumbnail_address": 220,
+    "dwg_version": 25,
+    "maint_version": 0,
+    "codepage": 30,
+    "sections": 6
+  },
+  "HEADER": {
+    "unit1_ratio": 412148564080.0,
+    "unit2_ratio": 1.0,
+    "unit3_ratio": 1.0,
+    "unit4_ratio": 1.0,
+    "unit1_name": "m",
+    "unit2_name": "",
+    "unit3_name": "",
+    "unit4_name": "",
+    "unknown_8": 0,
+    "unknown_9": 0,
+    "VX_TABLE_RECORD": [
+      5,
+      0,
+      0,
+      0
+    ],
+    "DIMASO": 1,
+    "DIMSHO": 1,
+    "PLINEGEN": 0,
+    "ORTHOMODE": 0,
+    "REGENMODE": 1,
+    "FILLMODE": 1,
+    "QTEXTMODE": 0,
+    "PSLTSCALE": 1,
+    "LIMCHECK": 0,
+    "USRTIMER": 1,
+    "SKPOLY": 0,
+    "ANGDIR": 0,
+    "SPLFRAME": 0,
+    "MIRRTEXT": 0,
+    "WORLDVIEW": 1,
+    "TILEMODE": 1,
+    "PLIMCHECK": 0,
+    "VISRETAIN": 1,
+    "DISPSILH": 0,
+    "PELLIPSE": 0,
+    "PROXYGRAPHICS": 1,
+    "TREEDEPTH": 3020,
+    "LUNITS": 2,
+    "LUPREC": 4,
+    "AUNITS": 0,
+    "AUPREC": 0,
+    "ATTMODE": 1,
+    "PDMODE": 0,
+    "USERI1": 0,
+    "USERI2": 0,
+    "USERI3": 0,
+    "USERI4": 0,
+    "USERI5": 0,
+    "SPLINESEGS": 8,
+    "SURFU": 6,
+    "SURFV": 6,
+    "SURFTYPE": 6,
+    "SURFTAB1": 6,
+    "SURFTAB2": 6,
+    "SPLINETYPE": 6,
+    "SHADEDGE": 3,
+    "SHADEDIF": 70,
+    "UNITMODE": 0,
+    "MAXACTVP": 64,
+    "ISOLINES": 4,
+    "CMLJUST": 0,
+    "TEXTQLTY": 50,
+    "LTSCALE": 1.0,
+    "TEXTSIZE": 2.5,
+    "TRACEWID": 1.0,
+    "SKETCHINC": 1.0,
+    "FILLETRAD": 0.0,
+    "THICKNESS": 0.0,
+    "ANGBASE": 0.0,
+    "PDSIZE": 0.0,
+    "PLINEWID": 0.0,
+    "USERR1": 0.0,
+    "USERR2": 0.0,
+    "USERR3": 0.0,
+    "USERR4": 0.0,
+    "USERR5": 0.0,
+    "CHAMFERA": 0.0,
+    "CHAMFERB": 0.0,
+    "CHAMFERC": 0.0,
+    "CHAMFERD": 0.0,
+    "FACETRES": 0.5,
+    "CMLSCALE": 20.0,
+    "CELTSCALE": 1.0,
+    "MENU": ".",
+    "TDUCREATE": [
+      2454593,
+      72939562
+    ],
+    "TDUUPDATE": [
+      2454593,
+      73055421
+    ],
+    "TDINDWG": [
+      0,
+      115859
+    ],
+    "TDUSRTIMER": [
+      0,
+      115859
+    ],
+    "CECOLOR": 256,
+    "HANDSEED": [
+      0,
+      1,
+      158,
+      158
+    ],
+    "CLAYER": [
+      5,
+      1,
+      16,
+      16
+    ],
+    "TEXTSTYLE": [
+      5,
+      1,
+      17,
+      17
+    ],
+    "CELTYPE": [
+      5,
+      1,
+      21,
+      21
+    ],
+    "DIMSTYLE": [
+      5,
+      1,
+      39,
+      39
+    ],
+    "CMLSTYLE": [
+      5,
+      1,
+      24,
+      24
+    ],
+    "PSVPSCALE": 0.0,
+    "PINSBASE": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "PEXTMIN": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "PEXTMAX": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "PLIMMIN": [
+      0.0,
+      0.0
+    ],
+    "PLIMMAX": [
+      12.0,
+      9.0
+    ],
+    "PELEVATION": 0.0,
+    "PUCSORG": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "PUCSXDIR": [
+      1.0,
+      0.0,
+      0.0
+    ],
+    "PUCSYDIR": [
+      0.0,
+      1.0,
+      0.0
+    ],
+    "PUCSNAME": [
+      5,
+      0,
+      0,
+      0
+    ],
+    "PUCSORTHOREF": [
+      5,
+      0,
+      0,
+      0
+    ],
+    "PUCSORTHOVIEW": 0,
+    "PUCSBASE": [
+      5,
+      0,
+      0,
+      0
+    ],
+    "PUCSORGTOP": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "PUCSORGBOTTOM": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "PUCSORGLEFT": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "PUCSORGRIGHT": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "PUCSORGFRONT": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "PUCSORGBACK": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "INSBASE": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "EXTMIN": [
+      -50.32104400256765,
+      -85.32133424668729,
+      -0.00152582070036
+    ],
+    "EXTMAX": [
+      219.70916822518825,
+      194.70231685659655,
+      3.49246e-08
+    ],
+    "LIMMIN": [
+      0.0,
+      0.0
+    ],
+    "LIMMAX": [
+      420.0,
+      297.0
+    ],
+    "ELEVATION": 0.0,
+    "UCSORG": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "UCSXDIR": [
+      1.0,
+      0.0,
+      0.0
+    ],
+    "UCSYDIR": [
+      0.0,
+      1.0,
+      0.0
+    ],
+    "UCSNAME": [
+      5,
+      0,
+      0,
+      0
+    ],
+    "UCSORTHOREF": [
+      5,
+      0,
+      0,
+      0
+    ],
+    "UCSORTHOVIEW": 0,
+    "UCSBASE": [
+      5,
+      0,
+      0,
+      0
+    ],
+    "UCSORGTOP": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "UCSORGBOTTOM": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "UCSORGLEFT": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "UCSORGRIGHT": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "UCSORGFRONT": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "UCSORGBACK": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "DIMPOST": "",
+    "DIMAPOST": "",
+    "DIMSCALE": 1.0,
+    "DIMASZ": 2.5,
+    "DIMEXO": 0.625,
+    "DIMDLI": 3.75,
+    "DIMEXE": 1.25,
+    "DIMRND": 0.0,
+    "DIMDLE": 0.0,
+    "DIMTP": 0.0,
+    "DIMTM": 0.0,
+    "DIMTOL": 0,
+    "DIMLIM": 0,
+    "DIMTIH": 0,
+    "DIMTOH": 0,
+    "DIMSE1": 0,
+    "DIMSE2": 0,
+    "DIMTAD": 1,
+    "DIMZIN": 8,
+    "DIMAZIN": 0,
+    "DIMTXT": 2.5,
+    "DIMCEN": 2.5,
+    "DIMTSZ": 0.0,
+    "DIMALTF": 0.03937007874016,
+    "DIMLFAC": 1.0,
+    "DIMTVP": 0.0,
+    "DIMTFAC": 1.0,
+    "DIMGAP": 0.625,
+    "DIMALTRND": 0.0,
+    "DIMALT": 0,
+    "DIMALTD": 3,
+    "DIMTOFL": 1,
+    "DIMSAH": 0,
+    "DIMTIX": 0,
+    "DIMSOXD": 0,
+    "DIMCLRD": 0,
+    "DIMCLRE": 0,
+    "DIMCLRT": 0,
+    "DIMADEC": 0,
+    "DIMDEC": 2,
+    "DIMTDEC": 2,
+    "DIMALTU": 2,
+    "DIMALTTD": 3,
+    "DIMAUNIT": 0,
+    "DIMFRAC": 0,
+    "DIMLUNIT": 2,
+    "DIMDSEP": 44,
+    "DIMTMOVE": 0,
+    "DIMJUST": 0,
+    "DIMSD1": 0,
+    "DIMSD2": 0,
+    "DIMTOLJ": 0,
+    "DIMTZIN": 8,
+    "DIMALTZ": 0,
+    "DIMALTTZ": 0,
+    "DIMUPT": 0,
+    "DIMATFIT": 3,
+    "DIMTXSTY": [
+      5,
+      1,
+      17,
+      17
+    ],
+    "DIMLDRBLK": [
+      5,
+      0,
+      0,
+      0
+    ],
+    "DIMBLK": [
+      5,
+      0,
+      0,
+      0
+    ],
+    "DIMBLK1": [
+      5,
+      0,
+      0,
+      0
+    ],
+    "DIMBLK2": [
+      5,
+      0,
+      0,
+      0
+    ],
+    "DIMLWD": -2,
+    "DIMLWE": -2,
+    "BLOCK_CONTROL_OBJECT": [
+      3,
+      1,
+      1,
+      1
+    ],
+    "LAYER_CONTROL_OBJECT": [
+      3,
+      1,
+      2,
+      2
+    ],
+    "STYLE_CONTROL_OBJECT": [
+      3,
+      1,
+      3,
+      3
+    ],
+    "LTYPE_CONTROL_OBJECT": [
+      3,
+      1,
+      5,
+      5
+    ],
+    "VIEW_CONTROL_OBJECT": [
+      3,
+      1,
+      6,
+      6
+    ],
+    "UCS_CONTROL_OBJECT": [
+      3,
+      1,
+      7,
+      7
+    ],
+    "VPORT_CONTROL_OBJECT": [
+      3,
+      1,
+      8,
+      8
+    ],
+    "APPID_CONTROL_OBJECT": [
+      3,
+      1,
+      9,
+      9
+    ],
+    "DIMSTYLE_CONTROL_OBJECT": [
+      3,
+      1,
+      10,
+      10
+    ],
+    "VX_CONTROL_OBJECT": [
+      3,
+      1,
+      126,
+      126
+    ],
+    "DICTIONARY_ACAD_GROUP": [
+      5,
+      1,
+      13,
+      13
+    ],
+    "DICTIONARY_ACAD_MLINESTYLE": [
+      5,
+      1,
+      23,
+      23
+    ],
+    "DICTIONARY_NAMED_OBJECT": [
+      3,
+      1,
+      12,
+      12
+    ],
+    "TSTACKALIGN": 1,
+    "TSTACKSIZE": 70,
+    "HYPERLINKBASE": "",
+    "STYLESHEET": "",
+    "DICTIONARY_LAYOUT": [
+      5,
+      1,
+      26,
+      26
+    ],
+    "DICTIONARY_PLOTSETTINGS": [
+      5,
+      1,
+      25,
+      25
+    ],
+    "DICTIONARY_PLOTSTYLENAME": [
+      5,
+      1,
+      14,
+      14
+    ],
+    "FLAGS": 10781,
+    "INSUNITS": 4,
+    "CEPSNTYPE": 0,
+    "FINGERPRINTGUID": "{FDEAD578-A652-11D2-9A35-0060089B3A3F}",
+    "VERSIONGUID": "{A6BF05D3-02A0-4EB8-9AEE-9443625E66B6}",
+    "BLOCK_RECORD_PSPACE": [
+      5,
+      1,
+      80,
+      80
+    ],
+    "BLOCK_RECORD_MSPACE": [
+      5,
+      1,
+      31,
+      31
+    ],
+    "LTYPE_BYLAYER": [
+      5,
+      1,
+      21,
+      21
+    ],
+    "LTYPE_BYBLOCK": [
+      5,
+      1,
+      20,
+      20
+    ],
+    "LTYPE_CONTINUOUS": [
+      5,
+      1,
+      22,
+      22
+    ],
+    "unknown_54": 12836,
+    "unknown_55": 44447,
+    "unknown_56": 25579,
+    "unknown_57": 20388
+  },
+  "CLASSES": [
+    {
+      "number": 500,
+      "dxfname": "ACDBDICTIONARYWDFLT",
+      "cppname": "AcDbDictionaryWithDefault",
+      "appname": "ObjectDBX Classes",
+      "proxyflag": 0,
+      "num_instances": 0,
+      "is_zombie": 0,
+      "item_class_id": 499
+    },
+    {
+      "number": 501,
+      "dxfname": "ACDBPLACEHOLDER",
+      "cppname": "AcDbPlaceHolder",
+      "appname": "ObjectDBX Classes",
+      "proxyflag": 0,
+      "num_instances": 0,
+      "is_zombie": 0,
+      "item_class_id": 499
+    },
+    {
+      "number": 502,
+      "dxfname": "LAYOUT",
+      "cppname": "AcDbLayout",
+      "appname": "ObjectDBX Classes",
+      "proxyflag": 0,
+      "num_instances": 0,
+      "is_zombie": 0,
+      "item_class_id": 499
+    },
+    {
+      "number": 503,
+      "dxfname": "DICTIONARYVAR",
+      "cppname": "AcDbDictionaryVar",
+      "appname": "ObjectDBX Classes",
+      "proxyflag": 0,
+      "num_instances": 0,
+      "is_zombie": 0,
+      "item_class_id": 499
+    }
+  ],
+  "OBJECTS": [
+    {
+      "object": "BLOCK_CONTROL",
+      "index": 0,
+      "type": 48,
+      "handle": [
+        0,
+        1,
+        1
+      ],
+      "size": 18,
+      "bitsize": 72,
+      "ownerhandle": [
+        4,
+        0,
+        0,
+        0
+      ],
+      "entries": [
+        [
+          2,
+          1,
+          85,
+          85
+        ],
+        [
+          2,
+          0,
+          0,
+          0
+        ]
+      ],
+      "model_space": [
+        3,
+        1,
+        31,
+        31
+      ],
+      "paper_space": [
+        3,
+        1,
+        80,
+        80
+      ]
+    },
+    {
+      "object": "LAYER_CONTROL",
+      "index": 1,
+      "type": 50,
+      "handle": [
+        0,
+        1,
+        2
+      ],
+      "size": 15,
+      "bitsize": 72,
+      "ownerhandle": [
+        4,
+        0,
+        0,
+        0
+      ],
+      "entries": [
+        [
+          2,
+          1,
+          16,
+          16
+        ],
+        [
+          2,
+          1,
+          129,
+          129
+        ]
+      ]
+    },
+    {
+      "object": "STYLE_CONTROL",
+      "index": 2,
+      "type": 52,
+      "handle": [
+        0,
+        1,
+        3
+      ],
+      "size": 13,
+      "bitsize": 72,
+      "ownerhandle": [
+        4,
+        0,
+        0,
+        0
+      ],
+      "entries": [
+        [
+          2,
+          1,
+          17,
+          17
+        ]
+      ]
+    },
+    {
+      "object": "LTYPE_CONTROL",
+      "index": 3,
+      "type": 56,
+      "handle": [
+        0,
+        1,
+        5
+      ],
+      "size": 17,
+      "bitsize": 72,
+      "ownerhandle": [
+        4,
+        0,
+        0,
+        0
+      ],
+      "entries": [
+        [
+          2,
+          1,
+          22,
+          22
+        ]
+      ],
+      "byblock": [
+        3,
+        1,
+        20,
+        20
+      ],
+      "bylayer": [
+        3,
+        1,
+        21,
+        21
+      ]
+    },
+    {
+      "object": "VIEW_CONTROL",
+      "index": 4,
+      "type": 60,
+      "handle": [
+        0,
+        1,
+        6
+      ],
+      "size": 10,
+      "bitsize": 64,
+      "ownerhandle": [
+        4,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "object": "UCS_CONTROL",
+      "index": 5,
+      "type": 62,
+      "handle": [
+        0,
+        1,
+        7
+      ],
+      "size": 10,
+      "bitsize": 64,
+      "ownerhandle": [
+        4,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "object": "VPORT_CONTROL",
+      "index": 6,
+      "type": 64,
+      "handle": [
+        0,
+        1,
+        8
+      ],
+      "size": 14,
+      "bitsize": 72,
+      "ownerhandle": [
+        4,
+        0,
+        0,
+        0
+      ],
+      "entries": [
+        [
+          2,
+          0,
+          0,
+          0
+        ],
+        [
+          2,
+          1,
+          147,
+          147
+        ]
+      ]
+    },
+    {
+      "object": "APPID_CONTROL",
+      "index": 7,
+      "type": 66,
+      "handle": [
+        0,
+        1,
+        9
+      ],
+      "size": 13,
+      "bitsize": 72,
+      "ownerhandle": [
+        4,
+        0,
+        0,
+        0
+      ],
+      "entries": [
+        [
+          2,
+          1,
+          18,
+          18
+        ]
+      ]
+    },
+    {
+      "object": "DIMSTYLE_CONTROL",
+      "index": 8,
+      "type": 68,
+      "handle": [
+        0,
+        1,
+        10
+      ],
+      "size": 16,
+      "bitsize": 80,
+      "ownerhandle": [
+        4,
+        0,
+        0,
+        0
+      ],
+      "_subclass": "AcDbDimStyleTable",
+      "entries": [
+        [
+          2,
+          1,
+          39,
+          39
+        ],
+        [
+          2,
+          1,
+          130,
+          130
+        ]
+      ]
+    },
+    {
+      "object": "DICTIONARY",
+      "index": 9,
+      "type": 42,
+      "handle": [
+        0,
+        1,
+        12
+      ],
+      "size": 182,
+      "bitsize": 1292,
+      "ownerhandle": [
+        4,
+        0,
+        0,
+        0
+      ],
+      "numitems": 9,
+      "cloning": 1,
+      "is_hardowner": 0,
+      "items": {
+        "ACAD_COLOR": [
+          2,
+          1,
+          107,
+          107
+        ],
+        "ACAD_GROUP": [
+          2,
+          1,
+          13,
+          13
+        ],
+        "ACAD_LAYOUT": [
+          2,
+          1,
+          26,
+          26
+        ],
+        "ACAD_MATERIAL": [
+          2,
+          1,
+          106,
+          106
+        ],
+        "ACAD_MLINESTYLE": [
+          2,
+          1,
+          23,
+          23
+        ],
+        "ACAD_PLOTSETTINGS": [
+          2,
+          1,
+          25,
+          25
+        ],
+        "ACAD_PLOTSTYLENAME": [
+          2,
+          1,
+          14,
+          14
+        ],
+        "ACDBHEADERROUNDTRIPXREC": [
+          2,
+          1,
+          148,
+          148
+        ],
+        "AcDbVariableDictionary": [
+          2,
+          1,
+          94,
+          94
+        ]
+      }
+    },
+    {
+      "object": "DICTIONARY",
+      "index": 10,
+      "type": 42,
+      "handle": [
+        0,
+        1,
+        13
+      ],
+      "size": 16,
+      "bitsize": 90,
+      "ownerhandle": [
+        8,
+        0,
+        0,
+        12
+      ],
+      "reactors": [
+        [
+          4,
+          1,
+          12,
+          12
+        ]
+      ],
+      "numitems": 0,
+      "cloning": 1,
+      "is_hardowner": 0,
+      "items": {}
+    },
+    {
+      "object": "DICTIONARYWDFLT",
+      "dxfname": "ACDBDICTIONARYWDFLT",
+      "index": 11,
+      "type": 500,
+      "handle": [
+        0,
+        1,
+        14
+      ],
+      "size": 30,
+      "bitsize": 164,
+      "ownerhandle": [
+        12,
+        1,
+        2,
+        12
+      ],
+      "reactors": [
+        [
+          4,
+          1,
+          12,
+          12
+        ]
+      ],
+      "numitems": 1,
+      "cloning": 1,
+      "is_hardowner": 0,
+      "items": {
+        "Normal": [
+          2,
+          1,
+          15,
+          15
+        ]
+      },
+      "_subclass": "AcDbDictionaryWithDefault",
+      "defaultid": [
+        5,
+        1,
+        15,
+        15
+      ]
+    },
+    {
+      "object": "PLACEHOLDER",
+      "dxfname": "ACDBPLACEHOLDER",
+      "index": 12,
+      "type": 501,
+      "handle": [
+        0,
+        1,
+        15
+      ],
+      "size": 14,
+      "bitsize": 78,
+      "ownerhandle": [
+        8,
+        0,
+        0,
+        14
+      ],
+      "reactors": [
+        [
+          4,
+          1,
+          14,
+          14
+        ]
+      ]
+    },
+    {
+      "object": "LAYER",
+      "index": 13,
+      "type": 51,
+      "handle": [
+        0,
+        1,
+        16
+      ],
+      "size": 22,
+      "bitsize": 112,
+      "ownerhandle": [
+        4,
+        1,
+        2,
+        2
+      ],
+      "name": "0",
+      "is_xref_ref": 1,
+      "is_xref_resolved": 0,
+      "is_xref_dep": 0,
+      "xref": [
+        5,
+        0,
+        0,
+        0
+      ],
+      "flag0": 1008,
+      "linewt": 31,
+      "color": 7,
+      "plotstyle": [
+        5,
+        1,
+        15,
+        15
+      ],
+      "ltype": [
+        5,
+        1,
+        22,
+        22
+      ]
+    },
+    {
+      "object": "STYLE",
+      "index": 14,
+      "type": 53,
+      "handle": [
+        0,
+        1,
+        17
+      ],
+      "size": 37,
+      "bitsize": 258,
+      "ownerhandle": [
+        4,
+        1,
+        3,
+        3
+      ],
+      "name": "Standard",
+      "is_xref_ref": 1,
+      "is_xref_resolved": 0,
+      "is_xref_dep": 0,
+      "xref": [
+        5,
+        0,
+        0,
+        0
+      ],
+      "is_shape": 0,
+      "is_vertical": 0,
+      "text_size": 0.0,
+      "width_factor": 1.0,
+      "oblique_angle": 0.0,
+      "generation": 0,
+      "last_height": 2.5,
+      "font_file": "txt",
+      "bigfont_file": ""
+    },
+    {
+      "object": "APPID",
+      "index": 15,
+      "type": 67,
+      "handle": [
+        0,
+        1,
+        18
+      ],
+      "size": 19,
+      "bitsize": 116,
+      "ownerhandle": [
+        4,
+        1,
+        9,
+        9
+      ],
+      "name": "ACAD",
+      "is_xref_ref": 1,
+      "is_xref_resolved": 0,
+      "is_xref_dep": 0,
+      "xref": [
+        5,
+        0,
+        0,
+        0
+      ],
+      "unknown": 0
+    },
+    {
+      "object": "LTYPE",
+      "index": 16,
+      "type": 57,
+      "handle": [
+        0,
+        1,
+        20
+      ],
+      "size": 279,
+      "bitsize": 2200,
+      "ownerhandle": [
+        4,
+        1,
+        5,
+        5
+      ],
+      "name": "ByBlock",
+      "is_xref_ref": 1,
+      "is_xref_resolved": 0,
+      "is_xref_dep": 0,
+      "xref": [
+        5,
+        0,
+        0,
+        0
+      ],
+      "description": "",
+      "pattern_len": 0.0,
+      "alignment": 65,
+      "numdashes": 0,
+      "strings_area": "00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+    },
+    {
+      "object": "LTYPE",
+      "index": 17,
+      "type": 57,
+      "handle": [
+        0,
+        1,
+        21
+      ],
+      "size": 279,
+      "bitsize": 2200,
+      "ownerhandle": [
+        4,
+        1,
+        5,
+        5
+      ],
+      "name": "ByLayer",
+      "is_xref_ref": 1,
+      "is_xref_resolved": 0,
+      "is_xref_dep": 0,
+      "xref": [
+        5,
+        0,
+        0,
+        0
+      ],
+      "description": "",
+      "pattern_len": 0.0,
+      "alignment": 65,
+      "numdashes": 0,
+      "strings_area": "00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+    },
+    {
+      "object": "LTYPE",
+      "index": 18,
+      "type": 57,
+      "handle": [
+        0,
+        1,
+        22
+      ],
+      "size": 293,
+      "bitsize": 2312,
+      "ownerhandle": [
+        4,
+        1,
+        5,
+        5
+      ],
+      "name": "Continuous",
+      "is_xref_ref": 1,
+      "is_xref_resolved": 0,
+      "is_xref_dep": 0,
+      "xref": [
+        5,
+        0,
+        0,
+        0
+      ],
+      "description": "Solid line",
+      "pattern_len": 0.0,
+      "alignment": 65,
+      "numdashes": 0,
+      "strings_area": "00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+    },
+    {
+      "object": "DICTIONARY",
+      "index": 19,
+      "type": 42,
+      "handle": [
+        0,
+        1,
+        23
+      ],
+      "size": 29,
+      "bitsize": 172,
+      "ownerhandle": [
+        12,
+        1,
+        11,
+        12
+      ],
+      "reactors": [
+        [
+          4,
+          1,
+          12,
+          12
+        ]
+      ],
+      "numitems": 1,
+      "cloning": 1,
+      "is_hardowner": 0,
+      "items": {
+        "Standard": [
+          2,
+          1,
+          24,
+          24
+        ]
+      }
+    },
+    {
+      "object": "MLINESTYLE",
+      "index": 20,
+      "type": 73,
+      "handle": [
+        0,
+        1,
+        24
+      ],
+      "size": 62,
+      "bitsize": 462,
+      "ownerhandle": [
+        8,
+        0,
+        0,
+        23
+      ],
+      "reactors": [
+        [
+          4,
+          1,
+          23,
+          23
+        ]
+      ],
+      "_subclass": "AcDbMlineStyle",
+      "name": "STANDARD",
+      "description": "",
+      "flag": 0,
+      "fill_color": 256,
+      "start_angle": 1.5707963267949,
+      "end_angle": 1.5707963267949,
+      "lines": [
+        {
+          "offset": 0.5,
+          "color": 256,
+          "lt.index": 32767
+        },
+        {
+          "offset": -0.5,
+          "color": 256,
+          "lt.index": 32767
+        }
+      ]
+    },
+    {
+      "object": "DICTIONARY",
+      "index": 21,
+      "type": 42,
+      "handle": [
+        0,
+        1,
+        25
+      ],
+      "size": 17,
+      "bitsize": 90,
+      "ownerhandle": [
+        4,
+        1,
+        12,
+        12
+      ],
+      "reactors": [
+        [
+          4,
+          1,
+          12,
+          12
+        ]
+      ],
+      "numitems": 0,
+      "cloning": 1,
+      "is_hardowner": 0,
+      "items": {}
+    },
+    {
+      "object": "DICTIONARY",
+      "index": 22,
+      "type": 42,
+      "handle": [
+        0,
+        1,
+        26
+      ],
+      "size": 46,
+      "bitsize": 280,
+      "ownerhandle": [
+        4,
+        1,
+        12,
+        12
+      ],
+      "reactors": [
+        [
+          4,
+          1,
+          12,
+          12
+        ]
+      ],
+      "numitems": 3,
+      "cloning": 1,
+      "is_hardowner": 0,
+      "items": {
+        "Layout1": [
+          2,
+          1,
+          81,
+          81
+        ],
+        "Layout2": [
+          2,
+          1,
+          86,
+          86
+        ],
+        "Model": [
+          2,
+          1,
+          34,
+          34
+        ]
+      }
+    },
+    {
+      "object": "BLOCK_HEADER",
+      "index": 23,
+      "type": 49,
+      "handle": [
+        0,
+        1,
+        31
+      ],
+      "size": 39,
+      "bitsize": 197,
+      "ownerhandle": [
+        4,
+        1,
+        1,
+        1
+      ],
+      "name": "*Model_Space",
+      "is_xref_ref": 1,
+      "is_xref_resolved": 0,
+      "is_xref_dep": 0,
+      "xref": [
+        5,
+        0,
+        0,
+        0
+      ],
+      "anonymous": 0,
+      "hasattrs": 0,
+      "blkisxref": 0,
+      "xrefoverlaid": 0,
+      "xref_loaded": 0,
+      "base_pt": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "xref_pname": "",
+      "description": "",
+      "preview": "",
+      "block_entity": [
+        3,
+        1,
+        32,
+        32
+      ],
+      "first_entity": [
+        4,
+        1,
+        141,
+        141
+      ],
+      "last_entity": [
+        4,
+        1,
+        146,
+        146
+      ],
+      "endblk_entity": [
+        3,
+        1,
+        33,
+        33
+      ],
+      "layout": [
+        5,
+        1,
+        34,
+        34
+      ]
+    },
+    {
+      "entity": "BLOCK",
+      "index": 24,
+      "type": 4,
+      "handle": [
+        0,
+        1,
+        32
+      ],
+      "size": 29,
+      "bitsize": 190,
+      "_subclass": "AcDbBlockBegin",
+      "prev_entity": [
+        4,
+        0,
+        0,
+        0
+      ],
+      "next_entity": [
+        4,
+        0,
+        0,
+        0
+      ],
+      "layer": [
+        5,
+        1,
+        16,
+        16
+      ],
+      "preview_exists": 0,
+      "entmode": 2,
+      "nolinks": 0,
+      "color": 256,
+      "ltype_scale": 1.0,
+      "ltype_flags": 0,
+      "plotstyle_flags": 0,
+      "invisible": 0,
+      "linewt": 29,
+      "name": "*Model_Space"
+    },
+    {
+      "entity": "ENDBLK",
+      "index": 25,
+      "type": 5,
+      "handle": [
+        0,
+        1,
+        33
+      ],
+      "size": 16,
+      "bitsize": 84,
+      "_subclass": "AcDbBlockEnd",
+      "prev_entity": [
+        4,
+        0,
+        0,
+        0
+      ],
+      "next_entity": [
+        4,
+        0,
+        0,
+        0
+      ],
+      "layer": [
+        5,
+        1,
+        16,
+        16
+      ],
+      "preview_exists": 0,
+      "entmode": 2,
+      "nolinks": 0,
+      "color": 256,
+      "ltype_scale": 1.0,
+      "ltype_flags": 0,
+      "plotstyle_flags": 0,
+      "invisible": 0,
+      "linewt": 29
+    },
+    {
+      "object": "LAYOUT",
+      "index": 26,
+      "type": 502,
+      "handle": [
+        0,
+        1,
+        34
+      ],
+      "size": 181,
+      "bitsize": 1354,
+      "ownerhandle": [
+        12,
+        1,
+        8,
+        26
+      ],
+      "reactors": [
+        [
+          4,
+          1,
+          26,
+          26
+        ]
+      ],
+      "xdicobjhandle": [
+        3,
+        1,
+        151,
+        151
+      ],
+      "_subclass": "AcDbLayout",
+      "plotsettings.printer_cfg_file": "",
+      "plotsettings.paper_size": "none_device",
+      "plotsettings.plot_flags": 11952,
+      "plotsettings.left_margin": 6.34999990463257,
+      "plotsettings.bottom_margin": 19.04999923706055,
+      "plotsettings.right_margin": 6.35000610351562,
+      "plotsettings.top_margin": 19.04998779296875,
+      "plotsettings.paper_width": 215.89999389648438,
+      "plotsettings.paper_height": 279.3999938964844,
+      "plotsettings.canonical_media_name": "ANSI_A_(8.50_x_11.00_Inches)",
+      "plotsettings.plot_origin": [
+        0.0,
+        0.0
+      ],
+      "plotsettings.plot_paper_unit": 0,
+      "plotsettings.plot_rotation_mode": 1,
+      "plotsettings.plot_type": 0,
+      "plotsettings.plot_window_ll": [
+        0.0,
+        0.0
+      ],
+      "plotsettings.plot_window_ur": [
+        0.0,
+        0.0
+      ],
+      "plotsettings.plotview_name": "",
+      "plotsettings.paper_units": 1.0,
+      "plotsettings.drawing_units": 78.436453180766,
+      "plotsettings.stylesheet": "",
+      "plotsettings.std_scale_type": 0,
+      "plotsettings.std_scale_factor": 0.0127491741333,
+      "plotsettings.paper_image_origin": [
+        0.0,
+        0.0
+      ],
+      "layout_name": "Model",
+      "tab_order": 0,
+      "layout_flags": 1,
+      "INSBASE": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "LIMMIN": [
+        0.0,
+        0.0
+      ],
+      "LIMMAX": [
+        12.0,
+        9.0
+      ],
+      "UCSORG": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "UCSXDIR": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "UCSYDIR": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "ucs_elevation": 0.0,
+      "UCSORTHOVIEW": 0,
+      "EXTMIN": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "EXTMAX": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "block_header": [
+        4,
+        1,
+        31,
+        31
+      ],
+      "active_viewport": [
+        4,
+        0,
+        0,
+        0
+      ],
+      "base_ucs": [
+        5,
+        0,
+        0,
+        0
+      ],
+      "named_ucs": [
+        5,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "object": "DIMSTYLE",
+      "index": 27,
+      "type": 69,
+      "handle": [
+        0,
+        1,
+        39
+      ],
+      "size": 118,
+      "bitsize": 861,
+      "ownerhandle": [
+        4,
+        1,
+        10,
+        10
+      ],
+      "name": "ISO-25",
+      "is_xref_ref": 1,
+      "is_xref_resolved": 0,
+      "is_xref_dep": 0,
+      "xref": [
+        5,
+        0,
+        0,
+        0
+      ],
+      "DIMPOST": "",
+      "DIMAPOST": "",
+      "DIMSCALE": 1.0,
+      "DIMASZ": 2.5,
+      "DIMEXO": 0.625,
+      "DIMDLI": 3.75,
+      "DIMEXE": 1.25,
+      "DIMRND": 0.0,
+      "DIMDLE": 0.0,
+      "DIMTP": 0.0,
+      "DIMTM": 0.0,
+      "DIMTOL": 0,
+      "DIMLIM": 0,
+      "DIMTIH": 0,
+      "DIMTOH": 0,
+      "DIMSE1": 0,
+      "DIMSE2": 0,
+      "DIMTAD": 1,
+      "DIMZIN": 8,
+      "DIMAZIN": 0,
+      "DIMTXT": 2.5,
+      "DIMCEN": 2.5,
+      "DIMTSZ": 0.0,
+      "DIMALTF": 0.03937007874016,
+      "DIMLFAC": 1.0,
+      "DIMTVP": 0.0,
+      "DIMTFAC": 1.0,
+      "DIMGAP": 0.625,
+      "DIMALTRND": 0.0,
+      "DIMALT": 0,
+      "DIMALTD": 3,
+      "DIMTOFL": 1,
+      "DIMSAH": 0,
+      "DIMTIX": 0,
+      "DIMSOXD": 0,
+      "DIMCLRD": 0,
+      "DIMCLRE": 0,
+      "DIMCLRT": 0,
+      "DIMADEC": 0,
+      "DIMDEC": 2,
+      "DIMTDEC": 2,
+      "DIMALTU": 2,
+      "DIMALTTD": 3,
+      "DIMAUNIT": 0,
+      "DIMFRAC": 0,
+      "DIMLUNIT": 2,
+      "DIMDSEP": 44,
+      "DIMTMOVE": 0,
+      "DIMJUST": 0,
+      "DIMSD1": 0,
+      "DIMSD2": 0,
+      "DIMTOLJ": 0,
+      "DIMTZIN": 8,
+      "DIMALTZ": 0,
+      "DIMALTTZ": 0,
+      "DIMUPT": 0,
+      "DIMATFIT": 3,
+      "DIMTXSTY": [
+        5,
+        1,
+        17,
+        17
+      ],
+      "DIMLWD": -2,
+      "DIMLWE": -2,
+      "flag0": 0,
+      "DIMLDRBLK": [
+        5,
+        0,
+        0,
+        0
+      ],
+      "DIMBLK": [
+        5,
+        0,
+        0,
+        0
+      ],
+      "DIMBLK1": [
+        5,
+        0,
+        0,
+        0
+      ],
+      "DIMBLK2": [
+        5,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "object": "BLOCK_HEADER",
+      "index": 28,
+      "type": 49,
+      "handle": [
+        0,
+        1,
+        80
+      ],
+      "size": 37,
+      "bitsize": 197,
+      "ownerhandle": [
+        4,
+        1,
+        1,
+        1
+      ],
+      "name": "*Paper_Space",
+      "is_xref_ref": 1,
+      "is_xref_resolved": 0,
+      "is_xref_dep": 0,
+      "xref": [
+        5,
+        0,
+        0,
+        0
+      ],
+      "anonymous": 0,
+      "hasattrs": 0,
+      "blkisxref": 0,
+      "xrefoverlaid": 0,
+      "xref_loaded": 0,
+      "base_pt": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "xref_pname": "",
+      "description": "",
+      "preview": "",
+      "block_entity": [
+        3,
+        1,
+        82,
+        82
+      ],
+      "first_entity": [
+        4,
+        0,
+        0,
+        0
+      ],
+      "last_entity": [
+        4,
+        0,
+        0,
+        0
+      ],
+      "endblk_entity": [
+        3,
+        1,
+        83,
+        83
+      ],
+      "layout": [
+        5,
+        1,
+        81,
+        81
+      ]
+    },
+    {
+      "object": "LAYOUT",
+      "index": 29,
+      "type": 502,
+      "handle": [
+        0,
+        1,
+        81
+      ],
+      "size": 85,
+      "bitsize": 586,
+      "ownerhandle": [
+        4,
+        1,
+        26,
+        26
+      ],
+      "reactors": [
+        [
+          4,
+          1,
+          26,
+          26
+        ]
+      ],
+      "xdicobjhandle": [
+        3,
+        1,
+        153,
+        153
+      ],
+      "_subclass": "AcDbLayout",
+      "plotsettings.printer_cfg_file": "",
+      "plotsettings.paper_size": "None",
+      "plotsettings.plot_flags": 688,
+      "plotsettings.left_margin": 0.0,
+      "plotsettings.bottom_margin": 0.0,
+      "plotsettings.right_margin": 0.0,
+      "plotsettings.top_margin": 0.0,
+      "plotsettings.paper_width": 0.0,
+      "plotsettings.paper_height": 0.0,
+      "plotsettings.canonical_media_name": "",
+      "plotsettings.plot_origin": [
+        0.0,
+        0.0
+      ],
+      "plotsettings.plot_paper_unit": 0,
+      "plotsettings.plot_rotation_mode": 0,
+      "plotsettings.plot_type": 5,
+      "plotsettings.plot_window_ll": [
+        0.0,
+        0.0
+      ],
+      "plotsettings.plot_window_ur": [
+        0.0,
+        0.0
+      ],
+      "plotsettings.plotview_name": "",
+      "plotsettings.paper_units": 1.0,
+      "plotsettings.drawing_units": 1.0,
+      "plotsettings.stylesheet": "",
+      "plotsettings.std_scale_type": 16,
+      "plotsettings.std_scale_factor": 1.0,
+      "plotsettings.paper_image_origin": [
+        0.0,
+        0.0
+      ],
+      "layout_name": "Layout1",
+      "tab_order": 1,
+      "layout_flags": 1,
+      "INSBASE": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "LIMMIN": [
+        0.0,
+        0.0
+      ],
+      "LIMMAX": [
+        12.0,
+        9.0
+      ],
+      "UCSORG": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "UCSXDIR": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "UCSYDIR": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "ucs_elevation": 0.0,
+      "UCSORTHOVIEW": 0,
+      "EXTMIN": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "EXTMAX": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "block_header": [
+        4,
+        1,
+        80,
+        80
+      ],
+      "active_viewport": [
+        4,
+        0,
+        0,
+        0
+      ],
+      "base_ucs": [
+        5,
+        0,
+        0,
+        0
+      ],
+      "named_ucs": [
+        5,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "entity": "BLOCK",
+      "index": 30,
+      "type": 4,
+      "handle": [
+        0,
+        1,
+        82
+      ],
+      "size": 29,
+      "bitsize": 190,
+      "_subclass": "AcDbBlockBegin",
+      "prev_entity": [
+        4,
+        0,
+        0,
+        0
+      ],
+      "next_entity": [
+        4,
+        0,
+        0,
+        0
+      ],
+      "layer": [
+        5,
+        1,
+        16,
+        16
+      ],
+      "preview_exists": 0,
+      "entmode": 1,
+      "nolinks": 0,
+      "color": 256,
+      "ltype_scale": 1.0,
+      "ltype_flags": 0,
+      "plotstyle_flags": 0,
+      "invisible": 0,
+      "linewt": 29,
+      "name": "*Paper_Space"
+    },
+    {
+      "entity": "ENDBLK",
+      "index": 31,
+      "type": 5,
+      "handle": [
+        0,
+        1,
+        83
+      ],
+      "size": 16,
+      "bitsize": 84,
+      "_subclass": "AcDbBlockEnd",
+      "prev_entity": [
+        4,
+        0,
+        0,
+        0
+      ],
+      "next_entity": [
+        4,
+        0,
+        0,
+        0
+      ],
+      "layer": [
+        5,
+        1,
+        16,
+        16
+      ],
+      "preview_exists": 0,
+      "entmode": 1,
+      "nolinks": 0,
+      "color": 256,
+      "ltype_scale": 1.0,
+      "ltype_flags": 0,
+      "plotstyle_flags": 0,
+      "invisible": 0,
+      "linewt": 29
+    },
+    {
+      "object": "BLOCK_HEADER",
+      "index": 32,
+      "type": 49,
+      "handle": [
+        0,
+        1,
+        85
+      ],
+      "size": 37,
+      "bitsize": 197,
+      "ownerhandle": [
+        4,
+        1,
+        1,
+        1
+      ],
+      "name": "*Paper_Space",
+      "is_xref_ref": 1,
+      "is_xref_resolved": 0,
+      "is_xref_dep": 0,
+      "xref": [
+        5,
+        0,
+        0,
+        0
+      ],
+      "anonymous": 0,
+      "hasattrs": 0,
+      "blkisxref": 0,
+      "xrefoverlaid": 0,
+      "xref_loaded": 0,
+      "base_pt": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "xref_pname": "",
+      "description": "",
+      "preview": "",
+      "block_entity": [
+        3,
+        1,
+        87,
+        87
+      ],
+      "first_entity": [
+        4,
+        0,
+        0,
+        0
+      ],
+      "last_entity": [
+        4,
+        0,
+        0,
+        0
+      ],
+      "endblk_entity": [
+        3,
+        1,
+        88,
+        88
+      ],
+      "layout": [
+        5,
+        1,
+        86,
+        86
+      ]
+    },
+    {
+      "object": "LAYOUT",
+      "index": 33,
+      "type": 502,
+      "handle": [
+        0,
+        1,
+        86
+      ],
+      "size": 85,
+      "bitsize": 586,
+      "ownerhandle": [
+        4,
+        1,
+        26,
+        26
+      ],
+      "reactors": [
+        [
+          4,
+          1,
+          26,
+          26
+        ]
+      ],
+      "xdicobjhandle": [
+        3,
+        1,
+        155,
+        155
+      ],
+      "_subclass": "AcDbLayout",
+      "plotsettings.printer_cfg_file": "",
+      "plotsettings.paper_size": "None",
+      "plotsettings.plot_flags": 688,
+      "plotsettings.left_margin": 0.0,
+      "plotsettings.bottom_margin": 0.0,
+      "plotsettings.right_margin": 0.0,
+      "plotsettings.top_margin": 0.0,
+      "plotsettings.paper_width": 0.0,
+      "plotsettings.paper_height": 0.0,
+      "plotsettings.canonical_media_name": "",
+      "plotsettings.plot_origin": [
+        0.0,
+        0.0
+      ],
+      "plotsettings.plot_paper_unit": 0,
+      "plotsettings.plot_rotation_mode": 0,
+      "plotsettings.plot_type": 5,
+      "plotsettings.plot_window_ll": [
+        0.0,
+        0.0
+      ],
+      "plotsettings.plot_window_ur": [
+        0.0,
+        0.0
+      ],
+      "plotsettings.plotview_name": "",
+      "plotsettings.paper_units": 1.0,
+      "plotsettings.drawing_units": 1.0,
+      "plotsettings.stylesheet": "",
+      "plotsettings.std_scale_type": 16,
+      "plotsettings.std_scale_factor": 1.0,
+      "plotsettings.paper_image_origin": [
+        0.0,
+        0.0
+      ],
+      "layout_name": "Layout2",
+      "tab_order": 2,
+      "layout_flags": 1,
+      "INSBASE": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "LIMMIN": [
+        0.0,
+        0.0
+      ],
+      "LIMMAX": [
+        12.0,
+        9.0
+      ],
+      "UCSORG": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "UCSXDIR": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "UCSYDIR": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "ucs_elevation": 0.0,
+      "UCSORTHOVIEW": 0,
+      "EXTMIN": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "EXTMAX": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "block_header": [
+        4,
+        1,
+        85,
+        85
+      ],
+      "active_viewport": [
+        4,
+        0,
+        0,
+        0
+      ],
+      "base_ucs": [
+        5,
+        0,
+        0,
+        0
+      ],
+      "named_ucs": [
+        5,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "entity": "BLOCK",
+      "index": 34,
+      "type": 4,
+      "handle": [
+        0,
+        1,
+        87
+      ],
+      "size": 32,
+      "bitsize": 198,
+      "ownerhandle": [
+        12,
+        1,
+        2,
+        85
+      ],
+      "_subclass": "AcDbBlockBegin",
+      "prev_entity": [
+        4,
+        0,
+        0,
+        0
+      ],
+      "next_entity": [
+        4,
+        0,
+        0,
+        0
+      ],
+      "layer": [
+        5,
+        1,
+        16,
+        16
+      ],
+      "preview_exists": 0,
+      "entmode": 0,
+      "nolinks": 0,
+      "color": 256,
+      "ltype_scale": 1.0,
+      "ltype_flags": 0,
+      "plotstyle_flags": 0,
+      "invisible": 0,
+      "linewt": 29,
+      "name": "*Paper_Space0"
+    },
+    {
+      "entity": "ENDBLK",
+      "index": 35,
+      "type": 5,
+      "handle": [
+        0,
+        1,
+        88
+      ],
+      "size": 18,
+      "bitsize": 84,
+      "ownerhandle": [
+        12,
+        1,
+        3,
+        85
+      ],
+      "_subclass": "AcDbBlockEnd",
+      "prev_entity": [
+        4,
+        0,
+        0,
+        0
+      ],
+      "next_entity": [
+        4,
+        0,
+        0,
+        0
+      ],
+      "layer": [
+        5,
+        1,
+        16,
+        16
+      ],
+      "preview_exists": 0,
+      "entmode": 0,
+      "nolinks": 0,
+      "color": 256,
+      "ltype_scale": 1.0,
+      "ltype_flags": 0,
+      "plotstyle_flags": 0,
+      "invisible": 0,
+      "linewt": 29
+    },
+    {
+      "object": "DICTIONARY",
+      "index": 36,
+      "type": 42,
+      "handle": [
+        0,
+        1,
+        94
+      ],
+      "size": 54,
+      "bitsize": 344,
+      "ownerhandle": [
+        4,
+        1,
+        12,
+        12
+      ],
+      "reactors": [
+        [
+          4,
+          1,
+          12,
+          12
+        ]
+      ],
+      "numitems": 3,
+      "cloning": 1,
+      "is_hardowner": 0,
+      "items": {
+        "DIMASSOC": [
+          2,
+          1,
+          95,
+          95
+        ],
+        "HIDETEXT": [
+          2,
+          1,
+          99,
+          99
+        ],
+        "PROJECTNAME": [
+          2,
+          1,
+          157,
+          157
+        ]
+      }
+    },
+    {
+      "object": "DICTIONARYVAR",
+      "index": 37,
+      "type": 503,
+      "handle": [
+        0,
+        1,
+        95
+      ],
+      "size": 17,
+      "bitsize": 104,
+      "ownerhandle": [
+        8,
+        0,
+        0,
+        94
+      ],
+      "reactors": [
+        [
+          4,
+          1,
+          94,
+          94
+        ]
+      ],
+      "_subclass": "DictionaryVariables",
+      "schema": 0,
+      "strvalue": "2"
+    },
+    {
+      "object": "DICTIONARYVAR",
+      "index": 38,
+      "type": 503,
+      "handle": [
+        0,
+        1,
+        99
+      ],
+      "size": 18,
+      "bitsize": 104,
+      "ownerhandle": [
+        12,
+        1,
+        5,
+        94
+      ],
+      "reactors": [
+        [
+          4,
+          1,
+          94,
+          94
+        ]
+      ],
+      "_subclass": "DictionaryVariables",
+      "schema": 0,
+      "strvalue": "1"
+    },
+    {
+      "object": "DICTIONARY",
+      "index": 39,
+      "type": 42,
+      "handle": [
+        0,
+        1,
+        106
+      ],
+      "size": 17,
+      "bitsize": 90,
+      "ownerhandle": [
+        4,
+        1,
+        12,
+        12
+      ],
+      "reactors": [
+        [
+          4,
+          1,
+          12,
+          12
+        ]
+      ],
+      "numitems": 0,
+      "cloning": 1,
+      "is_hardowner": 0,
+      "items": {}
+    },
+    {
+      "object": "DICTIONARY",
+      "index": 40,
+      "type": 42,
+      "handle": [
+        0,
+        1,
+        107
+      ],
+      "size": 17,
+      "bitsize": 90,
+      "ownerhandle": [
+        4,
+        1,
+        12,
+        12
+      ],
+      "reactors": [
+        [
+          4,
+          1,
+          12,
+          12
+        ]
+      ],
+      "numitems": 0,
+      "cloning": 1,
+      "is_hardowner": 0,
+      "items": {}
+    },
+    {
+      "object": "VX_CONTROL",
+      "index": 41,
+      "type": 70,
+      "handle": [
+        0,
+        1,
+        126
+      ],
+      "size": 10,
+      "bitsize": 64,
+      "ownerhandle": [
+        4,
+        0,
+        0,
+        0
+      ],
+      "_subclass": "AcDbVXTable"
+    },
+    {
+      "object": "LAYER",
+      "index": 42,
+      "type": 51,
+      "handle": [
+        0,
+        1,
+        129
+      ],
+      "size": 29,
+      "bitsize": 168,
+      "ownerhandle": [
+        4,
+        1,
+        2,
+        2
+      ],
+      "name": "Tavolo 1",
+      "is_xref_ref": 1,
+      "is_xref_resolved": 0,
+      "is_xref_dep": 0,
+      "xref": [
+        5,
+        0,
+        0,
+        0
+      ],
+      "flag0": 1008,
+      "linewt": 31,
+      "color": 2,
+      "plotstyle": [
+        5,
+        1,
+        15,
+        15
+      ],
+      "ltype": [
+        5,
+        1,
+        22,
+        22
+      ]
+    },
+    {
+      "object": "DIMSTYLE",
+      "index": 43,
+      "type": 69,
+      "handle": [
+        0,
+        1,
+        130
+      ],
+      "size": 118,
+      "bitsize": 861,
+      "ownerhandle": [
+        4,
+        1,
+        10,
+        10
+      ],
+      "name": "Standard",
+      "is_xref_ref": 1,
+      "is_xref_resolved": 0,
+      "is_xref_dep": 0,
+      "xref": [
+        5,
+        0,
+        0,
+        0
+      ],
+      "DIMPOST": "",
+      "DIMAPOST": "",
+      "DIMSCALE": 1.0,
+      "DIMASZ": 0.18,
+      "DIMEXO": 0.0625,
+      "DIMDLI": 0.38,
+      "DIMEXE": 0.18,
+      "DIMRND": 0.0,
+      "DIMDLE": 0.0,
+      "DIMTP": 0.0,
+      "DIMTM": 0.0,
+      "DIMTOL": 0,
+      "DIMLIM": 0,
+      "DIMTIH": 1,
+      "DIMTOH": 1,
+      "DIMSE1": 0,
+      "DIMSE2": 0,
+      "DIMTAD": 0,
+      "DIMZIN": 0,
+      "DIMAZIN": 0,
+      "DIMTXT": 0.18,
+      "DIMCEN": 0.09,
+      "DIMTSZ": 0.0,
+      "DIMALTF": 25.4,
+      "DIMLFAC": 1.0,
+      "DIMTVP": 0.0,
+      "DIMTFAC": 1.0,
+      "DIMGAP": 0.09,
+      "DIMALTRND": 0.0,
+      "DIMALT": 0,
+      "DIMALTD": 2,
+      "DIMTOFL": 0,
+      "DIMSAH": 0,
+      "DIMTIX": 0,
+      "DIMSOXD": 0,
+      "DIMCLRD": 0,
+      "DIMCLRE": 0,
+      "DIMCLRT": 0,
+      "DIMADEC": 0,
+      "DIMDEC": 4,
+      "DIMTDEC": 4,
+      "DIMALTU": 2,
+      "DIMALTTD": 2,
+      "DIMAUNIT": 0,
+      "DIMFRAC": 0,
+      "DIMLUNIT": 2,
+      "DIMDSEP": 46,
+      "DIMTMOVE": 0,
+      "DIMJUST": 0,
+      "DIMSD1": 0,
+      "DIMSD2": 0,
+      "DIMTOLJ": 1,
+      "DIMTZIN": 0,
+      "DIMALTZ": 0,
+      "DIMALTTZ": 0,
+      "DIMUPT": 0,
+      "DIMATFIT": 3,
+      "DIMTXSTY": [
+        5,
+        1,
+        17,
+        17
+      ],
+      "DIMLWD": -2,
+      "DIMLWE": -2,
+      "flag0": 0,
+      "DIMLDRBLK": [
+        5,
+        0,
+        0,
+        0
+      ],
+      "DIMBLK": [
+        5,
+        0,
+        0,
+        0
+      ],
+      "DIMBLK1": [
+        5,
+        0,
+        0,
+        0
+      ],
+      "DIMBLK2": [
+        5,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "entity": "CIRCLE",
+      "index": 44,
+      "type": 18,
+      "handle": [
+        0,
+        1,
+        141
+      ],
+      "size": 41,
+      "bitsize": 286,
+      "_subclass": "AcDbCircle",
+      "prev_entity": [
+        4,
+        0,
+        0,
+        0
+      ],
+      "next_entity": [
+        6,
+        0,
+        0,
+        142
+      ],
+      "layer": [
+        5,
+        1,
+        129,
+        129
+      ],
+      "preview_exists": 0,
+      "entmode": 2,
+      "nolinks": 0,
+      "color": 256,
+      "ltype_scale": 1.0,
+      "ltype_flags": 0,
+      "plotstyle_flags": 0,
+      "invisible": 0,
+      "linewt": 29,
+      "center": [
+        199.6812627452187,
+        24.69575912391304,
+        0.0
+      ],
+      "radius": 20.0,
+      "thickness": 0,
+      "extrusion": [
+        0.0,
+        0.0,
+        1.0
+      ]
+    },
+    {
+      "entity": "TEXT",
+      "index": 45,
+      "type": 1,
+      "handle": [
+        0,
+        1,
+        142
+      ],
+      "size": 86,
+      "bitsize": 646,
+      "_subclass": "AcDbText",
+      "layer": [
+        5,
+        1,
+        129,
+        129
+      ],
+      "preview_exists": 0,
+      "entmode": 2,
+      "nolinks": 1,
+      "color": 256,
+      "ltype_scale": 1.0,
+      "ltype_flags": 0,
+      "plotstyle_flags": 0,
+      "invisible": 0,
+      "linewt": 29,
+      "dataflags": 189,
+      "ins_pt": [
+        -50.31873725478131,
+        134.69575912391306
+      ],
+      "alignment_pt": [
+        9.26459607855202,
+        136.36242579057972
+      ],
+      "extrusion": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "thickness": 0,
+      "height": 5.0,
+      "text_value": "Jen teksto simpla, cxu ne?",
+      "horiz_alignment": 4,
+      "style": [
+        5,
+        1,
+        17,
+        17
+      ]
+    },
+    {
+      "entity": "LWPOLYLINE",
+      "index": 46,
+      "type": 77,
+      "handle": [
+        0,
+        1,
+        143
+      ],
+      "size": 59,
+      "bitsize": 444,
+      "_subclass": "AcDbPolyline",
+      "layer": [
+        5,
+        1,
+        129,
+        129
+      ],
+      "preview_exists": 0,
+      "entmode": 2,
+      "nolinks": 1,
+      "color": 256,
+      "ltype_scale": 1.0,
+      "ltype_flags": 0,
+      "plotstyle_flags": 0,
+      "invisible": 0,
+      "linewt": 29,
+      "flag": 512,
+      "points": [
+        [
+          -50.3187372547813,
+          -85.30424087608696
+        ],
+        [
+          49.6812627452187,
+          -85.30424087608696
+        ],
+        [
+          49.6812627452187,
+          54.69575912391305
+        ],
+        [
+          -50.3187372547813,
+          54.69575912391305
+        ]
+      ],
+      "bulges": []
+    },
+    {
+      "entity": "LINE",
+      "index": 47,
+      "type": 19,
+      "handle": [
+        0,
+        1,
+        144
+      ],
+      "size": 48,
+      "bitsize": 355,
+      "_subclass": "AcDbLine",
+      "layer": [
+        5,
+        1,
+        129,
+        129
+      ],
+      "preview_exists": 0,
+      "entmode": 2,
+      "nolinks": 1,
+      "color": 3,
+      "ltype_scale": 1.2008,
+      "ltype_flags": 1,
+      "plotstyle_flags": 0,
+      "invisible": 0,
+      "linewt": 29,
+      "z_is_zero": 1,
+      "start": [
+        99.6812627452187,
+        94.69575912391304,
+        0.0
+      ],
+      "end": [
+        199.6812627452187,
+        94.69575912391304,
+        0.0
+      ],
+      "thickness": 0,
+      "extrusion": [
+        0.0,
+        0.0,
+        1.0
+      ]
+    },
+    {
+      "entity": "LINE",
+      "index": 48,
+      "type": 19,
+      "handle": [
+        0,
+        1,
+        145
+      ],
+      "size": 39,
+      "bitsize": 283,
+      "_subclass": "AcDbLine",
+      "layer": [
+        5,
+        1,
+        16,
+        16
+      ],
+      "preview_exists": 0,
+      "entmode": 2,
+      "nolinks": 1,
+      "color": 256,
+      "ltype_scale": 1.0,
+      "ltype_flags": 0,
+      "plotstyle_flags": 0,
+      "invisible": 0,
+      "linewt": 29,
+      "z_is_zero": 1,
+      "start": [
+        199.6812627452187,
+        194.69575912391304,
+        0.0
+      ],
+      "end": [
+        199.6812627452187,
+        94.69575912391304,
+        0.0
+      ],
+      "thickness": 0,
+      "extrusion": [
+        0.0,
+        0.0,
+        1.0
+      ]
+    },
+    {
+      "entity": "LINE",
+      "index": 49,
+      "type": 19,
+      "handle": [
+        0,
+        1,
+        146
+      ],
+      "size": 49,
+      "bitsize": 347,
+      "_subclass": "AcDbLine",
+      "prev_entity": [
+        8,
+        0,
+        0,
+        145
+      ],
+      "next_entity": [
+        4,
+        0,
+        0,
+        0
+      ],
+      "layer": [
+        5,
+        1,
+        16,
+        16
+      ],
+      "preview_exists": 0,
+      "entmode": 2,
+      "nolinks": 0,
+      "color": 256,
+      "ltype_scale": 1.0,
+      "ltype_flags": 0,
+      "plotstyle_flags": 0,
+      "invisible": 0,
+      "linewt": 29,
+      "z_is_zero": 1,
+      "start": [
+        99.6812627452187,
+        94.69575912391304,
+        0.0
+      ],
+      "end": [
+        199.6812627452187,
+        194.69575912391304,
+        0.0
+      ],
+      "thickness": 0,
+      "extrusion": [
+        0.0,
+        0.0,
+        1.0
+      ]
+    },
+    {
+      "object": "VPORT",
+      "index": 50,
+      "type": 65,
+      "handle": [
+        0,
+        1,
+        147
+      ],
+      "size": 154,
+      "bitsize": 1181,
+      "ownerhandle": [
+        4,
+        1,
+        8,
+        8
+      ],
+      "name": "*Active",
+      "is_xref_ref": 1,
+      "is_xref_resolved": 0,
+      "is_xref_dep": 0,
+      "xref": [
+        5,
+        0,
+        0,
+        0
+      ],
+      "VIEWSIZE": 283.1758873258349,
+      "view_width": 579.1266267114818,
+      "aspect_ratio": 2.04511278195489,
+      "VIEWCTR": [
+        84.69406211131027,
+        54.69049130495463
+      ],
+      "view_target": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "VIEWDIR": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "VIEWTWIST": 0.0,
+      "LENSLENGTH": 50.0,
+      "FRONTZ": 0.0,
+      "BACKZ": 0.0,
+      "VIEWMODE": 1,
+      "render_mode": 0,
+      "lower_left": [
+        0.0,
+        0.0
+      ],
+      "upper_right": [
+        1.0,
+        1.0
+      ],
+      "UCSFOLLOW": 0,
+      "circle_zoom": 1000,
+      "FASTZOOM": 1,
+      "UCSICON": 3,
+      "GRIDMODE": 0,
+      "GRIDUNIT": [
+        10.0,
+        10.0
+      ],
+      "SNAPMODE": 0,
+      "SNAPSTYLE": 0,
+      "SNAPISOPAIR": 0,
+      "SNAPANG": 0.0,
+      "SNAPBASE": [
+        0.0,
+        0.0
+      ],
+      "SNAPUNIT": [
+        10.0,
+        10.0
+      ],
+      "ucs_at_origin": 0,
+      "UCSVP": 1,
+      "ucsorg": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "ucsxdir": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "ucsydir": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "ucs_elevation": 0.0,
+      "UCSORTHOVIEW": 0,
+      "named_ucs": [
+        5,
+        0,
+        0,
+        0
+      ],
+      "base_ucs": [
+        5,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "object": "DICTIONARY",
+      "index": 51,
+      "type": 42,
+      "handle": [
+        0,
+        1,
+        148
+      ],
+      "size": 45,
+      "bitsize": 286,
+      "ownerhandle": [
+        4,
+        1,
+        12,
+        12
+      ],
+      "reactors": [
+        [
+          4,
+          1,
+          12,
+          12
+        ]
+      ],
+      "numitems": 2,
+      "cloning": 1,
+      "is_hardowner": 0,
+      "items": {
+        "COLORDICT": [
+          2,
+          1,
+          150,
+          150
+        ],
+        "MATERIALDICT": [
+          2,
+          1,
+          149,
+          149
+        ]
+      }
+    },
+    {
+      "object": "XRECORD",
+      "index": 52,
+      "type": 79,
+      "handle": [
+        0,
+        1,
+        149
+      ],
+      "size": 26,
+      "bitsize": 170,
+      "ownerhandle": [
+        8,
+        0,
+        0,
+        148
+      ],
+      "reactors": [
+        [
+          4,
+          1,
+          148,
+          148
+        ]
+      ],
+      "xdata_size": 10,
+      "xdata": [
+        [
+          340,
+          106
+        ]
+      ],
+      "cloning": 1
+    },
+    {
+      "object": "XRECORD",
+      "index": 53,
+      "type": 79,
+      "handle": [
+        0,
+        1,
+        150
+      ],
+      "size": 27,
+      "bitsize": 170,
+      "ownerhandle": [
+        12,
+        1,
+        2,
+        148
+      ],
+      "reactors": [
+        [
+          4,
+          1,
+          148,
+          148
+        ]
+      ],
+      "xdata_size": 10,
+      "xdata": [
+        [
+          340,
+          107
+        ]
+      ],
+      "cloning": 1
+    },
+    {
+      "object": "DICTIONARY",
+      "index": 54,
+      "type": 42,
+      "handle": [
+        0,
+        1,
+        151
+      ],
+      "size": 37,
+      "bitsize": 252,
+      "ownerhandle": [
+        4,
+        1,
+        34,
+        34
+      ],
+      "numitems": 1,
+      "cloning": 1,
+      "is_hardowner": 1,
+      "items": {
+        "ACAD_XREC_ROUNDTRIP": [
+          2,
+          1,
+          152,
+          152
+        ]
+      }
+    },
+    {
+      "object": "XRECORD",
+      "index": 55,
+      "type": 79,
+      "handle": [
+        0,
+        1,
+        152
+      ],
+      "size": 87,
+      "bitsize": 658,
+      "ownerhandle": [
+        8,
+        0,
+        0,
+        151
+      ],
+      "reactors": [
+        [
+          4,
+          1,
+          151,
+          151
+        ]
+      ],
+      "xdata_size": 71,
+      "xdata": [
+        [
+          102,
+          "SHADEPLOT"
+        ],
+        [
+          70,
+          0
+        ],
+        [
+          102,
+          "SHADEPLOTRESLEVEL"
+        ],
+        [
+          70,
+          2
+        ],
+        [
+          102,
+          "SHADEPLOTCUSTOMDPI"
+        ],
+        [
+          70,
+          300
+        ]
+      ],
+      "cloning": 1
+    },
+    {
+      "object": "DICTIONARY",
+      "index": 56,
+      "type": 42,
+      "handle": [
+        0,
+        1,
+        153
+      ],
+      "size": 37,
+      "bitsize": 252,
+      "ownerhandle": [
+        12,
+        1,
+        72,
+        81
+      ],
+      "numitems": 1,
+      "cloning": 1,
+      "is_hardowner": 1,
+      "items": {
+        "ACAD_XREC_ROUNDTRIP": [
+          2,
+          1,
+          154,
+          154
+        ]
+      }
+    },
+    {
+      "object": "XRECORD",
+      "index": 57,
+      "type": 79,
+      "handle": [
+        0,
+        1,
+        154
+      ],
+      "size": 87,
+      "bitsize": 658,
+      "ownerhandle": [
+        8,
+        0,
+        0,
+        153
+      ],
+      "reactors": [
+        [
+          4,
+          1,
+          153,
+          153
+        ]
+      ],
+      "xdata_size": 71,
+      "xdata": [
+        [
+          102,
+          "SHADEPLOT"
+        ],
+        [
+          70,
+          0
+        ],
+        [
+          102,
+          "SHADEPLOTRESLEVEL"
+        ],
+        [
+          70,
+          2
+        ],
+        [
+          102,
+          "SHADEPLOTCUSTOMDPI"
+        ],
+        [
+          70,
+          300
+        ]
+      ],
+      "cloning": 1
+    },
+    {
+      "object": "DICTIONARY",
+      "index": 58,
+      "type": 42,
+      "handle": [
+        0,
+        1,
+        155
+      ],
+      "size": 37,
+      "bitsize": 252,
+      "ownerhandle": [
+        12,
+        1,
+        69,
+        86
+      ],
+      "numitems": 1,
+      "cloning": 1,
+      "is_hardowner": 1,
+      "items": {
+        "ACAD_XREC_ROUNDTRIP": [
+          2,
+          1,
+          156,
+          156
+        ]
+      }
+    },
+    {
+      "object": "XRECORD",
+      "index": 59,
+      "type": 79,
+      "handle": [
+        0,
+        1,
+        156
+      ],
+      "size": 87,
+      "bitsize": 658,
+      "ownerhandle": [
+        8,
+        0,
+        0,
+        155
+      ],
+      "reactors": [
+        [
+          4,
+          1,
+          155,
+          155
+        ]
+      ],
+      "xdata_size": 71,
+      "xdata": [
+        [
+          102,
+          "SHADEPLOT"
+        ],
+        [
+          70,
+          0
+        ],
+        [
+          102,
+          "SHADEPLOTRESLEVEL"
+        ],
+        [
+          70,
+          2
+        ],
+        [
+          102,
+          "SHADEPLOTCUSTOMDPI"
+        ],
+        [
+          70,
+          300
+        ]
+      ],
+      "cloning": 1
+    },
+    {
+      "object": "DICTIONARYVAR",
+      "index": 60,
+      "type": 503,
+      "handle": [
+        0,
+        1,
+        157
+      ],
+      "size": 16,
+      "bitsize": 88,
+      "ownerhandle": [
+        12,
+        1,
+        63,
+        94
+      ],
+      "reactors": [
+        [
+          4,
+          1,
+          94,
+          94
+        ]
+      ],
+      "_subclass": "DictionaryVariables",
+      "schema": 0,
+      "strvalue": ""
+    }
+  ],
+  "THUMBNAILIMAGE": {
+    "size": 17007,
+    "chain": "6B42000002010301000050000000025301000008420000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000028000000B4000000580000000100080000000000E03D000000000000000000000001000000000000FFFFFF00FFFFFF0000000000FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00330000006600000099000000CC000000FF00000000330000333300006633000099330000CC330000FF33000000660000336600006666000099660000CC660000FF66000000990000339900006699000099990000CC990000FF99000000CC000033CC000066CC000099CC0000CCCC0000FFCC000000FF000033FF000066FF000099FF0000CCFF0000FFFF000000003300330033006600330099003300CC003300FF00330000333300333333006633330099333300CC333300FF33330000663300336633006666330099663300CC663300FF66330000993300339933006699330099993300CC993300FF99330000CC330033CC330066CC330099CC3300CCCC3300FFCC330000FF330033FF330066FF330099FF3300CCFF3300FFFF330000006600330066006600660099006600CC006600FF00660000336600333366006633660099336600CC336600FF33660000666600336666006666660099666600CC666600FF66660000996600339966006699660099996600CC996600FF99660000CC660033CC660066CC660099CC6600CCCC6600FFCC660000FF660033FF660066FF660099FF6600CCFF6600FFFF660000009900330099006600990099009900CC009900FF00990000339900333399006633990099339900CC339900FF33990000669900336699006666990099669900CC669900FF66990000999900339999006699990099999900CC999900FF99990000CC990033CC990066CC990099CC9900CCCC9900FFCC990000FF990033FF990066FF990099FF9900CCFF9900FFFF99000000CC003300CC006600CC009900CC00CC00CC00FF00CC000033CC003333CC006633CC009933CC00CC33CC00FF33CC000066CC003366CC006666CC009966CC00CC66CC00FF66CC000099CC003399CC006699CC009999CC00CC99CC00FF99CC0000CCCC0033CCCC0066CCCC0099CCCC00CCCCCC00FFCCCC0000FFCC0033FFCC0066FFCC0099FFCC00CCFFCC00FFFFCC000000FF003300FF006600FF009900FF00CC00FF00FF00FF000033FF003333FF006633FF009933FF00CC33FF00FF33FF000066FF003366FF006666FF009966FF00CC66FF00FF66FF000099FF003399FF006699FF009999FF00CC99FF00FF99FF0000CCFF0033CCFF0066CCFF0099CCFF00CCCCFF00FFCCFF0000FFFF0033FFFF0066FFFF0099FFFF00CCFFFF0000000000FFFFFF000D0D0D001A1A1A00282828003535350043434300505050005D5D5D006B6B6B00787878008686860093939300A1A1A100AEAEAE00BBBBBB00C9C9C900D6D6D600E4E4E400F1F1F10000000000FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2DCDCDCDCDCDCDCDCDCDCDCDCDCDCDCDCDCDCDCDCDCDCDCDCDCDCDCDCDCDCDCDCE2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2DCE2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2DCE2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2DCE2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2DCE2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2DCE2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2DCE2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2DCE2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2DCE2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2DCE2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2DCE2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2DCE2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2DCE2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2DCE2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2DCE2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2DCE2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2DCE2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2DCE2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2DCE2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2DCE2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2DCE2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2DCE2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2DCE2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2DCE2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2DCE2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2DCE2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2DCE2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2DCE2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2DCE2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2DCE2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2DCE2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2DCE2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2DCE2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2DCE2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2DCE2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2DCE2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2DCE2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2DCE2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2DCE2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2DCE2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2DCE2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2DCE2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2DCE2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2DCE2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2DCE2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2DCE2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2DCE2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2DCE2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2DCE2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2DCE2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2DCE2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2DCE2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2DCE2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2DCE2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2DCE2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2DCE2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2DCE2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2DCDCDCDCDCE2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2DCE2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2DCE2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2DCDCE2E2E2E2E2DCDCE2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2DCE2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2DCE2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2DCE2E2E2E2E2E2E2DCE2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2DCE2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2DCE2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2DCE2E2E2E2E2E2E2E2E2DCDCE2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2DCE2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2DCE2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2DCE2E2E2E2E2E2E2E2E2E2E2DCE2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2DCE2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2DCE2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2DCE2E2E2E2E2E2E2E2E2E2E2DCE2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2DCE2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2DCE2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2DCE2E2E2E2E2E2E2E2E2E2E2DCE2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2DCE2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2DCE2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2DCE2E2E2E2E2E2E2E2E2E2E2DCE2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2DCE2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2DCE2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2DCE2E2E2E2E2E2E2E2E2E2E2DCE2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2DCE2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2DCE2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2DCE2E2E2E2E2E2E2E2E2E2DCE2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2DCE2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2DCE2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2DCE2E2E2E2E2E2E2E2E2DCE2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2DCE2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2DCE2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2DCE2E2E2E2E2E2E2DCE2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2DCE2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2DCE2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2DCDCDCDCDCDCDCE2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2DCE2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2DCE2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2DCE2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2DCE2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2DCE2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2DCE2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2DCDCDCDCDCDCDCDCDCDCDCDCDCDCDCDCDCDCDCDCDCDCDCDCDCDCDCDCDCDCDCDCE2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E22828282828282828282828282828282828282828282828282828282828282828E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2F5E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2F5E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2F5E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2F5E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2F5E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2F5E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2F5E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2F5E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2F5E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2F5E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2F5E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2F5E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2F5E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2F5E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2F5E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2F5E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2F5E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2F5E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2F5E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2F5E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2F5E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2F5E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2DCDCDCDCDCE2DCDCDCDCDCDCDCDCDCDCE2DCDCDCDCDCDCDCDCE2E2DCDCDCDCDCE2DCDCDCDCE2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2F5E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2F5E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2DCDCDCDCE2DCDCDCDCDCDCDCDCDCDCE2DCDCDCDCDCDCDCE2E2E2DCDCDCDCDCE2DCDCDCDCDCE2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2F5E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2F5E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2DCE2E2E2E2DCE2E2DCE2E2E2DCE2E2E2E2DCE2E2E2DCE2E2E2E2E2E2E2E2E2E2E2E2E2DCE2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2F5E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2F5E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2F5E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2F5E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2F5E2E2E2E2E2E2E2E2E2E2E2E2E2E2F5E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2F5E2E2E2E2E2E2E2E2E2E2E2E2E2F5E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2F5E2E2E2E2E2E2E2E2E2E2E2E2F5E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2F5E2E2E2E2E2E2E2E2E2E2E2F5E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2F5E2E2E2E2E2E2E2E2E2E2F5E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2F5E2E2E2E2E2E2E2E2E2F5E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2F5E2E2E2E2E2E2E2E2F5E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2F5E2E2E2E2E2E2E2F5E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2F5E2E2E2E2E2E2F5E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2F5E2E2E2E2E2F5E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2F5E2E2E2E2F5E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2F5E2E2E2F5E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2F5E2E2F5E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2F5E2F5E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2F5F5E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2F5E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2"
+  },
+  "SecondHeader": {
+    "size": 111,
+    "address": 21880,
+    "version": "AC1015",
+    "maint_rel_version": 15,
+    "zero_one_or_three": 1,
+    "dwg_versions": 25,
+    "codepage": 30,
+    "sections": [
+      {
+        "nr": 0,
+        "address": 17259,
+        "size": 522
+      },
+      {
+        "nr": 1,
+        "address": 17781,
+        "size": 261
+      },
+      {
+        "nr": 2,
+        "address": 21705,
+        "size": 175
+      },
+      {
+        "nr": 3,
+        "address": 0,
+        "size": 0
+      },
+      {
+        "nr": 4,
+        "address": 0,
+        "size": 0
+      },
+      {
+        "nr": 5,
+        "address": 97,
+        "size": 123
+      }
+    ],
+    "handles": [
+      {
+        "nr": 0,
+        "hdl": [
+          158
+        ]
+      },
+      {
+        "nr": 1,
+        "hdl": [
+          1
+        ]
+      },
+      {
+        "nr": 2,
+        "hdl": [
+          2
+        ]
+      },
+      {
+        "nr": 3,
+        "hdl": [
+          3
+        ]
+      },
+      {
+        "nr": 4,
+        "hdl": [
+          5
+        ]
+      },
+      {
+        "nr": 5,
+        "hdl": [
+          6
+        ]
+      },
+      {
+        "nr": 6,
+        "hdl": [
+          7
+        ]
+      },
+      {
+        "nr": 7,
+        "hdl": [
+          8
+        ]
+      },
+      {
+        "nr": 8,
+        "hdl": [
+          9
+        ]
+      },
+      {
+        "nr": 9,
+        "hdl": [
+          10
+        ]
+      },
+      {
+        "nr": 10,
+        "hdl": [
+          126
+        ]
+      },
+      {
+        "nr": 11,
+        "hdl": [
+          12
+        ]
+      },
+      {
+        "nr": 12,
+        "hdl": [
+          23
+        ]
+      },
+      {
+        "nr": 13,
+        "hdl": [
+          13
+        ]
+      }
+    ],
+    "junk_r14": 1923622788369149963
+  },
+  "Template": {
+    "description": "",
+    "MEASUREMENT": 1
+  },
+  "AuxHeader": {
+    "aux_intro": [
+      255,
+      119,
+      1
+    ],
+    "dwg_version": 25,
+    "maint_version": 0,
+    "numsaves": 15,
+    "minus_1": -1,
+    "numsaves_1": 12,
+    "numsaves_2": 2,
+    "zero": 0,
+    "dwg_version_1": 22,
+    "maint_version_1": 46,
+    "dwg_version_2": 22,
+    "maint_version_2": 46,
+    "unknown_6rs": [
+      4,
+      1381,
+      5,
+      2195,
+      0,
+      1
+    ],
+    "unknown_5rl": [
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "TDCREATE": [
+      2454593,
+      72939562
+    ],
+    "TDUPDATE": [
+      2454593,
+      73055421
+    ],
+    "HANDSEED": 158,
+    "plot_stamp": 0,
+    "zero_1": 0,
+    "numsaves_3": 11,
+    "zero_2": 65536,
+    "zero_3": 0,
+    "zero_4": 0,
+    "numsaves_4": 14,
+    "zero_5": 0,
+    "zero_6": 15
+  }
+}

@@ -11,11 +11,13 @@
 
 | 文件 | 测试数 | 覆盖范围 | Phase |
 |------|--------|---------|-------|
-| `tests/test_z_axis.py` | 5 | Z 轴硬断言（空轨迹/3D 轨迹/纯2D/均匀Z/微小变化）| 1.1 |
-| `tests/test_entity_stats.py` | 9 | DWG 实体统计 + drop note 格式化 | 1.3 |
-| `tests/test_roboir_diff.py` | 6 | RoboIR intent/target_frame 不变性检查 | 1.2 |
-| `tests/test_trajectory_smoother.py` | 11 | 梯形 Profile + 三次样条 + 轨迹合成 | 2.1 |
-| `tests/test_gradient_refine.py` | 7 | EDT 梯度计算 + 路径微调 | 2.2 |
+| `tests/test_z_axis.py` | 5 | Z 轴硬断言 | 1.1 |
+| `tests/test_entity_stats.py` | 9 | DWG 实体统计 + drop note | 1.3 |
+| `tests/test_roboir_diff.py` | 6 | RoboIR intent/target_frame 不变性 | 1.2 |
+| `tests/test_trajectory_smoother.py` | 11 | 梯形 Profile + 三次样条 | 2.1 |
+| `tests/test_gradient_refine.py` | 7 | EDT 梯度 + 路径微调 | 2.2 |
+| `tests/test_metrics.py` | 16 | stl_robustness, path_efficiency 等 5 函数 | Next |
+| `tests/test_rust_compiler.py` | 9 | RoboIR 编译器验证 (validate) | Next |
 | `tests/test_closed_loop_recovery.py` | 1* | 端到端闭环自愈（需 LLM API）| 1.x |
 | `tests/test_demo3_pipeline.py` | 1* | Demo 3 鲁棒度验证管道 | 4.2 |
 

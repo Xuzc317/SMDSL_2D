@@ -1,0 +1,6 @@
+{
+  "total_networks": 0,
+  "preset": "all",
+  "resolution_m_per_px": 1.0,
+  "description": "Real-world OSM road networks converted to SMDSL JSON format"
+}

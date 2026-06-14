@@ -1,4 +1,4 @@
-# CAD 2D Spatial Parsing — Demo 1 (RoboIR Zone 1 感知层)
+# CAD 2D Spatial Parsing — Demo 1 (SMDSL_2D Zone 1 感知层)
 
 > 弃用 U-Net，使用矢量栅格化 + 距离场 + 安全代价 A\* 的确定性图论流水线。
 

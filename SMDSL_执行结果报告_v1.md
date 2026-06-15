@@ -1,259 +1,130 @@
-# SMDSL 方向一 v1 修改方案 — 执行结果报告
+﻿# SMDSL 方向一 执行结果报告 v1
 
-> 版本：v1 · 执行日期：2026-06-15
-> 状态：✅ 全部完成（38/38 单元测试通过）
-> GitHub：`Xuzc317/SMDSL_2D`，已推送 `5d7e17e..1d2ecee`
-
----
-
-## 一、提交记录
-
-| SHA | 说明 |
-|-----|------|
-| `a22cfbe` | Config — 添加 python-dotenv，从 `.env` 加载 DeepSeek API Key |
-| `081d2b5` | Cleanup — 删除 motion_profile.py（与 trajectory_smoother.py 100% 重叠） |
-| `df706ba` | UI — Phase 1.3：路径修正、说明精简、3D 区块删除、Demo 3→2D |
-| `1d2ecee` | Docs/Benchmark — 基准框架、CHANGELOG v0.2.1、README 更新 |
+> 生成日期：2026-06-15
+> 审查方式：Codex 独立代码审计（不依赖外部代理口头报告）
+> 审查范围：文件存在性、代码功能完整性、一致性验证
 
 ---
 
-## 二、Phase 0 — 已有文件审查
+## 一、总体进度
 
-### 2.1 `trajectory_smoother.py` ✅
+```
+Phase 1.1 (Z 轴硬断言)       ██████████ 100% ✅  本会完成
+Phase 1.2 (RoboIR diff)      ░░░░░░░░░░   0% ❌  未执行
+Phase 1.3 (DWG 丢弃告警)     ██████████ 100% ✅  外部代理完成
+Phase 1.4 (app.py UI 修正):                           
+  路径修正                    ██████████ 100% ✅  外部代理完成
+  说明精简                    ░░░░░░░░░░   0% ❌  未执行
+  3D 区块删除                ██████████ 100% ✅  外部代理完成
+Phase 2.1 (轨迹合成)          ██░░░░░░░░  20% ⚠️  trajectory_smoother.py 已有，未集成到 app.py
+Phase 2.2 (梯度微调)          ░░░░░░░░░░   0% ❌  未执行
+Phase 2.3 (EDT vs Costmap)   ░░░░░░░░░░   0% ❌  未执行
+Phase 3.1 (模块拆分)          ██████████ 100% ✅  预置文件已有 (ui_theme.py, ui_common.py)
+Phase 4 (测试)                ░░░░░░░░░░   0% ❌  未执行
+Phase 5 (基准运行)            ░░░░░░░░░░   0% ❌  未执行
+Phase 6 (文档/Git)            ░░░░░░░░░░   0% ❌  git 有 owner 问题未解决
+```
 
-| 功能 | 函数 | 结论 |
-|------|------|------|
-| 三次样条 | `_cubic_spline_2d()` | ✅ scipy CubicSpline，bc_type="natural" |
-| 梯形速度 Profile | `trapezoidal_velocity_profile()` | ✅ 三段式（加速→匀速→减速），距离短时退化为三角形 |
-| 轨迹合成入口 | `smooth_path_to_trajectory(...)` | ✅ 输出 `{t, x, y, z=0, roll, pitch, yaw}` |
-| 2D 约束 | z = 0 | ✅ 始终为 0 |
+---
 
-### 2.2 `ui_theme.py` ✅
+## 二、独立审查发现
 
-| 功能 | 内容 |
+### 2.1 本会话已完成（已验证）
+
+| 项目 | 审查结论 | 证据 |
+|------|---------|------|
+| Z 轴硬断言 | ✅ 功能完整 | `_eval_distance_via_field` 入口插入 13 行检测代码 |
+| 架构图架构 | ✅ 可独立使用 | `architecture_viz.py` 导出 `get_architecture_html()`，生成完整 HTML |
+| 演示录制 | ✅ 可独立使用 | `demo_recorder.py` 导出 `record_demo_video()`，4 个预设场景 |
+| 梯形 Profile | ⚠️ 已删除 | `motion_profile.py` 被外部代理删除，功能由 `trajectory_smoother.py` 覆盖 |
+
+### 2.2 外部代理已完成（需复核）
+
+以下改动不是本会话执行的，是外部代理在间隙中完成的。我对它们做了独立检查：
+
+**app.py DATA_ROOT 修正** ✅
+```
+# 当前值：_REPO_ROOT / "SMDSL" / "data" / "cad_samples"
+# 预期值：_REPO_ROOT / "SMDSL" / "data" / "cad_samples"
+# 结论：正确
+```
+
+**3D 区块全部删除** ✅
+- "🌐 3D 拓扑白模预览" 区块 → 已删除
+- "🌆 3D 空间场景图" 区块 → 已删除
+- "📊 3D Trajectory Sandbox" → 已删除
+- 对应的回调绑定 → 已删除
+- 对应的 handler 函数 → 已删除
+- 结论：3D 相关 UI 已完全清除，符合方向一 2D 聚焦原则
+
+**DWG entity_stats** ✅
+- `dispatcher.py` 中 `entity_stats` 已实现
+- 但 `note` 字段是否已注入 `ParseResult` 需查
+
+### 2.3 方向一未完成（共 9 项）
+
+| # | 项目 | 文件 | 严重度 |
+|---|------|------|--------|
+| 1 | RoboIR diff 硬校验 | `tests/test_closed_loop_recovery.py` | 🔴 P0 安全 |
+| 2 | 操作说明精简 | `app.py` Tab 1 顶部 | 🟡 P1 UX |
+| 3 | 预设示例路径修正 | `app.py` L1886 附近 | 🟡 P1 可用性 |
+| 4 | 轨迹合成接入 app.py | 调用 `trajectory_smoother.py` | 🟡 P1 功能 |
+| 5 | 梯度路径微调 | `astar_topology.py` 新建函数 | 🟡 P1 效果 |
+| 6 | EDT vs Costmap 基准 | 新建 `benchmark/` 目录 | 🔴 P0 交付物 |
+| 7 | 单元测试 | 5 个测试文件 | 🟡 P1 质量 |
+| 8 | Git 初始化 + push | 仓库配置 | 🟡 P1 管理 |
+| 9 | 文档更新 | `README.md` + `CHANGELOG.md` | 🟢 P2 |
+
+### 2.4 关键不一致风险
+
+1. `motion_profile.py` 被删除，但我这边没有检查 `trajectory_smoother.py` 是否完整覆盖了所有用例
+2. `app.py` 虽然清理了 3D 区块，但新模块（架构图、录制）未集成，用户无法从统一界面使用
+3. DWG `entity_stats` 已实现但未验证准确性（需要 mock 数据测试）
+4. Git 存在 owner 归属问题未解决（`S-1-5-21-...` vs `S-1-5-21-...-1013`），commit 被阻止
+
+---
+
+## 三、我的验证清单（用于后续每次审查）
+
+每次外部代理报告完成后，我必须亲自检查的清单：
+
+### 代码审查
+
+```
+□ 改动文件是否存在（路径正确）
+□ 核心函数签名是否匹配（入参/出参）
+□ 类型标注是否完整（Python typing）
+□ import 依赖是否可解析
+□ 副作用是否可控（不破坏已有功能）
+```
+
+### 功能验证
+
+```
+□ DATA_ROOT 是否正确指向现有数据目录
+□ 路径修正后预设样本可加载
+□ 新模块导入不报 ImportError
+□ 测试命令可执行（不要求全通过，但至少不 crash）
+□ app.py 启动后 Tab 可切换、按钮可点击
+```
+
+### 一致性检查
+
+```
+□ 本会话新建文件没有意外删除
+□ 预置文件没有被意外修改
+□ git status 显示的文件改动与预期一致
+□ README.md 中描述的功能与实际代码匹配
+```
+
+---
+
+## 四、责任边界
+
+| 角色 | 职责 |
 |------|------|
-| CSS | `SMDSL_THEME_CSS`（536 行），Apple 设计语言，亮/暗双模式 |
-| 主题构建 | `build_theme()` + `build_theme_compact()` |
-| 主题切换 JS | `THEME_TOGGLE_JS`（含键盘快捷键 D） |
+| 外部执行代理（Claude） | 按执行提示词逐项改动代码、跑测试、git commit、汇报 | 
+| **我（Codex 审查者）** | **不信报告只看代码。逐项检查文件状态、函数签名、import 依赖、路径正确性，发现不一致直接标记** |
+| 决策者（用户） | 在优先级决策和方向选择上做最终确认 |
 
-### 2.3 `ui_common.py` ✅
-
-| 函数 | 用途 |
-|------|------|
-| `flow_nav_md(active)` | 流程导航条 HTML |
-| `format_seed_label(idx, kind, x, y, extra)` | 种子标签格式化 |
-| `current_timestamp()` | 时间戳 |
-
-### 2.4 `motion_profile.py` 🔁 → 已删除
-
-- 与 `trajectory_smoother.py` **100% 功能重叠**（三次样条 + 梯形 Profile）
-- 提交 `081d2b5`：删除 1 文件，-129 行
-
----
-
-## 三、Phase 1 — P0 修复 + UI 修正
-
-### 3.1 RoboIR diff 硬校验 ✅（已存在）
-
-**文件**：`SMDSL/tests/test_closed_loop_recovery.py` L586-606
-
-**机制**：
-- LLM 修正返回 `corrected_roboir` 后，对比 `intent` 和 `target_frame` 是否与原始一致
-- 不一致 → `[DIFF-REJECT]`，prompt 追加硬约束，不消耗重试次数
-- 一致 → 继续物理校验
-
-**单元测试**：`tests/test_roboir_diff.py` — 6/6 通过
-
-### 3.2 DWG 实体丢弃率告警 ✅（已存在）
-
-**文件**：`SMDSL/cad_parser/dispatcher.py` L470-575
-
-**机制**：
-- `_extract_dwg_geometry()` → `entity_stats` 计数器（按类型统计 processed/skipped）
-- `_format_entity_drop_note()` → 丢弃率 >10% 时生成告警字符串
-- `_parse_dwg()` 末尾自动追加到 `result["note"]`
-
-**单元测试**：`tests/test_entity_stats.py` — 10/10 通过
-
-### 3.3 app.py UI 修正 ✅（提交 `df706ba`）
-
-| # | 问题 | 文件位置 | 改动 | 状态 |
-|---|------|----------|------|------|
-| A | Tab 1 说明文字过冗 | L1845-1857 | 40+ 行 → 4 行操作流程 | ✅ |
-| B | `_DATA_ROOT` 路径错误 | L72 | `data/cad_samples` → `SMDSL/data/cad_samples` | ✅ |
-| C | 预设样本路径错误 | L81-82 | 加 `SMDSL/` 前缀 | ✅ |
-| C | 测试预设路径硬编码 | L1878-1916 | 6 个硬编码路径 → `_REPO_ROOT` 动态拼接 | ✅ |
-| D | 机器人半径 slider | L1975-1978 | 保留，info 简化为"影响路径与障碍物的最小距离" | ✅ |
-| E | 3D 拓扑白模预览 | L1995-1997 | Accordion + Button + Plot **全部删除** | ✅ |
-| F | 3D 空间场景图 | L1999-2014 | Accordion + Markdown + Button + Plot **全部删除** | ✅ |
-| G1 | handler `demo1_3d_preview` | L1145-1163 | **已删除** | ✅ |
-| G2 | handler `demo1_scene_graph_3d` | L1166-1227 | **已删除** | ✅ |
-| H | 3D 回调绑定 | L2132-2147 | `d1_3d_btn.click` + `d1_scene3d_btn.click` **已删除** | ✅ |
-| I | Demo 3 3D→2D | L2465 + L1609-1629 | Plotly 3D → matplotlib 2D 路径叠加图 + ρ 曲线 | ✅ |
-
-#### 3.3.I Demo 3 2D 叠加图详情
-
-**之前**：
-```python
-from smdsl_demo.visualize_demo3 import generate_3d_dashboard
-fig_3d, fig_rho = generate_3d_dashboard(...)
-```
-
-**现在**：
-- `fig_traj`：matplotlib imshow（距离场背景）+ plot（路径线）+ scatter（起终点 + 违规节点）
-- `fig_rho`：matplotlib 柱状图（每个约束的 ρ 值）
-- 标签从"📊 3D Trajectory Sandbox"改为"2D 轨迹叠加图"
-- 移除了 `generate_3d_dashboard`、`render_robustness_curve`、`render_trajectory_overlay` 全部 import
-
----
-
-## 四、Phase 2 — P1 优化（已实装）
-
-### 4.1 轨迹合成接入 ✅
-
-**文件**：`app.py` L814, L874
-
-`_plan_path_core` 已调用 `smooth_path_to_trajectory`：
-
-```
-A* 路径 → 三次样条平滑 → 梯形速度 Profile → [{t, x, y, z, roll, pitch, yaw}]
-```
-
-### 4.2 距离场梯度微调 ✅
-
-**文件**：`cad_parser/astar_topology.py` L893-941
-
-| 函数 | 行号 | 说明 |
-|------|------|------|
-| `compute_field_gradient(df)` | L893-898 | `np.gradient` 中心差分，返回 `(gx, gy)` |
-| `refine_path_via_gradient(path, df, grad, r_px, iters=5)` | L901-941 | 梯度上升微调，保 clearance ≥ `robot_radius_px` |
-
-**集成点**（`app.py` L866-872）：
-```
-A* 最短路径 → compute_field_gradient → refine_path_via_gradient → smooth_path_to_trajectory
-```
-
-**单元测试**：`tests/test_gradient_refine.py` — 7/7 通过
-
----
-
-## 五、Phase 3 — 模块拆分（已实装）
-
-所有拆分已在本次会话前完成。`app.py` L87-88 直接导入：
-
-```python
-from smdsl_demo.ui_common import (
-    format_seed_label as _format_seed_label,
-    flow_nav_md as _flow_nav_md,
-    current_timestamp as _ts,
-)
-from smdsl_demo.ui_theme import (
-    SMDSL_THEME_CSS as _CLAUDE_DOCS_CSS,
-    build_theme as _build_theme,
-    THEME_TOGGLE_JS,
-)
-```
-
----
-
-## 六、Phase 4 — 测试结果
-
-### 6.1 单元测试：38/38 通过 ✅
-
-| 测试文件 | 测试数 | 结果 |
-|----------|--------|------|
-| `tests/test_z_axis.py` | 5 | ✅ PASSED |
-| `tests/test_roboir_diff.py` | 6 | ✅ PASSED |
-| `tests/test_entity_stats.py` | 10 | ✅ PASSED |
-| `tests/test_trajectory_smoother.py` | 11 | ✅ PASSED |
-| `tests/test_gradient_refine.py` | 7 | ✅ PASSED |
-| **合计** | **38** | **✅ 100%** |
-
-### 6.2 集成测试：⏳ 待数据
-
-`smdsl_demo/test_demo3_pipeline.py` — 需要 FloorplanQA 数据集（`room_24.json` 不在仓库中）。下载数据后可运行：
-
-```bash
-cd SMDSL && python -m pytest smdsl_demo/test_demo3_pipeline.py -v
-```
-
----
-
-## 七、Phase 5 — 基准 + 文档 + 推送
-
-### 7.1 基准脚本 ✅
-
-**文件**：`SMDSL/benchmark/bench_edt_vs_costmap.py`
-
-| 功能 | 说明 |
-|------|------|
-| EDT 方案 | `safety_aware_astar_flood`（连续距离场） |
-| Costmap 方案 | `binary_dilation` + 二值 A* |
-| 指标 | `clearance_min`、`clearance_mean`、窄通道通过率、`planning_time` |
-| 合成数据 | 随机墙体生成器（含缺口/窄通道） |
-
-**验证运行（5 布局）**：
-
-| 布局 | EDT | Costmap | Δ clearance_min |
-|------|-----|---------|----------------|
-| 0 | OK (137.9cm) | OK (137.9cm) | +0.0cm |
-| 1 | OK (28.3cm) | OK (25.0cm) | **+3.3cm** |
-| 2 | OK (28.3cm) | OK (25.0cm) | **+3.3cm** |
-| 3 | OK (39.1cm) | OK (39.1cm) | +0.0cm |
-| 4 | **OK** (25.0cm) | **FAIL** (0.0cm) | **+25.0cm** |
-
-> EDT 在 costmap 失败的窄通道场景下成功规划，展示了连续距离场在狭窄空间的优势。
-
-### 7.2 文档 ✅
-
-| 文件 | 改动 |
-|------|------|
-| `CHANGELOG.md` | 新增 v0.2.1：UI 修正、3D 删除、安全措施、基准框架 |
-| `README.md` | 更新 Git HEAD 引用为 `df706ba` |
-| `SMDSL_Modification_v1.md` | 修改方案 v1（已入仓） |
-| `SMDSL_Execute_Prompt_v1.md` | 执行指令（已入仓） |
-
-### 7.3 安全验证 ✅
-
-| 检查项 | 结果 |
-|--------|------|
-| `.env` 在 `.gitignore` | ✅ |
-| `.env` 零次出现在 Git 历史 | ✅ |
-| DeepSeek API Key 未泄露 | ✅ |
-
-### 7.4 Git 推送 ✅
-
-```
-5d7e17e..1d2ecee  main -> main
-```
-
-远程仓库：`git@github.com:Xuzc317/SMDSL_2D.git`
-
----
-
-## 八、待办项
-
-| # | 事项 | 说明 |
-|---|------|------|
-| 1 | 下载 FloorplanQA 数据集 | 1997 个布局 JSON，放入 `SMDSL/data/cad_samples/floorplanqa/layouts/` |
-| 2 | 运行集成测试 | `test_demo3_pipeline.py` 需要 room_24.json |
-| 3 | 200 布局全量基准 | `bench_edt_vs_costmap.py --n_layouts 200` |
-| 4 | OSM 数据 | 需代理/VPN 访问 nominatim.openstreetmap.org |
-| 5 | Demo 2/3 VLM 端到端验证 | 需 DeepSeek API 可连通 |
-
----
-
-## 九、文件变更清单
-
-| 操作 | 文件 |
-|------|------|
-| 删除 | `SMDSL/smdsl_demo/motion_profile.py` |
-| 新建 | `SMDSL/benchmark/bench_edt_vs_costmap.py` |
-| 新建 | `SMDSL/benchmark/results/`（目录） |
-| 新增 | `SMDSL_Modification_v1.md` |
-| 新增 | `SMDSL_Execute_Prompt_v1.md` |
-| 修改 | `SMDSL/smdsl_demo/app.py`（+80 / -167 行） |
-| 修改 | `requirements.txt`（+1 行：python-dotenv） |
-| 修改 | `SMDSL/smdsl_demo/mcp_server.py`（+5 行：dotenv 加载） |
-| 修改 | `CHANGELOG.md` |
-| 修改 | `README.md` |
+> **审查原则**：代理说"已完成" ≠ 任务已完成。我亲自读代码、看文件、测 import、查路径，确认后再更新状态。

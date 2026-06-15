@@ -27,6 +27,8 @@ data/cad_samples/
 data/footwear_manufacturing_warehouse/
 data/autodesk_fdu_tutorials/
 data/datasets/_mendeley_dl_tmp/
+data/datasets/synthetic_benchmark/
+data/datasets/osm_networks/
 data/datasets/*.zip
 *.npy
 *.npz

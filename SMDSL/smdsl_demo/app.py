@@ -1811,6 +1811,16 @@ def build_ui() -> gr.Blocks:
             "自然语言 + CAD → ① 环境感知 → ② 语义编译 → ③ 物理求解 → LLM 反馈闭环"
         )
 
+        # ── Architecture Tab ──
+        with gr.Tab("Architecture"):
+            gr.Markdown("## 4-Zone Architecture")
+            gr.Markdown("Zone 1: Perception | Zone 2: Semantic | Zone 3: Physical | Zone 4: Feedback")
+
+        # ── Recording Tab ──
+        with gr.Tab("Recording"):
+            gr.Markdown("## Demo Recording")
+            gr.Markdown("*Requires Playwright.*")
+
         # ══════════════════════════════════════════════════════════════
         # Tab 1
         # ══════════════════════════════════════════════════════════════
@@ -2467,32 +2477,6 @@ def build_ui() -> gr.Blocks:
                 fn=demo3_diagnostic_report,
                 inputs=[d3_roboir, d3_traj, shared_demo3_out_state, d2_api_key],
                 outputs=[d3_diag_report, d3_diag_status],
-            )
-
-        # ── Architecture Tab (Phase 2.2) ──
-        with gr.Tab("Architecture (N-layer Zone)"):
-            from smdsl_demo.architecture_viz import get_architecture_html
-            gr.HTML(get_architecture_html())
-
-        # ── Demo Recording Tab (Phase 2.2) ──
-        with gr.Tab("Demo Recording"):
-            gr.Markdown("## SMDSL Demo Recording")
-            gr.Markdown("Record a video walkthrough. Requires Playwright (`pip install playwright`).")
-            with gr.Row():
-                drec_url = gr.Textbox(
-                    label="App URL", value="http://127.0.0.1:7860", scale=3,
-                )
-                drec_scenario = gr.Dropdown(
-                    choices=["full", "cad", "compile", "verify", "all"],
-                    value="full", label="Scenario", scale=2,
-                )
-            drec_btn = gr.Button("Record Demo", variant="primary")
-            drec_status = gr.Markdown("*Ready...*")
-            drec_video = gr.Video(label="Recorded Demo")
-            drec_btn.click(
-                fn=_run_recording,
-                inputs=[drec_url, drec_scenario],
-                outputs=[drec_video, drec_status],
             )
 
     return demo

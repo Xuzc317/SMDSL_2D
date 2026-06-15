@@ -23,17 +23,17 @@ app.py — SMDSL 模块化调试面板（Gradio）
 
 from __future__ import annotations
 
-from dotenv import load_dotenv as _load_dotenv
-_load_dotenv(
-    Path(__file__).resolve().parent.parent.parent / ".env"
-)
-
 import datetime as _dt
 import json
 import os
 import sys
 import traceback
 from pathlib import Path
+
+from dotenv import load_dotenv as _load_dotenv
+_load_dotenv(
+    Path(__file__).resolve().parent.parent.parent / ".env"
+)
 from typing import Any, Dict, List, Optional, Tuple
 
 import gradio as gr

@@ -25,6 +25,11 @@ import sys
 from pathlib import Path
 from typing import Any, Dict, List, Optional, Tuple
 
+from dotenv import load_dotenv as _load_dotenv
+_load_dotenv(
+    Path(__file__).resolve().parent.parent.parent / ".env"
+)
+
 _PROJ = Path(__file__).resolve().parent.parent
 if str(_PROJ) not in sys.path:
     sys.path.insert(0, str(_PROJ))

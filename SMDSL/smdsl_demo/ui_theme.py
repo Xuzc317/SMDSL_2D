@@ -484,8 +484,8 @@ def build_theme() -> "gr.themes.Soft":
             gr.themes.GoogleFont("JetBrains Mono"),
             "SF Mono", "ui-monospace", "Menlo", "Consolas", "monospace",
         ],
-        radius_size=gr.themes.Size(sm="6px", md="10px", lg="14px"),
-        spacing_size=gr.themes.Size(sm="8px", md="16px", lg="24px"),
+        radius_size=gr.themes.Size(xxs="2px", xs="4px", sm="6px", md="10px", lg="14px", xl="20px", xxl="28px"),
+        spacing_size=gr.themes.Size(xxs="2px", xs="4px", sm="8px", md="16px", lg="24px", xl="32px", xxl="48px"),
     )
 
 
@@ -510,8 +510,8 @@ def build_theme_compact() -> "gr.themes.Soft":
             gr.themes.GoogleFont("JetBrains Mono"),
             "monospace",
         ],
-        radius_size=gr.themes.Size(sm="4px", md="8px", lg="12px"),
-        spacing_size=gr.themes.Size(sm="6px", md="12px", lg="20px"),
+        radius_size=gr.themes.Size(xxs="2px", xs="3px", sm="4px", md="8px", lg="12px", xl="16px", xxl="24px"),
+        spacing_size=gr.themes.Size(xxs="2px", xs="3px", sm="6px", md="12px", lg="20px", xl="28px", xxl="40px"),
     )
 
 

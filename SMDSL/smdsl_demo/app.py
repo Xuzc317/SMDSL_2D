@@ -65,7 +65,7 @@ from smdsl_demo.vlm_parser import (  # noqa: E402
 import tempfile as _tempfile
 _OUT_DIR = Path(_tempfile.gettempdir()) / "smdsl_ui_cache"
 _OUT_DIR.mkdir(parents=True, exist_ok=True)
-_DATA_ROOT = str(_REPO_ROOT / "SMDSL" / "data" / "cad_samples")
+_DATA_ROOT = str(_REPO_ROOT / "data" / "cad_samples")
 
 
 # ══════════════════════════════════════════════════════════════════════
@@ -74,8 +74,8 @@ _DATA_ROOT = str(_REPO_ROOT / "SMDSL" / "data" / "cad_samples")
 
 # 默认预设：换更复杂的 bedroom 样本（如不存在则回退 kitchen）
 _PRESET_CANDIDATES = [
-    "SMDSL/data/cad_samples/floorplanqa/layouts/bedroom/room_5.json",
-    "SMDSL/data/cad_samples/floorplanqa/layouts/kitchen/room_24.json",
+    "data/cad_samples/floorplanqa/layouts/bedroom/room_5.json",
+    "data/cad_samples/floorplanqa/layouts/kitchen/room_24.json",
 ]
 _DEFAULT_SAMPLE_PATH = next(
     (str(_REPO_ROOT / p) for p in _PRESET_CANDIDATES
@@ -1687,7 +1687,7 @@ def _load_default_bundle() -> Optional[Dict[str, Any]]:
         )
         layout_path = (
             _REPO_ROOT
-            / "SMDSL/data/cad_samples/floorplanqa/layouts/kitchen/room_24.json"
+            / "data/cad_samples/floorplanqa/layouts/kitchen/room_24.json"
         )
         if not layout_path.exists():
             return None
@@ -1851,37 +1851,37 @@ def build_ui() -> gr.Blocks:
             # 6 个本地测试快速预设（路径+说明）
             _TEST_PRESETS = [
                 {
-                    "path": str(_REPO_ROOT / "SMDSL/data/cad_samples/mapf_all_png/Paris_1_256.png"),
+                    "path": str(_REPO_ROOT / "data/cad_samples/mapf_all_png/Paris_1_256.png"),
                     "label": "① PNG 迷宫 Paris_1_256",
                     "hint": "mapf_all_png/Paris_1_256.png — 迷宫栅格图",
                     "is_dir": False,
                 },
                 {
-                    "path": str(_REPO_ROOT / "SMDSL/data/cad_samples/floorplanqa/layouts/bedroom/room_5.json"),
+                    "path": str(_REPO_ROOT / "data/cad_samples/floorplanqa/layouts/bedroom/room_5.json"),
                     "label": "② JSON 卧室 room_5",
                     "hint": "FloorplanQA JSON 矢量 — 完整语义",
                     "is_dir": False,
                 },
                 {
-                    "path": str(_REPO_ROOT / "SMDSL/data/cad_samples/floorplanqa/layouts/kitchen/room_24.json"),
+                    "path": str(_REPO_ROOT / "data/cad_samples/floorplanqa/layouts/kitchen/room_24.json"),
                     "label": "③ JSON 厨房 room_24",
                     "hint": "FloorplanQA JSON 矢量 — 完整语义",
                     "is_dir": False,
                 },
                 {
-                    "path": str(_REPO_ROOT / "SMDSL/data/cad_samples/svg_samples/bedroom_example.svg"),
+                    "path": str(_REPO_ROOT / "data/cad_samples/svg_samples/bedroom_example.svg"),
                     "label": "④ SVG 卧室示例",
                     "hint": "SVG 矢量图 — 无对象语义",
                     "is_dir": False,
                 },
                 {
-                    "path": str(_REPO_ROOT / "SMDSL/data/cad_samples/raster_samples/factory_layout_003.jpg"),
+                    "path": str(_REPO_ROOT / "data/cad_samples/raster_samples/factory_layout_003.jpg"),
                     "label": "⑤ JPG 工厂手绘（边界弱）",
                     "hint": "factory_layout_003.jpg — 手绘，识别效果有限",
                     "is_dir": False,
                 },
                 {
-                    "path": str(_REPO_ROOT / "SMDSL/data/cad_samples/raster_samples/0006-0013.png"),
+                    "path": str(_REPO_ROOT / "data/cad_samples/raster_samples/0006-0013.png"),
                     "label": "⑥ PNG CAD 纯黑线图",
                     "hint": "0006-0013.png — 白底黑线，建议勾选「PNG 反色」",
                     "is_dir": False,

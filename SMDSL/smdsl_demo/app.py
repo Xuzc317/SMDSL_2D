@@ -60,16 +60,12 @@ from smdsl_demo.vlm_parser import (  # noqa: E402
     normalize_stl_constraints,
     validate_roboir_references,
 )
-from smdsl_demo.visualize_demo3 import (  # noqa: E402
-    generate_3d_dashboard,
-    render_robustness_curve,
-    render_trajectory_overlay,
-)
+# visualize_demo3 imports removed — 2D path overlay generated locally in demo3_run
 
 import tempfile as _tempfile
 _OUT_DIR = Path(_tempfile.gettempdir()) / "smdsl_ui_cache"
 _OUT_DIR.mkdir(parents=True, exist_ok=True)
-_DATA_ROOT = str(_REPO_ROOT / "data" / "cad_samples")
+_DATA_ROOT = str(_REPO_ROOT / "SMDSL" / "data" / "cad_samples")
 
 
 # ══════════════════════════════════════════════════════════════════════
@@ -78,8 +74,8 @@ _DATA_ROOT = str(_REPO_ROOT / "data" / "cad_samples")
 
 # 默认预设：换更复杂的 bedroom 样本（如不存在则回退 kitchen）
 _PRESET_CANDIDATES = [
-    "data/cad_samples/floorplanqa/layouts/bedroom/room_5.json",
-    "data/cad_samples/floorplanqa/layouts/kitchen/room_24.json",
+    "SMDSL/data/cad_samples/floorplanqa/layouts/bedroom/room_5.json",
+    "SMDSL/data/cad_samples/floorplanqa/layouts/kitchen/room_24.json",
 ]
 _DEFAULT_SAMPLE_PATH = next(
     (str(_REPO_ROOT / p) for p in _PRESET_CANDIDATES
@@ -1142,90 +1138,6 @@ def demo3_diagnostic_report(
 
 # ── Spatial-RAG: 环境语义画像按钮 ───────────────────
 
-def demo1_3d_preview(topology_state: Dict[str, Any]) -> Tuple[Any, str]:
-    """生成 3D 拓扑白模预览。"""
-    if not topology_state or topology_state.get("grid") is None:
-        return None, "*请先运行 Demo 1 解析 CAD。*"
-    try:
-        from cad_parser.visualize import generate_3d_topology_preview  # noqa: PLC0415
-        pipeline = {
-            "grid": topology_state.get("grid"),
-            "distance_field": topology_state.get("distance_field"),
-            "topology": topology_state.get("topology"),
-            "transform": topology_state.get("transform", {}),
-            "seeds": [],  # seeds are in pixel coords inside demo1_run
-            "semantics": topology_state.get("semantics", {}),
-            "cad_data": topology_state.get("cad_data", {}),
-        }
-        fig = generate_3d_topology_preview(pipeline)
-        return fig, "3D topology preview generated (drag to rotate/zoom)"
-    except Exception as e:
-        return None, f"3D preview failed: {e}"
-
-
-def demo1_scene_graph_3d(topology_state: Dict[str, Any]) -> Tuple[Any, str]:
-    """
-    生成 3D 空间场景图（浏览器内 Plotly，无需下载）。
-
-    - OSM 模式：房间多边形 Mesh3d + 拓扑通路图层 + Hover 语义
-    - 其他模式：距离场地板热力图 + 墙体线框 + 连通区域着色
-    """
-    if not topology_state or topology_state.get("grid") is None:
-        return None, "❌ 请先在 Tab 1 解析 CAD 文件。"
-
-    mode = topology_state.get("mode", "")
-
-    try:
-        if mode == "osm" and topology_state.get("osm_rooms"):
-            # OSM 专属：精确多边形场景图
-            from smdsl_demo.visualize_demo3 import generate_osm_3d_scene  # noqa: PLC0415
-            parse_result = {
-                "mode": "osm",
-                "osm_rooms": topology_state.get("osm_rooms", []),
-                "osm_edges": topology_state.get("osm_edges", []),
-                "adjacency_graph": topology_state.get("adjacency_graph", {}),
-            }
-            src = Path(topology_state.get("source_path", "")).name
-            fig = generate_osm_3d_scene(
-                parse_result,
-                wall_height=3.2,
-                title=f"3D Space Graph — {src}",
-                show_topology_edges=True,
-            )
-            n_rooms = len(topology_state.get("osm_rooms", []))
-            n_edges = len(topology_state.get("osm_edges", []))
-            status = (
-                f"✅ 3D 场景图生成完成 · OSM 模式 · "
-                f"{n_rooms} 个房间多边形 · {n_edges} 条拓扑通路 · "
-                "可拖转旋转/滚轮缩放/悬停查看房间语义"
-            )
-        else:
-            # 其他模式：grid 场景图（距离场地板 + 等高线幕墙）
-            from smdsl_demo.visualize_demo3 import generate_grid_3d_scene  # noqa: PLC0415
-            pipeline = {
-                "grid": topology_state.get("grid"),
-                "distance_field": topology_state.get("distance_field"),
-                "topology": topology_state.get("topology"),
-                "transform": topology_state.get("transform", {}),
-                "seeds": topology_state.get("seeds", []),
-                "semantics": topology_state.get("semantics", {}),
-                "cad_data": topology_state.get("cad_data", {}),
-            }
-            src = Path(topology_state.get("source_path", "")).name
-            fig = generate_grid_3d_scene(
-                pipeline,
-                wall_height=3.0,
-                title=f"3D Space Graph — {src} [{mode.upper()}]",
-            )
-            status = (
-                f"✅ 3D 场景图生成完成 · {mode.upper()} 模式 · "
-                "距离场地板 + 3D 墙体幕墙 · 可拖转/缩放/Hover"
-            )
-        return fig, status
-    except Exception as e:  # noqa: BLE001
-        import traceback  # noqa: PLC0415
-        return None, f"❌ 3D 场景图生成失败：{e}\n{traceback.format_exc()[:400]}"
-
 
 def demo1_profile(topology_state: Dict[str, Any],
                   api_key_override: str = "") -> Tuple[Any, Any, Any]:
@@ -1694,18 +1606,62 @@ def demo3_run(
         if rep.get("violated"):
             all_violations.extend(rep.get("violation_nodes", []))
 
+    # ── 生成 2D 轨迹叠加图 (matplotlib) ──────────────────
+    import matplotlib
+    matplotlib.use("Agg")
+    import matplotlib.pyplot as plt
+    fig_traj, fig_rho = None, None
     try:
-        from smdsl_demo.visualize_demo3 import generate_3d_dashboard  # noqa: PLC0415
-        topo = topology_state.get("topology") if topology_state else None
-        fig_3d, fig_rho = generate_3d_dashboard(
-            trajectory=trajectory,
-            bundle=bundle,
-            topology=topo,
-            violation_nodes=all_violations if all_violations else None,
-            min_distance_m=min_d,
-        )
+        df = bundle.get("distance_field") if bundle else None
+        tx = bundle.get("grid_transform") if bundle else None
+        if df is not None and tx is not None and trajectory:
+            res = tx["resolution"]
+            ox, oy = tx["origin"]
+            H, W = df.shape
+            xs = [p["x"] for p in trajectory]
+            ys = [p["y"] for p in trajectory]
+
+            fig_traj, ax = plt.subplots(figsize=(8, 6))
+            ax.imshow(df, cmap="RdYlGn", origin="upper",
+                      extent=[ox, ox + W * res, oy + H * res, oy])
+            ax.plot(xs, ys, "b-", linewidth=2, label="Planned Path")
+            ax.plot(xs[0], ys[0], "go", markersize=8, label="Start")
+            ax.plot(xs[-1], ys[-1], "ro", markersize=8, label="Goal")
+            if all_violations:
+                vx = [n["x"] for n in all_violations if "x" in n]
+                vy = [n["y"] for n in all_violations if "y" in n]
+                if vx:
+                    ax.scatter(vx, vy, c="red", marker="x", s=60,
+                               linewidths=2, label=f"Violations ({len(vx)})")
+            ax.set_xlabel("x (m)")
+            ax.set_ylabel("y (m)")
+            ax.set_title("2D Trajectory Overlay on Distance Field")
+            ax.legend(loc="upper right")
+            ax.set_aspect("equal")
+            plt.tight_layout()
+
+        # ── ρ(t) robustness curve ──
+        reports_data = [
+            {"t": r.get("t", 0), "rho": r.get("robustness", 0),
+             "label": r.get("rule_expr", ""),
+             "violated": r.get("violated", False)}
+            for r in reports
+        ]
+        if reports_data:
+            fig_rho, ax2 = plt.subplots(figsize=(8, 3))
+            for rd in reports_data:
+                color = "red" if rd["violated"] else "green"
+                ax2.axhline(y=rd["rho"], color=color, linestyle="--",
+                            linewidth=1, alpha=0.5,
+                            label=f"{rd['label']}: ρ={rd['rho']:.3f}")
+            ax2.axhline(y=0, color="black", linewidth=1)
+            ax2.set_xlabel("Constraint Index")
+            ax2.set_ylabel("ρ (robustness)")
+            ax2.set_title("ρ(t) Robustness by Constraint")
+            ax2.legend(fontsize=8, loc="upper right")
+            plt.tight_layout()
     except Exception:
-        fig_3d, fig_rho = None, None
+        fig_traj, fig_rho = None, None
 
     pose_table = _build_pose_table(trajectory, roboir, bundle, min_d)
 
@@ -1714,7 +1670,7 @@ def demo3_run(
         f"{icon} {n_violations} / {len(reports)} constraints violated · "
         f"distance field: {bundle_status}"
     )
-    return json_text, fig_3d, fig_rho, pose_table, status
+    return json_text, fig_traj, fig_rho, pose_table, status
 
 
 _DEFAULT_BUNDLE_CACHE: Optional[Dict[str, Any]] = None
@@ -1731,7 +1687,7 @@ def _load_default_bundle() -> Optional[Dict[str, Any]]:
         )
         layout_path = (
             _REPO_ROOT
-            / "data/cad_samples/floorplanqa/layouts/kitchen/room_24.json"
+            / "SMDSL/data/cad_samples/floorplanqa/layouts/kitchen/room_24.json"
         )
         if not layout_path.exists():
             return None
@@ -1844,16 +1800,11 @@ def build_ui() -> gr.Blocks:
             gr.HTML(_flow_nav_md(1))
             gr.Markdown("## 这一步在做什么？")
             gr.Markdown(
-                "**输入**：CAD 平面图。**支持三种格式 → 不同语义能力**：\n\n"
-                "| 格式 | 解析方式 | Demo 2 词汇能力 | Demo 3 路径规划 |\n"
-                "|------|----------|----------------|------------------|\n"
-                "| **`.json`** (FloorplanQA) | 矢量 + 完整语义 | ✅ 自动获得 doors/objects | ✅ |\n"
-                "| **`.svg`** | 抽 line/polyline / path / rect | ⚠️ 无对象语义 (需手填) | ✅ |\n"
-                "| **`.png/.jpg`** | 二值化为 occupancy | ⚠️ 无对象语义 (需手填) | ✅ |\n\n"
-                "**处理**：栅格化 → 外部剔除 → 形态学破壁 → 距离场 (EDT) → "
-                "全局矩阵化拓扑分类。\n\n"
-                "**输出**：① 4 联可视化；② 候选起终点清单；③ 选 A→B 后求最短路径，"
-                "**自动同步轨迹至 Tab 3**。"
+                "### 操作流程\n"
+                "1. 选择/上传 CAD 文件 → 自动解析\n"
+                "2. 查看 4 联图结果（栅格/距离场/A* 热力/拓扑）\n"
+                "3. 选起终点 → 点击「规划路径」→ 查看路径\n"
+                "4. 路径轨迹自动同步至 Demo 3"
             )
             # 📌 数据来源 & 零幻觉护栏（文档站风格 callout）
             gr.HTML(
@@ -1883,37 +1834,37 @@ def build_ui() -> gr.Blocks:
             # 6 个本地测试快速预设（路径+说明）
             _TEST_PRESETS = [
                 {
-                    "path": r"D:\code_backup_dwg\data\cad_samples\mapf_all_png\Paris_1_256.png",
+                    "path": str(_REPO_ROOT / "SMDSL/data/cad_samples/mapf_all_png/Paris_1_256.png"),
                     "label": "① PNG 迷宫 Paris_1_256",
                     "hint": "mapf_all_png/Paris_1_256.png — 迷宫栅格图",
                     "is_dir": False,
                 },
                 {
-                    "path": r"C:\Users\admin\AppData\Local\Temp\gradio\30a4521c8e4d8f5c4f95598a6a40791a46a3e56b40a8c3cbd4f2e69563202c41\room_48.json",
-                    "label": "② JSON 房间 room_48",
+                    "path": str(_REPO_ROOT / "SMDSL/data/cad_samples/floorplanqa/layouts/bedroom/room_5.json"),
+                    "label": "② JSON 卧室 room_5",
                     "hint": "FloorplanQA JSON 矢量 — 完整语义",
                     "is_dir": False,
                 },
                 {
-                    "path": r"C:\Users\admin\AppData\Local\Temp\gradio\bad2222842025f7089570da795492aa5fc3e96c0bb179eac202fdcae80233d03\bedroom_example.svg",
-                    "label": "③ SVG 卧室",
-                    "hint": "bedroom_example.svg — 矢量，无对象语义",
+                    "path": str(_REPO_ROOT / "SMDSL/data/cad_samples/floorplanqa/layouts/kitchen/room_24.json"),
+                    "label": "③ JSON 厨房 room_24",
+                    "hint": "FloorplanQA JSON 矢量 — 完整语义",
                     "is_dir": False,
                 },
                 {
-                    "path": r"C:\Users\admin\AppData\Local\Temp\gradio\c9e3b858134c87e2ed9f39c9d63e2a11423e2b5fda953b47bec28e35ea496103\factory_layout_003.jpg",
-                    "label": "④ JPG 工厂手绘（边界弱）",
+                    "path": str(_REPO_ROOT / "SMDSL/data/cad_samples/svg_samples/bedroom_example.svg"),
+                    "label": "④ SVG 卧室示例",
+                    "hint": "SVG 矢量图 — 无对象语义",
+                    "is_dir": False,
+                },
+                {
+                    "path": str(_REPO_ROOT / "SMDSL/data/cad_samples/raster_samples/factory_layout_003.jpg"),
+                    "label": "⑤ JPG 工厂手绘（边界弱）",
                     "hint": "factory_layout_003.jpg — 手绘，识别效果有限",
                     "is_dir": False,
                 },
                 {
-                    "path": r"C:\Users\admin\AppData\Local\Temp\gradio\0785c08215e4b01d2eb2a2dee0dc241b7af536f983af4618e2834217f0895ffb\factory_layout_002.jpg",
-                    "label": "⑤ JPG 工厂手绘（边缘较清）",
-                    "hint": "factory_layout_002.jpg — 内边缘较清晰",
-                    "is_dir": False,
-                },
-                {
-                    "path": r"C:\Users\admin\AppData\Local\Temp\gradio\69672a7ff67c55741f97224ec6a3bf41b4bc79c217e45d799674c4c7fcbca204\0006-0013.png",
+                    "path": str(_REPO_ROOT / "SMDSL/data/cad_samples/raster_samples/0006-0013.png"),
                     "label": "⑥ PNG CAD 纯黑线图",
                     "hint": "0006-0013.png — 白底黑线，建议勾选「PNG 反色」",
                     "is_dir": False,
@@ -1974,7 +1925,7 @@ def build_ui() -> gr.Blocks:
                 )
                 d1_robot_radius = gr.Slider(
                     label="机器人半径 (m)",
-                    info="默认 0.15m。越大约束越严格（0.25-0.5m 适合大型机器人）",
+                    info="影响路径与障碍物的最小距离",
                     minimum=0.0, maximum=0.5, value=0.15, step=0.05,
                 )
 
@@ -1992,26 +1943,6 @@ def build_ui() -> gr.Blocks:
                 label="4 联图：(a) 栅格 / (b) 距离场 / (c) A* 热力 / (d) 拓扑标签",
                 type="filepath", interactive=False, height=420,
             )
-            with gr.Accordion("🌐 3D 拓扑白模预览", open=True):
-                d1_3d_btn = gr.Button("🏗 生成 3D 白模预览", variant="primary", size="lg")
-                d1_3d_plot = gr.Plot(label="3D Topology Preview", min_width=600)
-
-            with gr.Accordion("🌆 3D 空间场景图", open=False):
-                gr.Markdown(
-                    "在浏览器内生成交互式 3D 空间场景图，无需下载任何文件。\n\n"
-                    "- **OSM 文件**：精确多边形房间板块 + 拓扑通路连线 + Hover 语义（房间名/面积/高度）\n"
-                    "- **其他格式**：距离场地板热力图 + 墙体 3D 线框\n\n"
-                    "支持：**拖转旋转 · 滚轮缩放 · 双击复位 · 悬停查看房间信息**"
-                )
-                d1_scene3d_btn = gr.Button(
-                    "🏙 生成 3D 空间场景图",
-                    variant="primary", size="lg",
-                )
-                d1_scene3d_status = gr.Markdown("*解析 CAD 后点击上方按钮。*")
-                d1_scene3d_plot = gr.Plot(
-                    label="3D Space Graph",
-                    min_width=700,
-                )
 
             d1_out = gr.Code(
                 label="解析摘要 JSON", language="json", lines=10,
@@ -2152,24 +2083,6 @@ def build_ui() -> gr.Blocks:
             ).then(
                 fn=lambda: "✅ 解析完成 · 点击地图选起终点 / 或展开备选下拉",
                 inputs=None, outputs=d1_click_status,
-            )
-
-            # 3D 拓扑预览按钮
-            d1_3d_btn.click(
-                fn=demo1_3d_preview,
-                inputs=[topology_state],
-                outputs=[d1_3d_plot, d1_status],
-            )
-
-            # 3D 空间场景图
-            d1_scene3d_btn.click(
-                fn=lambda: (None, "⏳ 正在渲染 3D 空间场景图..."),
-                inputs=None,
-                outputs=[d1_scene3d_plot, d1_scene3d_status],
-            ).then(
-                fn=demo1_scene_graph_3d,
-                inputs=[topology_state],
-                outputs=[d1_scene3d_plot, d1_scene3d_status],
             )
 
             # ── 点击图选 A/B ──────────────────────────────
@@ -2462,7 +2375,7 @@ def build_ui() -> gr.Blocks:
 
             # 3D 轨迹图独占一行（全宽，不被压缩）
             d3_traj_image = gr.Plot(
-                label="📊 3D Trajectory Sandbox",
+                label="2D 轨迹叠加图",
             )
 
             # ρ(t) 曲线独占一行

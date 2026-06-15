@@ -1,5 +1,26 @@
 # SMDSL_2D Changelog
 
+## [0.2.1] — 2026-06-15 (v1 Review Pass)
+
+### Removed
+- **3D topology wireframe preview**: deleted `demo1_3d_preview` handler + Accordion block + callback (`app.py`)
+- **3D spatial scene graph**: deleted `demo1_scene_graph_3d` handler + Accordion block + callback (`app.py`)
+- **motion_profile.py**: functionally 100% redundant with `trajectory_smoother.py`
+
+### Changed
+- **Demo 3: 3D → 2D**: replaced Plotly 3D dashboard with matplotlib 2D path overlay + rho curve (`app.py`)
+- **Tab 1 description**: trimmed from 40+ lines to 4-line operation flow (`app.py`)
+- **Robot radius slider**: simplified info text to "影响路径与障碍物的最小距离" (`app.py`)
+- **_DATA_ROOT path**: corrected from `data/cad_samples` → `SMDSL/data/cad_samples` (`app.py`)
+- **Test presets**: replaced hardcoded temp paths with `_REPO_ROOT`-relative paths (`app.py`)
+
+### Added
+- **python-dotenv**: loads DeepSeek API key from `.env` at startup (`app.py`, `mcp_server.py`, `requirements.txt`)
+- **benchmark/bench_edt_vs_costmap.py**: EDT vs Costmap comparison framework with synthetic layout generation
+
+### Security
+- `.env` confirmed in `.gitignore` — no API keys in git history
+
 ## [0.2.0] — 2026-06-15
 
 ### Added (P0)

@@ -10,7 +10,7 @@
 
 ## 项目状态
 
-- **Git HEAD**: `0a4fdaf` — fix: A\* corner-cutting, API key propagation, path-planner state reuse
+- **Git HEAD**: `df706ba` — Phase 1.3 UI: path fixes, 3D→2D, security hardening
 - **Gradio UI**: `http://127.0.0.1:7860/` （`python -m smdsl_demo.app`）
 - **闭环测试**: ✅ 端到端自愈验证通过（`SMDSL/tests/test_closed_loop_recovery.py`）
 

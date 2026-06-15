@@ -235,10 +235,15 @@ def edt_baseline(
         # 墙壁区域标记为不可通行
         cost_grid[grid == _WALL] = float("inf")
 
-        # 空地: cost = 1.0 + safety_weight / (1 + d/r)
-        free_mask = (grid == _FREE)
-        d_vals = dt_field[free_mask]
-        cost_grid[free_mask] = 1.0 + safety_weight / (1.0 + d_vals / r_px)
+        # 距离场 < robot_radius_px 的"膨胀缓冲区"标记为不可通行
+        # 这严格对应 SMDSL 物理防穿透约束（与 astar_topology.py 一致）
+        inflated_mask = (dt_field < r_px) & (grid == _FREE)
+        cost_grid[inflated_mask] = float("inf")
+
+        # 安全区域: cost = 1.0 + safety_weight / (1 + d/r)
+        safe_mask = (grid == _FREE) & (dt_field >= r_px)
+        d_vals = dt_field[safe_mask]
+        cost_grid[safe_mask] = 1.0 + safety_weight / (1.0 + d_vals / r_px)
 
         path, n_exp = _astar_search(cost_grid, start, goal)
         dt = (time.perf_counter() - t0) * 1000

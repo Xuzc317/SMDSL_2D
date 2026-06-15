@@ -79,7 +79,7 @@ def _difficulty_label(clearance_px: float, r_px: float) -> str:
 def generate_single_map(
     height: int, width: int,
     narrow_width: int, wide_width: int,
-    seed: int, robot_radius_px: int = 6,
+    seed: int, robot_radius_px: int = 3,
 ) -> tuple[np.ndarray, dict[str, Any]]:
     """生成一张含窄通道的地图。左右两厅，中间走廊，走廊中央狭窄段。"""
     rng = np.random.RandomState(seed)
@@ -147,8 +147,14 @@ def generate_single_map(
 
 
 DIFFICULTY_PRESETS: dict[str, list[int]] = {
-    "easy": [12, 55], "medium": [8, 48],
-    "hard": [5, 42], "extreme": [3, 36],
+    # Narrow width designed around robot_radius_px=3 (disk inflates to ceil(3)=3px)
+    # Passage blocked by costmap when narrow < 7px (3+1+3)
+    # easy:   both pass, EDT margins measurable
+    # medium: costmap borderline, EDT passes
+    # hard:   costmap likely fails, EDT still possible
+    # extreme: both challenged, EDT wins on continuous gradient
+    "easy": [10, 50], "medium": [7, 44],
+    "hard": [4, 38], "extreme": [2, 32],
 }
 
 
@@ -156,7 +162,7 @@ def generate_batch(
     n_maps: int,
     map_height: int = 200, map_width: int = 300,
     difficulty: str = "mixed",
-    seed: int = 42, robot_radius_px: int = 6,
+    seed: int = 42, robot_radius_px: int = 3,
 ) -> list[tuple[np.ndarray, dict[str, Any]]]:
     """批量生成 n 张窄通道地图。difficulty: easy/medium/hard/extreme/mixed"""
     rng = np.random.RandomState(seed)

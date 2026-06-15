@@ -113,8 +113,8 @@ def run_benchmark(
     map_height: int = 200,
     map_width: int = 300,
     difficulty: str = "mixed",
-    robot_radius_px: float = 6.0,
-    safety_weight: float = 0.5,
+    robot_radius_px: float = 3.0,
+    safety_weight: float = 2.0,
     resolution: float = 0.05,
     global_seed: int = 42,
     output_csv: str = "",
@@ -201,10 +201,10 @@ def main() -> None:
                         help="map height in pixels (default: 200)")
     parser.add_argument("--width", type=int, default=300,
                         help="map width in pixels (default: 300)")
-    parser.add_argument("--robot-radius", type=float, default=6.0,
-                        help="robot radius in pixels (default: 6.0)")
-    parser.add_argument("--safety-weight", type=float, default=0.5,
-                        help="EDT safety weight (default: 0.5)")
+    parser.add_argument("--robot-radius", type=float, default=3.0,
+                        help="robot radius in pixels (default: 3.0, costmap disk=ceil(r)=3)")
+    parser.add_argument("--safety-weight", type=float, default=2.0,
+                        help="EDT safety weight (default: 2.0, stronger wall repulsion)")
     parser.add_argument("--resolution", type=float, default=0.05,
                         help="meters per pixel (default: 0.05)")
     parser.add_argument("--output", type=str, default="",

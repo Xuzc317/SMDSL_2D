@@ -1759,6 +1759,24 @@ def _api_key_status_md() -> str:
 # Build UI
 # ══════════════════════════════════════════════════════════════════════
 
+# ── Demo Recording handler (Phase 2.2) ──────────────────
+
+def _run_recording(app_url: str, scenario: str):
+    """Handler for the Demo Recording Tab. Returns (video_path, status_md)."""
+    from smdsl_demo.demo_recorder import record_demo_video
+    try:
+        results = record_demo_video(
+            app_url=app_url,
+            scenario=scenario,
+        )
+        # results is Dict[str, str] — find first video path
+        video_path = next((v for v in results.values() if v), None)
+        if video_path:
+            return video_path, f"✅ Saved: {video_path}"
+        return None, "⚠️ Recording completed but no video file produced"
+    except Exception as e:
+        return None, f"❌ Recording failed: {e}"
+
 
 def build_ui() -> gr.Blocks:
     with gr.Blocks(title="SMDSL_2D — Spatial-Motion DSL") as demo:
@@ -2452,6 +2470,32 @@ def build_ui() -> gr.Blocks:
                 fn=demo3_diagnostic_report,
                 inputs=[d3_roboir, d3_traj, shared_demo3_out_state, d2_api_key],
                 outputs=[d3_diag_report, d3_diag_status],
+            )
+
+        # ── Architecture Tab (Phase 2.2) ──
+        with gr.Tab("Architecture (N-layer Zone)"):
+            from smdsl_demo.architecture_viz import get_architecture_html
+            gr.HTML(get_architecture_html())
+
+        # ── Demo Recording Tab (Phase 2.2) ──
+        with gr.Tab("Demo Recording"):
+            gr.Markdown("## SMDSL Demo Recording")
+            gr.Markdown("Record a video walkthrough. Requires Playwright (`pip install playwright`).")
+            with gr.Row():
+                drec_url = gr.Textbox(
+                    label="App URL", value="http://127.0.0.1:7860", scale=3,
+                )
+                drec_scenario = gr.Dropdown(
+                    choices=["full", "cad", "compile", "verify", "all"],
+                    value="full", label="Scenario", scale=2,
+                )
+            drec_btn = gr.Button("Record Demo", variant="primary")
+            drec_status = gr.Markdown("*Ready...*")
+            drec_video = gr.Video(label="Recorded Demo")
+            drec_btn.click(
+                fn=_run_recording,
+                inputs=[drec_url, drec_scenario],
+                outputs=[drec_video, drec_status],
             )
 
     return demo

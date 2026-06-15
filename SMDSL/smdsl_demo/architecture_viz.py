@@ -130,7 +130,7 @@ def _generate_html() -> str:
         mods = ''.join(f'<span class="module-tag">{m}</span>' for m in z["modules"])
         ins = ''.join(f'<div class="io-item input-item">⤷ {i}</div>' for i in z["inputs"])
         outs = ''.join(f'<div class="io-item output-item">⟶ {o}</div>' for o in z["outputs"])
-        return f'<div class="zone-card" id="{z['id']}" style="{style}"><div class="zone-header"><span class="zone-icon">{z["icon"]}</span><div class="zone-title-group"><div class="zone-title">{z["title"]}</div><div class="zone-subtitle">{z["subtitle"]}</div></div><div class="zone-indicator"></div></div><div class="zone-modules">{mods}</div><div class="zone-io"><div class="io-section"><div class="io-label io-label-in">Inputs</div>{ins}</div><div class="io-section"><div class="io-label io-label-out">Outputs</div>{outs}</div></div><div class="zone-data-badge">{z["data"]}</div></div>'
+        return f"<div class=\"zone-card\" id=\"{z['id']}\" style=\"{style}\"><div class=\"zone-header\"><span class=\"zone-icon\">{z['icon']}</span><div class=\"zone-title-group\"><div class=\"zone-title\">{z['title']}</div><div class=\"zone-subtitle\">{z['subtitle']}</div></div><div class=\"zone-indicator\"></div></div><div class=\"zone-modules\">{mods}</div><div class=\"zone-io\"><div class=\"io-section\"><div class=\"io-label io-label-in\">Inputs</div>{ins}</div><div class=\"io-section\"><div class=\"io-label io-label-out\">Outputs</div>{outs}</div></div><div class=\"zone-data-badge\">{z['data']}</div></div>"
 
     zone_cards = "\n".join(_zone_card(z) for z in zones)
 

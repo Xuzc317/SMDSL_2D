@@ -133,6 +133,45 @@ def _narrow_passage_exists(
     return narrow.sum() / max(free.sum(), 1) > 0.05
 
 
+def _narrow_passage_detection(
+    grid: np.ndarray,
+    robot_radius_px: float,
+) -> Tuple[bool, int]:
+    """
+    检测布局中是否存在狭窄通道（通道宽度 ≤ 1.5×机器人直径）。
+
+    方法：对自由空间做 distance_transform，找到局部最小值区域（距离场 < 阈值），
+    再通过连通分量分析统计独立的窄区域数量。
+
+    Args:
+        grid: H×W uint8 占据栅格（0=墙, 1=自由）。
+        robot_radius_px: 机器人半径（像素）。
+
+    Returns:
+        (exists, narrow_regions): exists 表示是否存在窄通道；
+        narrow_regions 表示独立窄区域的数量。
+    """
+    from scipy.ndimage import distance_transform_edt
+    df = distance_transform_edt(grid.astype(np.uint8)).astype(np.float32)
+
+    narrow_thresh = robot_radius_px * 1.5
+    free = (grid == 1) & (df > 0)
+    if not free.any():
+        return False, 0
+
+    narrow_mask = free & (df < narrow_thresh)
+    if not narrow_mask.any():
+        return False, 0
+
+    # 连通分量分析 → 独立窄区域数量
+    from scipy.ndimage import label
+    labeled, n_regions = label(narrow_mask)
+    narrow_frac = narrow_mask.sum() / free.sum()
+    exists = narrow_frac > 0.05
+
+    return exists, n_regions
+
+
 # ═══════════════════════════════════════════════════════════════
 # Seed point generation
 # ═══════════════════════════════════════════════════════════════
@@ -360,6 +399,70 @@ def _generate_boxplots(
     fig.savefig(out_path, dpi=150, bbox_inches="tight")
     plt.close(fig)
     return str(out_path)
+
+
+def _generate_comparison_boxplots(
+    results_df: "pd.DataFrame",
+    output_path: str,
+) -> None:
+    """
+    生成 EDT vs Costmap 的并排箱线图。
+
+    指标：clearance_min、clearance_mean
+    分组：按 room_type
+    输出：PNG 保存到 output_path
+    """
+    import matplotlib
+    matplotlib.use("Agg")
+    import matplotlib.pyplot as plt
+
+    room_types = sorted(results_df["room_type"].unique())
+    n_rooms = len(room_types)
+    if n_rooms == 0:
+        return
+
+    # Two panels: clearance_min (top) + clearance_mean (bottom)
+    fig, (ax1, ax2) = plt.subplots(2, 1, figsize=(max(8, n_rooms * 2.5), 10))
+
+    for ax, metric, title in [
+        (ax1, "edt_clearance_min_mm", "clearance_min (mm)"),
+        (ax2, "edt_clearance_mean_mm", "clearance_mean (mm)"),
+    ]:
+        for i, rt in enumerate(room_types):
+            subset = results_df[results_df["room_type"] == rt]
+            edt_vals = subset.loc[subset["edt_path_found"], metric.replace("edt_", "edt_")].dropna()
+            cm_vals = subset.loc[subset["costmap_path_found"], metric.replace("edt_", "costmap_")].dropna()
+
+            x_edt = i * 2.5 + 0.5
+            x_cm = i * 2.5 + 1.5
+            if len(edt_vals) > 0:
+                ax.boxplot(edt_vals, positions=[x_edt], widths=0.6,
+                           patch_artist=True, showfliers=True,
+                           boxprops=dict(facecolor="#4CAF50", alpha=0.6),
+                           medianprops=dict(color="darkgreen", linewidth=2))
+            if len(cm_vals) > 0:
+                ax.boxplot(cm_vals, positions=[x_cm], widths=0.6,
+                           patch_artist=True, showfliers=True,
+                           boxprops=dict(facecolor="#FF9800", alpha=0.6),
+                           medianprops=dict(color="darkorange", linewidth=2))
+
+        ax.set_xticks([i * 2.5 + 1.0 for i in range(n_rooms)])
+        ax.set_xticklabels(room_types, rotation=30, ha="right", fontsize=9)
+        ax.set_ylabel(title)
+        ax.set_title(f"EDT vs Costmap: {title} by Room Type")
+        ax.axhline(y=0, color="black", linewidth=0.5)
+
+    from matplotlib.patches import Patch
+    legend_elements = [
+        Patch(facecolor="#4CAF50", alpha=0.6, label="EDT (Ours)"),
+        Patch(facecolor="#FF9800", alpha=0.6, label="Costmap (Baseline)"),
+    ]
+    ax1.legend(handles=legend_elements, loc="upper right")
+
+    plt.tight_layout()
+    Path(output_path).parent.mkdir(parents=True, exist_ok=True)
+    fig.savefig(output_path, dpi=150, bbox_inches="tight")
+    plt.close(fig)
 
 
 def _print_summary_table(all_results: List[Dict[str, Any]]) -> None:

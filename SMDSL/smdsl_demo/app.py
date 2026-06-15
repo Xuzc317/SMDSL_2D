@@ -1816,7 +1816,6 @@ def build_ui() -> gr.Blocks:
         # ══════════════════════════════════════════════════════════════
         with gr.Tab("Demo 1 — 环境感知 (CAD 拓扑)"):
             gr.HTML(_flow_nav_md(1))
-            gr.Markdown("## 这一步在做什么？")
             gr.Markdown(
                 "### 操作流程\n"
                 "1. 选择/上传 CAD 文件 → 自动解析\n"
@@ -2139,7 +2138,6 @@ def build_ui() -> gr.Blocks:
         # ══════════════════════════════════════════════════════════════
         with gr.Tab("Demo 2 — 语义编译 (VLM → RoboIR)"):
             gr.HTML(_flow_nav_md(2))
-            gr.Markdown("## 这一步在做什么？")
             gr.Markdown(
                 "**输入**：自然语言指令 + 局部环境（场景实体白名单）。\n\n"
                 "**处理**：DeepSeek 翻译为 **声明式 STL 约束**（不是动作脚本！）：\n"
@@ -2345,7 +2343,6 @@ def build_ui() -> gr.Blocks:
         # ══════════════════════════════════════════════════════════════
         with gr.Tab("Demo 3 — 物理求解与反馈 (STL 验证)"):
             gr.HTML(_flow_nav_md(3))
-            gr.Markdown("## 这一步在做什么？")
             gr.Markdown(
                 "**输入**：① RoboIR (Tab 2 自动同步)；② 模拟轨迹 (Tab 1 自动同步 / 手动)。\n\n"
                 "**处理**：调出 Tab 1 算好的距离场，逐帧检查轨迹是否满足 RoboIR 约束。"

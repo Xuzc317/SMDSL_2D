@@ -109,7 +109,7 @@ def _append_csv(path: str, rows: list[dict[str, Any]]) -> None:
 
 def run_benchmark(
     n_maps: int = 10000,
-    workers: int = 8,
+    workers: int | None = None,
     map_height: int = 200,
     map_width: int = 300,
     difficulty: str = "mixed",
@@ -143,12 +143,12 @@ def run_benchmark(
     last_flush = 0
 
     print(f"SMDSL Benchmark — {n_maps} maps × 2 methods = {n_maps * 2} runs")
-    print(f"  workers: {workers}  |  seed: {global_seed}")
+    print(f"  workers: {workers or 'auto'}  |  seed: {global_seed}")
     print(f"  map: {map_height}×{map_width}  |  difficulty: {difficulty}")
     print(f"  output: {output_csv}")
     print(f"{'─' * 60}")
 
-    with Pool(workers) as pool:
+    with Pool(workers or None) as pool:
         for i, rows in enumerate(pool.imap_unordered(_worker, tasks)):
             # 统计成功/失败
             has_error = any(r.get("error", "") for r in rows if r)
@@ -221,7 +221,7 @@ def main() -> None:
 
     run_benchmark(
         n_maps=n_maps,
-        workers=workers or 0,
+        workers=workers,
         map_height=args.height,
         map_width=args.width,
         difficulty=args.difficulty,

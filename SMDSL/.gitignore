@@ -3,7 +3,8 @@ __pycache__/
 *.py[cod]
 
 # Data & output (junctions — not in git)
-data/
+data/_junctions/
+data/_cache/
 out/
 
 # IDE

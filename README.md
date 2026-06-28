@@ -43,8 +43,7 @@
 | 数据集 | 布局数 | EDT vs Costmap 提升 |
 |--------|--------|---------------------|
 | FloorplanQA | 1,981 (目标) | — |
-| 合成基准 (200 layouts × 5 pairs) | 200 | **clearance_min +31.0%** |
-| 合成基准 (200 layouts × 5 pairs) | 200 | **clearance_min +31.0%** |
+| 合成基准 (10,000 maps × 1 pair) | 10,000 | **clearance_min +25.8%** |
 | OSM 真实路网 | 0-30 (需代理/VPN) | — |
 
 > **注意**: OSM 下载需要访问 `nominatim.openstreetmap.org`，在中国大陆网络环境下需要配置代理或 VPN。
@@ -95,7 +94,7 @@
 ## 目录结构（干净状态）
 
 ```
-D:\code/
+SMDSL_2D/
 ├── SMDSL/                          ← 💎 唯一权威工程目录
 │   ├── cad_parser/                 ← Zone 1: 几何/拓扑解析
 │   │   ├── astar_topology.py       #   EDT + A* + 对角防穿墙
@@ -142,6 +141,22 @@ D:\code/
 
 ## 快速启动
 
+### Mac — 一键安装
+
+```bash
+git clone git@github.com:Xuzc317/SMDSL_2D.git
+cd SMDSL_2D
+chmod +x setup_mac.sh
+./setup_mac.sh
+```
+
+脚本自动完成：Homebrew 系统依赖 → Python 环境 → pip 依赖 → `.env` 模板 → 测试验证。
+完成后编辑 `.env` 填入 `DEEPSEEK_API_KEY`，然后 `cd SMDSL && python -m smdsl_demo.app` 启动。
+
+> 跳过硬件的组件：`./setup_mac.sh --skip-conda`（用 venv）或 `./setup_mac.sh --skip-brew`
+
+### Windows / Linux — 手动安装
+
 ```powershell
 # 1. 安装依赖
 pip install -r requirements.txt
@@ -176,7 +191,7 @@ cd SMDSL && python -m smdsl_demo.mcp_server
     "smdsl-2d": {
       "command": "python",
       "args": ["-m", "smdsl_demo.mcp_server"],
-      "cwd": "D:/Code/SMDSL_demo/SMDSL"
+      "cwd": "<你的项目路径>/SMDSL"
     }
   }
 }

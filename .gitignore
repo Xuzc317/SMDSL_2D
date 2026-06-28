@@ -56,3 +56,4 @@ back/scratch_scripts/
 
 # Claude Code session artifacts
 *.claude/projects/*/tool-results/
+.gstack/
